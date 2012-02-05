@@ -1,0 +1,10 @@
+sidebar.header.special: Special
+general.view.link_moderate: Moderator Panel
+general.view.link_administrate: Administrator Panel
+
+layout.header_links.members: Members 
+layout.header_links.forum: Forum
+layout.header_links.downloads: Downloads
+layout.header_links.answers: Answers
+layout.header_links.articles: Articles
+layout.header_links.knowledge_base: Knowledge Base

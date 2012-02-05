@@ -1,0 +1,7 @@
+{% for key, message in app.session.getFlashes() %}
+<div class="common_box_5 padding_5 bg_flash_message">
+	<div class="flash_{{ key }}">
+	    {{ message|trans }}
+	</div>
+</div>
+{% endfor %}

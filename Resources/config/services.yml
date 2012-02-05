@@ -1,0 +1,13 @@
+parameters:
+    cycler.extension.class:     CCDNComponent\CommonBundle\Extension\CyclerExtension
+    div_ceil.extension.class:   CCDNComponent\CommonBundle\Extension\DivCeilExtension
+
+services:
+    cycler.extension:
+        class:  %cycler.extension.class%
+        tags:
+            - { name: twig.extension }
+    div_ceil.extension:
+        class:  %div_ceil.extension.class%
+        tags:
+            - { name: twig.extension }

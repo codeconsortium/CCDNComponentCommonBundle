@@ -1,0 +1,54 @@
+/*td.label {
+	vertical-align: top;
+
+	display: table-cell;
+	
+	padding: 10px;
+	margin: 0px;
+
+	width: auto;
+	
+	overflow: hidden;
+}
+
+td.widget {
+	vertical-align: top;
+	
+	padding: 10px;
+	margin: 0px;
+	
+	overflow: hidden;
+}
+*/
+/*td.buttons {
+	padding: 10px;
+	text-align: center;
+}*/
+
+label.checkbox_widget_label {
+	font: x-small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+label.widget_label {
+	overflow: hidden;
+	margin: 20px;
+}
+
+input.widget_text {
+	display: block;
+	width: 500px;
+	size: 100;
+	overflow: hidden;
+}
+
+textarea.widget_textarea {
+	display: block;
+	width: 500px;
+	height: 200px;
+	cols: 100;
+	rows: 40;
+	overflow: scroll;
+}
+
+
+

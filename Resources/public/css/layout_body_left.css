@@ -1,0 +1,179 @@
+body { padding: 5px; }
+
+/************************
+ * Page Header
+ ***********************/
+div#header {
+	display: inline-block;
+	position: fixed;
+	width: 100% auto;
+	padding: 0;
+	margin: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 20;
+	clear: both;
+	overflow: hidden;
+	border-bottom: 1px solid #DDD;
+}
+
+div#upper_bar {
+	width: 100%;
+	height: 48px;
+	margin: 0px;
+	list-style-position: inside;
+	list-style-type: none;
+	background-image: url(../images/layout/header/upper_bar_bg.png);
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+}
+
+div#upper_bar div.bar_box {
+	height: 48px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #222c;
+}
+
+div#upper_bar div#logo {
+	left: 10px;
+	top: -15px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	border: 0;
+}
+
+div#upper_bar div#inbox {
+	width: 90px;
+	height: 48px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 190px;
+	vertical-align: middle;
+}
+
+div#upper_bar div#login {
+	width: 90px;
+	height: 48px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 10px;
+}
+
+div#upper_bar div#register {
+	width: 90px;
+	height: 48px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 101px;
+}
+
+img.site_logo {
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+}
+
+a.upper_bar:link, a.upper_bar:visited, a.upper_bar:active, a.upper_bar:hover {
+	width: 90px auto;
+	height: 24px;
+	margin: 0;
+	padding: 12px;
+	position: static;
+	display: block;
+	color: #eee;
+	text-decoration: none;
+	text-shadow: #111 0px -1px 1px;
+	vertical-align: middle;
+	font: bold medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: capitalize;
+}
+
+div#lower_bar {
+	width: 100% auto;
+	height: 31px;
+	margin: 0px;
+	vertical-align: middle;
+	text-align: center;
+	display: block;
+	overflow: hidden;
+	background-image: url(../images/layout/header/lower_bar_bg.png);
+}
+
+a.nav_link:link, a.nav_link:visited, a.nav_link:active {
+	height: 31px;
+	margin-right: 10px;
+	margin-left: 10px;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 111 0px -1px 1px;
+	font: bold medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #4183c4;
+}
+
+a.nav_link:hover {
+	text-decoration: underline;
+}
+
+/************************
+ * Page Body
+ ***********************/
+
+div#body {
+	width: 100%;
+	vertical-align: top;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 70px;
+}
+
+div.left_column_container {
+	vertical-align: top;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	float: left;
+	width: 100%;
+}
+
+div.left_column {
+	margin: 8px 205px 5px 5px;
+	padding: 1px;
+	overflow: hidden;
+}
+
+div.right_column_container {
+	vertical-align: top;
+	display: block;
+	margin: 0px 0px 0px -205px;
+	padding: 0px;
+	overflow: hidden;
+	float: right;
+	width: 200px;
+}
+
+div.right_column {
+	margin: 8px 5px 5px;
+	padding: 1px;
+	overflow: hidden;
+}
+
+/************************
+ * Page Footer
+ ***********************/
+
+div#footer {
+	width: 100%;
+	height: 100px;
+	clear: both;
+}

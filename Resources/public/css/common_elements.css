@@ -1,0 +1,267 @@
+#body {
+	font-family: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	color: #373737;
+}
+/* **********************************
+ * COMMON ICONS
+ * *********************************/
+img.icon_16x16 { border: 0; margin: 0; padding: 0; width: 16px; height: 16px; vertical-align: middle; }
+img.icon_32x32 { border: 0; margin: 0; padding: 0; width: 32px; height: 32px; vertical-align: middle; }
+
+img.avatar { width: 100px; height: 100px; }
+/* **********************************
+ * COMMON LINKS
+ * *********************************/
+a:link, a:visited, a:active { color: #4a89c6; font: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;	text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+a.sidebar { font-size: small; font-weight: bold; color: #373737; }
+
+a.header_strip { font-size: small; font-weight: bold; }
+a.heading_link { font-size: medium; font-weight: bold; }
+
+a.username_small { font-size: small !important; font-weight: bold !important; text-transform: capitalize !important; }
+a.username_medium { font-size: medium !important; font-weight: bold !important; text-transform: capitalize !important; }
+
+a.date_link_small { font: small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;	border-bottom:1px dotted black;	text-decoration: none;}
+a.date_link_medium { font: medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; border-bottom:1px dotted black; text-decoration: none;}
+	
+a.button_link:link, a.button_link:visited, a.button_link:hover, a.button_link:active {
+	text-transform: capitalize;
+	text-align: left;
+	color: #4183c4;
+	margin: 0px 8px 0px 0px;
+}
+/************************
+ * COMMON SPANS
+ ***********************/
+.common_h1 { font: x-large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
+.common_h2 { font: large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
+.common_h3 { font: medium "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
+
+.heading_glow {
+	color: #eee;
+	font: bold small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	text-shadow: #111 0px -1px 1px;
+	text-transform: capitalize;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.common_body { font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
+.common_note { font: bold x-small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
+
+span.label_small { font: small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: gray; }
+span.label_medium {	font: medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: gray; }
+span.label_large { font: large "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: gray; }
+
+span.stat_xsmall { font: x-small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #373737; }
+span.stat_small { font: small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #373737; }
+span.stat_medium {	font: medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #373737; }
+span.stat_large { font: large "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #373737; }
+
+/************************
+ * COMMON ALIGNMENTS
+ ***********************/
+.h_align_left { text-align: left !important; }
+.h_align_centre { text-align: center !important; }
+.h_align_right { text-align: right !important; }
+.v_align_top { vertical-align: top !important; }
+.v_align_middle { vertical-align: middle !important; }
+.v_align_bottom { vertical-align: bottom !important; }
+ /************************
+ * COMMON MARGINS
+ ***********************/
+.margin_0 { margin: 0px !important; }
+.margin_1 { margin: 1px !important; }
+.margin_2 { margin: 2px !important; }
+.margin_5 {	margin: 5px !important; }
+.margin_10 { margin: 10px !important; }
+
+.margin_bottom_0 { margin-bottom: 0px !important; }
+.margin_bottom_1 { margin-bottom: 1px !important; }
+.margin_bottom_2 { margin-bottom: 2px !important; }
+.margin_bottom_5 { margin-bottom: 5px !important; }
+.margin_bottom_10 { margin-bottom: 10px !important; }
+/************************
+ * COMMON PADDING
+ ***********************/
+.padding_0 { padding: 0px !important; }
+.padding_1 { padding: 1px !important; }
+.padding_2 { padding: 2px !important; }
+.padding_5 { padding: 5px !important; }
+.padding_10 { padding: 10px !important; }
+/************************
+ * COMMON BORDERS
+ ***********************/
+.border_none { border: none !important; }
+.border_light_silver { border: 1px solid #dee4e4; }
+.border_red {  border: 2px solid red !important; }
+/************************
+ * COMMON BACKGROUNDS
+ ***********************/
+.bg_header_smoke { background: url(../images/common/header_bg_smoke.png) repeat-x !important; }
+.bg_header_item { /*background-color: #f8faff !important;*/}
+.bg_header_sub_item {
+	border-top: 1px solid #eef0f0;
+	border-bottom: 1px solid #eef0f0;
+}
+
+.bg_highlight_light { background-color: #fafafa !important; }
+.bg_highlight_red { background-color: #ff9896 !important; }
+.bg_highlight_orange { background-color: #fec499; }
+
+.bg_item_light { background-color: #fafafa !important; }
+
+.bg_flash_message {	background-color: #fffcc7 !important; }
+/************************
+ * COMMON FLASH BOXES
+ ***********************/
+.flash_notice {
+	margin-left: 5px;
+	padding-left: 25px;
+	background: url(../images/icons/Black/16x16/16x16_check.png) no-repeat;
+
+	line-height: 1.5;
+	font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+}
+/************************
+ * COMMON BOXES
+ ***********************/ 
+.row { display: block; overflow: hidden; clear: both; }
+.column { display: inline-block; overflow: hidden; }
+
+.common_box_5 {
+	display: block;
+	width: 100% auto;
+	padding: 0px;
+	margin: 10px;
+	overflow: hidden;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.common_box_10 {
+	display: block;
+	width: 100% auto;
+	padding: 0px;
+	margin: 10px;
+	overflow: hidden;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+div.common_box_header {
+	display: block;
+	width: 100% auto;
+	height: 23px;
+	padding: 5px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.common_box_panel {
+	display: block;
+	width: 100% auto;
+	height: 100% auto;
+	padding: 5px;
+	background-color: #f6f6f6;
+	border-top: 1px solid #f5f7f7;
+	overflow: hidden;
+	clear: both;
+}
+
+div.scrollable_panel {
+	width: 100% auto;
+	overflow: auto;
+}
+
+div.common_tool_strip {
+	background-color: #f8fafd;
+	border-top: 1px solid #eee;
+/*	border-bottom: 1px solid #eee;*/
+}
+/************************
+ * COMMON ITEM
+ ***********************/
+.text_bubble {
+	background-color: white;
+	border: 1px solid silver;
+	position: relative;
+	z-index: 1;
+	top: -20px;
+}
+.text_bubble_deleted {
+	background-color: #dee0e0;
+	text-align: center;
+	vertical-align: middle;
+}
+img.text_bubble_chevron {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	left: 45px;
+	top: -5px;
+	z-index: 3;
+}
+
+/* **********************************
+ * COMMON LIST TABLE
+ * *********************************/
+table.common_list {
+	width: 100%;
+	border-spacing: 1px;
+	
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+}
+
+table.common_list thead { background-color: #f8fafd; }
+table.common_list tbody { }
+table.common_list tfoot { }
+
+tr.row_odd {
+	background-color: #fafcff;
+}
+
+tr.row_even {
+	background-color: #f6faff;
+}
+
+table.common_list th {
+	text-align: left;
+	vertical-align: middle;
+	padding: 5px;
+	text-transform: capitalize;
+}
+table.common_list td {
+	padding: 10px;
+}
+/* **********************************
+ * COMMON PAGINATION
+ * *********************************/
+.paginate {margin-left: 10px;}	
+.pagerfanta {}
+.pagerfanta a, .pagerfanta span {
+    display: inline-block;
+    border: 1px solid #c6c6c6;
+    color: #707070;
+    margin-right: .2em;
+    padding: .25em .35em;
+    border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	font: bold small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	background-color: #e2e2e2;
+	text-shadow: white 0px 1px 2px;
+}
+.pagerfanta a {text-decoration: none;}
+.pagerfanta a:hover {background: #ccf;}
+.pagerfanta .dots {border-width: 0;}
+.pagerfanta .current {background: #d8defe;font-weight: #b9e0fe;border: 1px solid #c6c6c6;}
+.pagerfanta .disabled {border: 1px solid #d0d0d0;color: #d0d0d0;}
