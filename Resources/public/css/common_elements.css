@@ -129,10 +129,10 @@ span.stat_large { font: large "Helvetica Neue", Arial, Helvetica, Geneva, sans-s
 /************************
  * COMMON BOXES
  ***********************/ 
-.row { display: block; overflow: hidden; clear: both; }
-.column { display: inline-block; overflow: hidden; }
+div.row { display: block; overflow: hidden; vertical-align: top; clear: both; }
+div.column { display: inline-block; overflow: hidden; vertical-align: top; }
 
-.common_box_5 {
+div.common_box_5 {
 	display: block;
 	width: 100% auto;
 	padding: 0px;
@@ -143,7 +143,7 @@ span.stat_large { font: large "Helvetica Neue", Arial, Helvetica, Geneva, sans-s
 	-webkit-border-radius: 5px;
 }
 
-.common_box_10 {
+div.common_box_10 {
 	display: block;
 	width: 100% auto;
 	padding: 0px;
@@ -161,9 +161,11 @@ div.common_box_header {
 	padding: 5px;
 	text-align: center;
 	vertical-align: middle;
+	overflow: hidden;
+	clear: both;
 }
 
-.common_box_panel {
+div.common_box_panel {
 	display: block;
 	width: 100% auto;
 	height: 100% auto;
@@ -174,27 +176,35 @@ div.common_box_header {
 	clear: both;
 }
 
+div.common_tool_strip {
+	display: block;
+	width: 100% auto;
+	height: 100% auto;
+	padding: 5px;
+	background-color: #f8fafd;
+	border-top: 1px solid #eee;
+	overflow: hidden;
+	clear: both;	
+/*	border-bottom: 1px solid #eee;*/
+}
+
+
 div.scrollable_panel {
 	width: 100% auto;
 	overflow: auto;
 }
 
-div.common_tool_strip {
-	background-color: #f8fafd;
-	border-top: 1px solid #eee;
-/*	border-bottom: 1px solid #eee;*/
-}
 /************************
  * COMMON ITEM
  ***********************/
-.text_bubble {
+div.text_bubble {
 	background-color: white;
 	border: 1px solid silver;
 	position: relative;
 	z-index: 1;
 	top: -20px;
 }
-.text_bubble_deleted {
+div.text_bubble_deleted {
 	background-color: #dee0e0;
 	text-align: center;
 	vertical-align: middle;

@@ -1,17 +1,17 @@
-body { padding: 5px; }
+body { padding: 0px; }
 
 /************************
  * Page Header
  ***********************/
 div#header {
-	display: inline-block;
+	display: block;
 	position: fixed;
-	width: 100% auto;
-	padding: 0;
-	margin: 0;
-	left: 0;
-	right: 0;
-	top: 0;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	left: -1px;
+	right: -1px;
+	top: -1px;
 	z-index: 20;
 	clear: both;
 	overflow: hidden;
@@ -19,9 +19,12 @@ div#header {
 }
 
 div#upper_bar {
+	display: block;
+	padding: relative;
 	width: 100%;
 	height: 48px;
 	margin: 0px;
+	top: -1px;
 	list-style-position: inside;
 	list-style-type: none;
 	background-image: url(../images/layout/header/upper_bar_bg.png);
@@ -40,8 +43,8 @@ div#upper_bar div.bar_box {
 
 div#upper_bar div#logo {
 	left: 10px;
-	top: -15px;
-	margin: 0;
+/*	top: -15px;*/
+	margin: 5px;
 	padding: 0;
 	position: absolute;
 	border: 0;
