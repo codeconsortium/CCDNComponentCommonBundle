@@ -18,7 +18,7 @@ namespace CCDNComponent\CommonBundle\Extension;
  * @author Reece Fowell <reece@codeconsortium.com> 
  * @version 1.0
  */
-class ParamExtension extends \Twig_Extension
+class BinSIUnitsExtension extends \Twig_Extension
 {
 
 
@@ -46,21 +46,21 @@ class ParamExtension extends \Twig_Extension
 	public function getFunctions()
 	{
 		return array(
-			'param' => new \Twig_Function_Method($this, 'param'),
+			'binSIUnits' => new \Twig_Function_Method($this, 'binSIUnits'),
 		);
 	}
 	
 	
 	/**
-	 * returns the requested param.
+	 * returns the requested file size in an appropriate SI Unit format.
 	 *
 	 * @access public
-	 * @param $param
+	 * @param $size
 	 * @return mixed
 	 */
-	public function param($param)
+	public function binSIUnits($size)
 	{
-		return $this->container->getParameter($param);
+		return $this->container->get('bin.si.units')->formatToSIUnit($size, null, true);
 	}
 	
 	
@@ -71,7 +71,7 @@ class ParamExtension extends \Twig_Extension
 	 */
 	public function getName()
 	{
-		return 'param';
+		return 'binSIUnits';
 	}
 	
 }

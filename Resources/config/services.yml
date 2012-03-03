@@ -1,9 +1,18 @@
 parameters:
-    cycler.extension.class:     CCDNComponent\CommonBundle\Extension\CyclerExtension
-    div_ceil.extension.class:   CCDNComponent\CommonBundle\Extension\DivCeilExtension
-    param.extension.class:      CCDNComponent\CommonBundle\Extension\ParamExtension
+    bin.si.units.class:             CCDNComponent\CommonBundle\Component\BinSIUnits
+    bin.si.units.extension.class:   CCDNComponent\CommonBundle\Extension\BinSIUnitsExtension
+    cycler.extension.class:         CCDNComponent\CommonBundle\Extension\CyclerExtension
+    div_ceil.extension.class:       CCDNComponent\CommonBundle\Extension\DivCeilExtension
+    param.extension.class:          CCDNComponent\CommonBundle\Extension\ParamExtension
 
 services:
+    bin.si.units:
+        class: %bin.si.units.class%
+    binSIUnits.extension:
+        class:  %bin.si.units.extension.class%
+        arguments: [@service_container]
+        tags:
+            - { name: twig.extension }        
     cycler.extension:
         class:  %cycler.extension.class%
         tags:
