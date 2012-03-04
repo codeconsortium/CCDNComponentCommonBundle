@@ -23,20 +23,37 @@ file that was distributed with this source code.
 Dependencies:
 -------------
 
+[CCDNComponent CommonBundle](https://github.com/codeconsortium/CommonBundle)
 
 Installation:
 -------------
     
-1) Create the directory src/CCDNComponent in your Symfony directory.
-  
-2) Add the CommonBundle to CCDNComponent directory.  
+1) Download and install the dependencies.
+   
+   You can set deps to include:
 
-3) In your AppKernel.php add the following bundles to the registerBundles method array:  
+```sh
+[CCDNComponentCommonBundle]
+    git=http://github.com/codeconsortium/CommonBundle.git
+    target=/bundles/CCDNComponent/CommonBundle
+```
+add to your autoload:
 
-	new CCDNComponent\CommonBundle\CCDNComponentCommonBundle(),    
+```php
+    'CCDNComponent'    => __DIR__.'/../vendor/bundles',
+```
+and then run `bin/vendors install` script.
 
-4) Symlink assets to your public web directory by running this in the command line:
+2) In your AppKernel.php add the following bundles to the registerBundles method array:  
 
+```php
+	new CCDNComponent\CommonBundle\CCDNComponentCommonBundle(),
+```
+	
+3) Symlink assets to your public web directory by running this in the command line:
+
+```sh
 	php app/console assets:install --symlink web/
-
+```
+	
 Then your done, if you need further help/support, have suggestions or want to contribute please join the community at [www.codeconsortium.com](http://www.codeconsortium.com)
