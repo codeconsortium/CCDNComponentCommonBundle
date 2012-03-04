@@ -23,7 +23,6 @@ file that was distributed with this source code.
 Dependencies:
 -------------
 
-[CCDNComponent CommonBundle](https://github.com/codeconsortium/CommonBundle)
 
 Installation:
 -------------
