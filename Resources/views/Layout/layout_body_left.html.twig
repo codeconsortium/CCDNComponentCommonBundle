@@ -21,7 +21,12 @@
 				{% if is_granted('ROLE_USER') %}
 				<div class="bar_box" id="login"><a class="upper_bar" href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout' |trans({}, 'FOSUserBundle') }}</a></div>
 				<div class="bar_box" id="register"><a class="upper_bar" href="{{ path('cc_profile_show') }}">{{ app.user.username }}</a></div>		
-				<div class="bar_box" id="inbox"><a class="upper_bar" href="{{ path('cc_message_index') }}"><img class="icon_16x16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Silver/16x16/16x16_email.png') }}" /></a></div>
+				<div class="bar_box" id="inbox">
+					<a class="upper_bar" href="{{ path('cc_message_index') }}">
+						<img class="icon_16x16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Silver/16x16/16x16_email.png') }}" />
+						{{ unreadMessageCount() }}
+					</a>
+				</div>
 				{% else %}
 				<div class="bar_box" id="login"><a class="upper_bar" href="{{ path('fos_user_security_login') }}">{{ 'layout.login' |trans({}, 'FOSUserBundle') }}</a></div>
 				<div class="bar_box" id="register"><a class="upper_bar" href="{{ path('fos_user_registration_register') }}">{{ 'layout.register' |trans({}, 'FOSUserBundle') }}</a></div>
