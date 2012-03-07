@@ -60,7 +60,7 @@ class BinSIUnitsExtension extends \Twig_Extension
 	 */
 	public function binSIUnits($size)
 	{
-		return $this->container->get('bin.si.units')->formatToSIUnit($size, null, true);
+		return $this->container->get('ccdn_component_common.bin.si.units')->formatToSIUnit($size, null, true);
 	}
 	
 	

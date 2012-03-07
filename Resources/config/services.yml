@@ -1,28 +1,28 @@
 parameters:
-    bin.si.units.class:             CCDNComponent\CommonBundle\Component\BinSIUnits
-    bin.si.units.extension.class:   CCDNComponent\CommonBundle\Extension\BinSIUnitsExtension
-    cycler.extension.class:         CCDNComponent\CommonBundle\Extension\CyclerExtension
-    div_ceil.extension.class:       CCDNComponent\CommonBundle\Extension\DivCeilExtension
-    param.extension.class:          CCDNComponent\CommonBundle\Extension\ParamExtension
+    ccdn_component_common.bin.si.units.class:             CCDNComponent\CommonBundle\Component\BinSIUnits
+    ccdn_component_common.bin.si.units.extension.class:   CCDNComponent\CommonBundle\Extension\BinSIUnitsExtension
+    ccdn_component_common.cycler.extension.class:         CCDNComponent\CommonBundle\Extension\CyclerExtension
+    ccdn_component_common.div_ceil.extension.class:       CCDNComponent\CommonBundle\Extension\DivCeilExtension
+    ccdn_component_common.param.extension.class:          CCDNComponent\CommonBundle\Extension\ParamExtension
 
 services:
-    bin.si.units:
-        class: %bin.si.units.class%
-    binSIUnits.extension:
-        class:  %bin.si.units.extension.class%
+    ccdn_component_common.bin.si.units:
+        class: %ccdn_component_common.bin.si.units.class%
+    ccdn_component_common.binSIUnits.extension:
+        class:  %ccdn_component_common.bin.si.units.extension.class%
         arguments: [@service_container]
         tags:
             - { name: twig.extension }        
-    cycler.extension:
-        class:  %cycler.extension.class%
+    ccdn_component_common.cycler.extension:
+        class:  %ccdn_component_common.cycler.extension.class%
         tags:
             - { name: twig.extension }
-    param.extension:
-        class:  %param.extension.class%
+    ccdn_component_common.param.extension:
+        class:  %ccdn_component_common.param.extension.class%
         arguments: [@service_container]
         tags:
             - { name: twig.extension }
-    div_ceil.extension:
-        class:  %div_ceil.extension.class%
+    ccdn_component_common.div_ceil.extension:
+        class:  %ccdn_component_common.div_ceil.extension.class%
         tags:
             - { name: twig.extension }
