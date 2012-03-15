@@ -16,24 +16,7 @@
     <body>
 		
 		<div id="header">
-			<div id="upper_bar">
-				<div id="logo"><img class="site_logo" width="263px" height="31px" src="{{ asset('bundles/ccdncomponentcommon/images/layout/header/logo.png') }}" /></div>
-				{% if is_granted('ROLE_USER') %}
-				<div class="bar_box" id="login"><a class="upper_bar" href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout' |trans({}, 'FOSUserBundle') }}</a></div>
-				<div class="bar_box" id="register"><a class="upper_bar" href="{{ path('cc_profile_show') }}">{{ app.user.username }}</a></div>		
-				<div class="bar_box" id="inbox">
-					<a class="upper_bar" href="{{ path('cc_message_index') }}">
-						<img class="icon_16x16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Silver/16x16/16x16_email.png') }}" />
-						{{ unreadMessageCount() }}
-					</a>
-				</div>
-				{% else %}
-				<div class="bar_box" id="login"><a class="upper_bar" href="{{ path('fos_user_security_login') }}">{{ 'layout.login' |trans({}, 'FOSUserBundle') }}</a></div>
-				<div class="bar_box" id="register"><a class="upper_bar" href="{{ path('fos_user_registration_register') }}">{{ 'layout.register' |trans({}, 'FOSUserBundle') }}</a></div>
-				{% endif %}
-			</div>
-			
-			<div id="lower_bar">
+			<div id="secondary_bar">
 				<a class="nav_link" href="{{ path('cc_members_index') }}">{{ 'layout.header_links.members' | trans({}, 'CCDNComponentCommonBundle') }}</a>
 				<a class="nav_link" href="{{ path('cc_forum_category_index') }}">{{ 'layout.header_links.forum' | trans({}, 'CCDNComponentCommonBundle') }}</a>
 			{#	<a class="nav_link" href="">{{ 'layout.header_links.downloads' | trans({}, 'CCDNComponentCommonBundle') }}</a>
@@ -41,6 +24,24 @@
 				<a class="nav_link" href="">{{ 'layout.header_links.articles' | trans({}, 'CCDNComponentCommonBundle') }}</a>
 				<a class="nav_link" href="">{{ 'layout.header_links.knowledge_base' | trans({}, 'CCDNComponentCommonBundle') }}</a>#}
 			</div>			
+			
+			<div id="primary_bar">
+				<div id="logo"><img class="site_logo" width="212px" height="25px" src="{{ asset('bundles/ccdncomponentcommon/images/layout/header/logo.png') }}" /></div>
+				{% if is_granted('ROLE_USER') %}
+				<div class="bar_box" id="login"><a class="primary_bar" href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout' |trans({}, 'FOSUserBundle') }}</a></div>
+				<div class="bar_box" id="register"><a class="primary_bar" href="{{ path('cc_profile_show') }}">{{ app.user.username }}</a></div>		
+				<div class="bar_box" id="inbox">
+					<a class="primary_bar" href="{{ path('cc_message_index') }}">
+						<img class="icon_16x16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Silver/16x16/16x16_email.png') }}" />
+						{{ unreadMessageCount() }}
+					</a>
+				</div>
+				{% else %}
+				<div class="bar_box" id="login"><a class="primary_bar" href="{{ path('fos_user_security_login') }}">{{ 'layout.login' |trans({}, 'FOSUserBundle') }}</a></div>
+				<div class="bar_box" id="register"><a class="primary_bar" href="{{ path('fos_user_registration_register') }}">{{ 'layout.register' |trans({}, 'FOSUserBundle') }}</a></div>
+				{% endif %}
+			</div>
+			
 		</div>
 		
 		<div id="body">

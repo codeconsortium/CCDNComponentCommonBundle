@@ -18,64 +18,43 @@ div#header {
 	border-bottom: 1px solid #DDD;
 }
 
-div#upper_bar {
+
+/************************
+ * Primary Bar
+ ***********************/
+div#primary_bar {
 	display: block;
 	padding: relative;
 	width: 100%;
-	height: 48px;
+	height: 35px;
 	margin: 0px;
 	top: -1px;
+	overflow: hidden;
 	list-style-position: inside;
 	list-style-type: none;
 	background-image: url(../images/layout/header/upper_bar_bg.png);
-	border-bottom: 1px solid #ddd;
-	overflow: hidden;
 }
 
-div#upper_bar div.bar_box {
-	height: 48px;
-	display: inline-block;
+div#primary_bar div.bar_box {
+	display: inline;
+	position: absolute;
+	height: 35px;
+	margin: 0;
+	padding: 0;
+	line-height: 35px;
+	white-space: nowrap;
 	text-align: center;
 	vertical-align: middle;
 	border-left: 1px solid #ddd;
 	border-right: 1px solid #222c;
 }
 
-div#upper_bar div#logo {
+div#primary_bar div#logo {
 	left: 10px;
 /*	top: -15px;*/
-	margin: 5px;
-	padding: 0;
+	padding: 4px !important;
 	position: absolute;
 	border: 0;
-}
-
-div#upper_bar div#inbox {
-	width: 90px;
-	height: 48px;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	right: 190px;
-	vertical-align: middle;
-}
-
-div#upper_bar div#login {
-	width: 90px;
-	height: 48px;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	right: 10px;
-}
-
-div#upper_bar div#register {
-	width: 90px;
-	height: 48px;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	right: 101px;
 }
 
 img.site_logo {
@@ -85,42 +64,61 @@ img.site_logo {
 	border: 0;
 }
 
-a.upper_bar:link, a.upper_bar:visited, a.upper_bar:active, a.upper_bar:hover {
-	width: 90px auto;
-	height: 24px;
-	margin: 0;
-	padding: 12px;
-	position: static;
-	display: block;
-	color: #eee;
-	text-decoration: none;
-	text-shadow: #111 0px -1px 1px;
-	vertical-align: middle;
-	font: bold medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-transform: capitalize;
+div#primary_bar div#inbox {
+	width: 90px;
+	right: 190px;
 }
 
-div#lower_bar {
-	width: 100% auto;
-	height: 31px;
-	margin: 0px;
-	vertical-align: middle;
-	text-align: center;
+div#primary_bar div#login {
+	width: 90px;
+	right: 10px;
+}
+
+div#primary_bar div#register {
+	width: 90px;
+	right: 101px;
+}
+
+a.primary_bar:link, a.primary_bar:visited, a.primary_bar:active, a.primary_bar:hover {
+	display: inline;
+	color: #eee;
+	font: bold medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: capitalize;
+	text-decoration: none;
+	text-shadow: #111 0px -1px 1px;
+}
+
+
+/************************
+ * Secondary Bar
+ ***********************/
+div#secondary_bar {
 	display: block;
+	width: 100%;
+	height: 24px;
+	margin: 0px;
+	
+	line-height: 24px;
+	white-space: nowrap;
+	vertical-align: middle;
+	text-align: left;
+	
 	overflow: hidden;
 	background-image: url(../images/layout/header/lower_bar_bg.png);
+
+	border-bottom: 1px solid #ddd;
 }
 
 a.nav_link:link, a.nav_link:visited, a.nav_link:active {
-	height: 31px;
+	display: inline;
 	margin-right: 10px;
 	margin-left: 10px;
-	vertical-align: middle;
-	text-align: center;
+
+	color: #4183c4;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: capitalize;
 	text-decoration: none;
 	text-shadow: 111 0px -1px 1px;
-	font: bold medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #4183c4;
 }
 
 a.nav_link:hover {

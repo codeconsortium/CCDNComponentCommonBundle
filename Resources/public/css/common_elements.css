@@ -26,11 +26,129 @@ a.username_medium { font-size: medium !important; font-weight: bold !important; 
 a.date_link_small { font: small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;	border-bottom:1px dotted black;	text-decoration: none;}
 a.date_link_medium { font: medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; border-bottom:1px dotted black; text-decoration: none;}
 	
-a.button_link:link, a.button_link:visited, a.button_link:hover, a.button_link:active {
-	text-transform: capitalize;
+a.button_link:link, a.button_link:visited, a.button_link:active {
+/*	margin: 5px 8px 5px 0px;*/
+	margin: 0 8px 0 0px;
+	padding: 5px;
+	border: 1px solid #a8cafe;
+	border-radius: 5px;
+	background-color: #a8cafe;
+	
+	color: white;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
-	color: #4183c4;
-	margin: 0px 8px 0px 0px;
+	text-transform: capitalize;
+	white-space: nowrap;
+}
+a.button_link:hover {
+	text-decoration: none;
+	border: 1px solid #9bbbeb;
+	background-color: #73a4fe;
+}
+
+a.button_link_light:link, a.button_link_light:visited, a.button_link_light:active {
+/*	margin: 5px 8px 5px 0px;*/
+	margin: 0 8px 0 0px;
+	padding: 5px;
+	border: 1px solid #a5c6fa;
+	border-radius: 4px;
+	background-color: #a8cafe;
+	
+	color: white;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-decoration: none;
+	text-transform: capitalize;
+	white-space: nowrap;
+}
+a.button_link_light:hover {
+	text-decoration: none;
+	border: 1px solid #9bbbeb;
+	background-color: #73a4fe;
+}
+/************************
+ * FORM ELEMENTS
+ ***********************/
+td.form_label {
+	width: 20%;
+	vertical-align: top;
+	text-align: right;
+}
+
+td.form_widget {
+	width: 60%;
+	vertical-align: top;
+	text-align: left;
+}
+
+td.form_tool_strip {
+	width: 100%;
+	vertical-align: middle;
+	text-align: center;
+}
+
+input.widget_submit {
+	margin: 0 8px 0 0px;
+	padding: 5px;
+	border: 1px solid #a8cafe;
+	border-radius: 5px;
+	background-color: #a8cafe;
+	
+	color: white;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-transform: capitalize;
+	white-space: nowrap;
+}
+input.widget_submit:hover {
+	text-decoration: none;
+	border: 1px solid #9bbbeb;
+	background-color: #73a4fe;
+}
+
+select.widget_select {
+	margin: 5px 8px 5px 0px;
+	padding: 5px;
+	border: 1px solid #a8cafe;
+	border-radius: 5px;
+	background-color: #a8cafe;
+	
+	color: white;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-transform: capitalize;
+	white-space: nowrap;
+}
+select.widget_select:hover {
+	text-decoration: none;
+	border: 1px solid #9bbbeb;
+	background-color: #73a4fe;
+}
+
+label.checkbox_widget_label {
+	font: x-small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+label.widget_label {
+	overflow: hidden;
+	margin: 20px;
+}
+
+input.widget_text {
+	display: block;
+	width: 500px;
+	size: 100;
+	overflow: hidden;
+	font: large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+}
+
+textarea.widget_textarea {
+	display: block;
+	width: 500px;
+	height: 200px;
+	cols: 100;
+	rows: 40;
+	overflow: scroll;
 }
 /************************
  * COMMON SPANS
@@ -41,7 +159,7 @@ a.button_link:link, a.button_link:visited, a.button_link:hover, a.button_link:ac
 
 .heading_glow {
 	color: #eee;
-	font: bold small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	font: bold medium "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 	text-shadow: #111 0px -1px 1px;
 	text-transform: capitalize;
 	text-decoration: none;
@@ -93,26 +211,13 @@ span.stat_large { font: large "Helvetica Neue", Arial, Helvetica, Geneva, sans-s
 .padding_5 { padding: 5px !important; }
 .padding_10 { padding: 10px !important; }
 /************************
- * COMMON BORDERS
- ***********************/
-.border_none { border: none !important; }
-.border_light_silver { border: 1px solid #dee4e4; }
-.border_red {  border: 2px solid red !important; }
-/************************
  * COMMON BACKGROUNDS
  ***********************/
 .bg_header_smoke { background: url(../images/common/header_bg_smoke.png) repeat-x !important; }
 .bg_header_item { /*background-color: #f8faff !important;*/}
-.bg_header_sub_item {
-	border-top: 1px solid #eef0f0;
-	border-bottom: 1px solid #eef0f0;
-}
-
 .bg_highlight_light { background-color: #fafafa !important; }
 .bg_highlight_red { background-color: #ff9896 !important; }
 .bg_highlight_orange { background-color: #fec499; }
-
-.bg_item_light { background-color: #fafafa !important; }
 
 .bg_flash_message {	background-color: #fffcc7 !important; }
 /************************
@@ -132,15 +237,34 @@ span.stat_large { font: large "Helvetica Neue", Arial, Helvetica, Geneva, sans-s
 div.row { display: block; overflow: hidden; vertical-align: top; clear: both; }
 div.column { display: inline-block; overflow: hidden; vertical-align: top; }
 
+div.float_left {
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+	float: left;
+	clear: none;
+	z-index: 1;
+	position: static;
+}
+
+div.float_right {
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+	float: right;
+	clear: none;
+	z-index: 2;
+	position: relative;
+}
+
 div.common_box_5 {
 	display: block;
 	width: 100% auto;
 	padding: 0px;
 	margin: 10px;
 	overflow: hidden;
+	border: 1px solid #eaeaea; /*#dfdfdf;*/
 	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
 }
 
 div.common_box_10 {
@@ -150,8 +274,6 @@ div.common_box_10 {
 	margin: 10px;
 	overflow: hidden;
 	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
 }
 
 div.common_box_header {
@@ -165,13 +287,27 @@ div.common_box_header {
 	clear: both;
 }
 
+div.common_box_sub_header {
+	display: block;
+	width: 100% auto;
+	height: 25px;
+	line-height: 25px;
+	white-space: nowrap;
+	padding: 5px;
+	vertical-align: middle;
+	background-color: #f6f6f6;
+	border-top: 1px solid #eee;
+	overflow: hidden;
+	clear: both;
+}
+
 div.common_box_panel {
 	display: block;
 	width: 100% auto;
 	height: 100% auto;
 	padding: 5px;
-	background-color: #f6f6f6;
-	border-top: 1px solid #f5f7f7;
+	background-color: #fafafa;
+	border-top: 1px solid #eee;
 	overflow: hidden;
 	clear: both;
 }
@@ -179,13 +315,14 @@ div.common_box_panel {
 div.common_tool_strip {
 	display: block;
 	width: 100% auto;
-	height: 100% auto;
+	height: 30px;
+	line-height: 28px;
+	vertical-align: middle;
 	padding: 5px;
-	background-color: #f8fafd;
+	background-color: #fafafa;
 	border-top: 1px solid #eee;
 	overflow: hidden;
-	clear: both;	
-/*	border-bottom: 1px solid #eee;*/
+	clear: both;
 }
 
 
@@ -195,14 +332,18 @@ div.scrollable_panel {
 }
 
 /************************
- * COMMON ITEM
+ * COMMON CHAT BUBBLE ITEM
  ***********************/
 div.text_bubble {
+	display: block;
+	width: 100% auto;
+	padding: 0px;
+	margin: 10px;
+	overflow: visible;
 	background-color: white;
-	border: 1px solid silver;
 	position: relative;
+	top: 5px;
 	z-index: 1;
-	top: -20px;
 }
 div.text_bubble_deleted {
 	background-color: #dee0e0;
@@ -213,27 +354,71 @@ img.text_bubble_chevron {
 	border: 0;
 	margin: 0;
 	padding: 0;
-	position: relative;
-	left: 45px;
-	top: -5px;
+	position: absolute;
+	left: 35px;
+	top: -19px;
 	z-index: 3;
+	visibility: visible;
+	overflow: visible;
 }
 
+div.text_bubble_header {
+	display: block;
+	width: 100% auto;
+	height: 35px;
+	line-height: 32px;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: middle;
+	
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-top: 1px solid #cfcfcf;
+	border-left: 1px solid #cfcfcf;
+	border-right: 1px solid #cfcfcf;	
+/*	background-color: #fcfcfc;*/
+	text-align: right;
+	
+	border-bottom: 1px solid #cfcfcf;
+	background-color: #efefef;
+}
+
+div.text_bubble_body {
+	display: block;
+	width: 100% auto;
+	margin: 0px;
+	padding: 15px;
+	border-left: 1px solid #cfcfcf;
+	border-right: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
+	background-color: white;
+}
+
+div.text_bubble_footer {
+	display: block;
+	width: 100% auto;
+	margin: 0px;
+	padding: 8px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-left: 1px solid #cfcfcf;
+	border-right: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
+/*	background-color: #fcfcfc;*/
+	background-color: #efefef;
+}
 /* **********************************
  * COMMON LIST TABLE
  * *********************************/
 table.common_list {
 	width: 100%;
 	border-spacing: 1px;
-	
 	border-radius:2px;
-	-moz-border-radius:2px;
-	-webkit-border-radius:2px;
 }
 
 table.common_list thead { background-color: #f8fafd; }
 table.common_list tbody { }
-table.common_list tfoot { }
+table.common_list tfoot { background-color: #f8fafd; }
 
 tr.row_odd {
 	background-color: #fafcff;
@@ -248,30 +433,62 @@ table.common_list th {
 	vertical-align: middle;
 	padding: 5px;
 	text-transform: capitalize;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }
 table.common_list td {
 	padding: 10px;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }
 /* **********************************
  * COMMON PAGINATION
  * *********************************/
+div.pagerfanta {
+	display: block;
+	width: 100% auto;
+	height: 30px;
+	line-height: 28px;
+	vertical-align: middle;
+	padding: 5px;
+	background-color: #fafafa;
+	border-top: 1px solid #eee;
+	overflow: hidden;
+	clear: both;
+	/*
+	display: inline-block;
+	height: 30px;
+	line-height: 28px;
+	vertical-align: middle;*/
+}
 .paginate {margin-left: 10px;}	
 .pagerfanta {}
 .pagerfanta a, .pagerfanta span {
-    display: inline-block;
-    border: 1px solid #c6c6c6;
-    color: #707070;
-    margin-right: .2em;
-    padding: .25em .35em;
-    border-radius:2px;
-	-moz-border-radius:2px;
-	-webkit-border-radius:2px;
-	font: bold small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-	background-color: #e2e2e2;
-	text-shadow: white 0px 1px 2px;
+	margin: 2px 5px 2px 0px;
+	padding: 5px;
+	border-radius: 4px;
+	color: white;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-decoration: none;
+	text-transform: capitalize;
+	white-space: nowrap;
+	background-color: #73a4fe;
+	border: 1px solid #9bbbeb;
 }
-.pagerfanta a {text-decoration: none;}
-.pagerfanta a:hover {background: #ccf;}
+.pagerfanta a:hover {
+	text-decoration: none;
+	border: 1px solid #3f6ffe;
+	background-color: #488bfd;
+}
 .pagerfanta .dots {border-width: 0;}
-.pagerfanta .current {background: #d8defe;font-weight: #b9e0fe;border: 1px solid #c6c6c6;}
-.pagerfanta .disabled {border: 1px solid #d0d0d0;color: #d0d0d0;}
+.pagerfanta .current {
+	border: 1px solid #b3dbfc;
+	background-color: #d7e6ff;
+	font-weight: #b9e0fe;
+}
+.pagerfanta .disabled {
+	border: 1px solid #d0d0d0;
+	background-color: #e0e0e0;
+	color: #cfcfcf;
+}
