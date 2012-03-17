@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,13 +26,13 @@
 			</div>			
 			
 			<div id="primary_bar">
-				<div id="logo"><img class="site_logo" width="212px" height="25px" src="{{ asset('bundles/ccdncomponentcommon/images/layout/header/logo.png') }}" /></div>
+				<div id="logo"><img class="site_logo" width="212" height="25" src="{{ asset('bundles/ccdncomponentcommon/images/layout/header/logo.png') }}" alt="site logo" /></div>
 				{% if is_granted('ROLE_USER') %}
 				<div class="bar_box" id="login"><a class="primary_bar" href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout' |trans({}, 'FOSUserBundle') }}</a></div>
 				<div class="bar_box" id="register"><a class="primary_bar" href="{{ path('cc_profile_show') }}">{{ app.user.username }}</a></div>		
 				<div class="bar_box" id="inbox">
 					<a class="primary_bar" href="{{ path('cc_message_index') }}">
-						<img class="icon_16x16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Silver/16x16/16x16_email.png') }}" />
+						<img class="icon_16x16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Silver/16x16/16x16_email.png') }}" alt="inbox" />
 						{{ unreadMessageCount() }}
 					</a>
 				</div>
@@ -47,7 +47,7 @@
 		<div id="body">
 	        <div class="left_column_container">
 				<div class="left_column">
-					<a name="#top"></a>
+					<a id="#top"></a>
 		            {% block body %}{% endblock %}
 				</div>
 	        </div>
