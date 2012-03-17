@@ -116,10 +116,11 @@ select.widget_select {
 	border-radius: 5px;
 	background-color: #a8cafe;
 	
-	color: black;
+	color: #fff;
 	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
 	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
 	white-space: nowrap;
 }
 select.widget_select:hover {
@@ -127,6 +128,12 @@ select.widget_select:hover {
 	border: 1px solid #9bbbeb;
 	background-color: #73a4fe;
 }
+option.widget_select {
+	background-color: #fff;
+	color: #000;
+	text-shadow: none;
+}
+
 
 label.checkbox_widget_label {
 	font: x-small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -319,8 +326,10 @@ div.common_tool_strip {
 	display: block;
 	width: auto;
 	height: 30px;
-	line-height: 28px;
+	line-height: 30px;
 	vertical-align: middle;
+	white-space: nowrap;
+	margin: 0px;
 	padding: 5px;
 	background-color: #fafafa;
 	border-top: 1px solid #eee;
@@ -451,7 +460,7 @@ div.pagerfanta {
 	display: block;
 	width: auto;
 	height: 30px;
-	line-height: 28px;
+	line-height: 30px;
 	vertical-align: middle;
 	padding: 5px;
 	background-color: #fafafa;
@@ -467,9 +476,11 @@ div.pagerfanta {
 .paginate {margin-left: 10px;}	
 .pagerfanta {}
 .pagerfanta a, .pagerfanta span {
-	margin: 2px 5px 2px 0px;
+/*	margin: 2px 5px 2px 0px;
+	padding: 5px;*/
+	margin: 5px 8px 5px 0px;
 	padding: 5px;
-	border-radius: 4px;
+	border-radius: 5px;
 	color: white;
 	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
