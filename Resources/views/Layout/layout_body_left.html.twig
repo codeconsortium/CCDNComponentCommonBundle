@@ -5,8 +5,8 @@
         <title>{% block title %}{% endblock %}</title>
 
 		{% block stylesheets %}
-		<link href="{{ asset('bundles/ccdncomponentcommon/css/layout_body_left.css') }}" rel="stylesheet" type="text/css" />
-		<link href="{{ asset('bundles/ccdncomponentcommon/css/common_elements.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('bundles/ccdncomponentcommon/css/layout_body_left.css') }}" rel="stylesheet" type="text/css">
+		<link href="{{ asset('bundles/ccdncomponentcommon/css/common_elements.css') }}" rel="stylesheet" type="text/css">
 		{% endblock %}
 		
 		{% block javascripts %}
@@ -47,7 +47,7 @@
 		<div id="body">
 	        <div class="left_column_container">
 				<div class="left_column">
-					<a id="#top"></a>
+					<div name="top"></div>
 		            {% block body %}{% endblock %}
 				</div>
 	        </div>
