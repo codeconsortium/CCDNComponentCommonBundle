@@ -30,41 +30,42 @@ a.button_link:link, a.button_link:visited, a.button_link:active {
 /*	margin: 5px 8px 5px 0px;*/
 	margin: 0 8px 0 0px;
 	padding: 5px;
-	border: 1px solid #a8cafe;
+	border: 1px solid #9bbbeb;
 	border-radius: 5px;
-	background-color: #a8cafe;
+	background-color: #73a4fe;
 	
 	color: white;
 	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
 	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
 	white-space: nowrap;
 }
 a.button_link:hover {
 	text-decoration: none;
 	border: 1px solid #9bbbeb;
-	background-color: #73a4fe;
+	background-color: #6994fe;
 }
 
 a.button_link_light:link, a.button_link_light:visited, a.button_link_light:active {
 /*	margin: 5px 8px 5px 0px;*/
 	margin: 0 8px 0 0px;
 	padding: 5px;
-	border: 1px solid #a5c6fa;
-	border-radius: 4px;
-	background-color: #a8cafe;
+	border: 1px solid #9bbbeb;
+	border-radius: 5px;
+	background-color: #73a4fe;
 	
 	color: white;
 	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
-	text-decoration: none;
 	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
 	white-space: nowrap;
 }
 a.button_link_light:hover {
 	text-decoration: none;
 	border: 1px solid #9bbbeb;
-	background-color: #73a4fe;
+	background-color: #6994fe;
 }
 /************************
  * FORM ELEMENTS
@@ -90,20 +91,21 @@ td.form_tool_strip {
 input.widget_submit {
 	margin: 0 8px 0 0px;
 	padding: 5px;
-	border: 1px solid #a8cafe;
+	border: 1px solid #9bbbeb;
 	border-radius: 5px;
-	background-color: #a8cafe;
+	background-color: #73a4fe;
 	
 	color: white;
 	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
 	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
 	white-space: nowrap;
 }
 input.widget_submit:hover {
 	text-decoration: none;
 	border: 1px solid #9bbbeb;
-	background-color: #73a4fe;
+	background-color: #6994fe;
 }
 
 select.widget_select {
@@ -113,10 +115,11 @@ select.widget_select {
 	border-radius: 5px;
 	background-color: #a8cafe;
 	
-	color: white;
+	color: black;
 	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
 	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
 	white-space: nowrap;
 }
 select.widget_select:hover {
@@ -160,7 +163,7 @@ textarea.widget_textarea {
 .heading_glow {
 	color: #eee;
 	font: bold medium "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-	text-shadow: #111 0px -1px 1px;
+	text-shadow: 0px -1px 1px #111;
 	text-transform: capitalize;
 	text-decoration: none;
 	text-align: center;
@@ -366,7 +369,7 @@ div.text_bubble_header {
 	display: block;
 	width: auto;
 	height: 35px;
-	line-height: 32px;
+	line-height: 35px;
 	margin: 0px;
 	padding: 0px;
 	vertical-align: middle;
@@ -472,6 +475,7 @@ div.pagerfanta {
 	text-align: left;
 	text-decoration: none;
 	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
 	white-space: nowrap;
 	background-color: #73a4fe;
 	border: 1px solid #9bbbeb;
@@ -485,7 +489,7 @@ div.pagerfanta {
 .pagerfanta .current {
 	border: 1px solid #b3dbfc;
 	background-color: #d7e6ff;
-	color: #b9e0fe;
+	color: #000;
 	font-style: italic;
 }
 .pagerfanta .disabled {
