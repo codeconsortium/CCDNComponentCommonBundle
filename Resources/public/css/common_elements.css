@@ -241,8 +241,8 @@ span.stat_large { font: large "Helvetica Neue", Arial, Helvetica, Geneva, sans-s
 /************************
  * COMMON BOXES
  ***********************/ 
-div.row { display: block; overflow: hidden; vertical-align: top; clear: both; }
-div.column { display: inline-block; overflow: hidden; vertical-align: top; }
+div.row { display: block; width: auto; height: auto; overflow: hidden; vertical-align: top; clear: both; }
+div.column { display: inline-block; width: auto; height: auto; overflow: hidden; vertical-align: top; }
 
 div.float_left {
 	display: inline-block;
