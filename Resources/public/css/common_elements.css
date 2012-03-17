@@ -12,7 +12,7 @@ img.avatar { width: 100px; height: 100px; }
 /* **********************************
  * COMMON LINKS
  * *********************************/
-a:link, a:visited, a:active { color: #4a89c6; font: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;	text-decoration: none; }
+a:link, a:visited, a:active { color: #4a89c6; text-decoration: none; font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
 a:hover { text-decoration: underline; }
 
 a.sidebar { font-size: small; font-weight: bold; color: #373737; }
@@ -137,7 +137,7 @@ label.widget_label {
 input.widget_text {
 	display: block;
 	width: 500px;
-	size: 100;
+/*	size: 100px;*/
 	overflow: hidden;
 	font: large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 }
@@ -146,8 +146,8 @@ textarea.widget_textarea {
 	display: block;
 	width: 500px;
 	height: 200px;
-	cols: 100;
-	rows: 40;
+/*	cols: 100;
+	rows: 40;*/
 	overflow: scroll;
 }
 /************************
@@ -259,7 +259,7 @@ div.float_right {
 
 div.common_box_5 {
 	display: block;
-	width: 100% auto;
+	width: auto;
 	padding: 0px;
 	margin: 10px;
 	overflow: hidden;
@@ -269,7 +269,7 @@ div.common_box_5 {
 
 div.common_box_10 {
 	display: block;
-	width: 100% auto;
+	width: auto;
 	padding: 0px;
 	margin: 10px;
 	overflow: hidden;
@@ -278,7 +278,7 @@ div.common_box_10 {
 
 div.common_box_header {
 	display: block;
-	width: 100% auto;
+	width: auto;
 	height: 23px;
 	padding: 5px;
 	text-align: center;
@@ -289,7 +289,7 @@ div.common_box_header {
 
 div.common_box_sub_header {
 	display: block;
-	width: 100% auto;
+	width: auto;
 	height: 25px;
 	line-height: 25px;
 	white-space: nowrap;
@@ -303,8 +303,8 @@ div.common_box_sub_header {
 
 div.common_box_panel {
 	display: block;
-	width: 100% auto;
-	height: 100% auto;
+	width: auto;
+	height: auto;
 	padding: 5px;
 	background-color: #fafafa;
 	border-top: 1px solid #eee;
@@ -314,7 +314,7 @@ div.common_box_panel {
 
 div.common_tool_strip {
 	display: block;
-	width: 100% auto;
+	width: auto;
 	height: 30px;
 	line-height: 28px;
 	vertical-align: middle;
@@ -327,7 +327,7 @@ div.common_tool_strip {
 
 
 div.scrollable_panel {
-	width: 100% auto;
+	width: auto;
 	overflow: auto;
 }
 
@@ -336,7 +336,7 @@ div.scrollable_panel {
  ***********************/
 div.text_bubble {
 	display: block;
-	width: 100% auto;
+	width: auto;
 	padding: 0px;
 	margin: 10px;
 	overflow: visible;
@@ -364,7 +364,7 @@ img.text_bubble_chevron {
 
 div.text_bubble_header {
 	display: block;
-	width: 100% auto;
+	width: auto;
 	height: 35px;
 	line-height: 32px;
 	margin: 0px;
@@ -385,7 +385,7 @@ div.text_bubble_header {
 
 div.text_bubble_body {
 	display: block;
-	width: 100% auto;
+	width: auto;
 	margin: 0px;
 	padding: 15px;
 	border-left: 1px solid #cfcfcf;
@@ -396,7 +396,7 @@ div.text_bubble_body {
 
 div.text_bubble_footer {
 	display: block;
-	width: 100% auto;
+	width: auto;
 	margin: 0px;
 	padding: 8px;
 	border-bottom-left-radius: 5px;
@@ -446,7 +446,7 @@ table.common_list td {
  * *********************************/
 div.pagerfanta {
 	display: block;
-	width: 100% auto;
+	width: auto;
 	height: 30px;
 	line-height: 28px;
 	vertical-align: middle;
@@ -485,7 +485,8 @@ div.pagerfanta {
 .pagerfanta .current {
 	border: 1px solid #b3dbfc;
 	background-color: #d7e6ff;
-	font-weight: #b9e0fe;
+	color: #b9e0fe;
+	font-style: italic;
 }
 .pagerfanta .disabled {
 	border: 1px solid #d0d0d0;
