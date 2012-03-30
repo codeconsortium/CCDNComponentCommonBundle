@@ -6,7 +6,7 @@ body { padding: 0px; }
 div#header {
 	display: block;
 	position: fixed;
-	width: 100%;
+	width: auto;
 	padding: 0px;
 	margin: 0px;
 	left: -1px;
@@ -24,7 +24,7 @@ div#header {
  ***********************/
 div#primary_bar {
 	display: block;
-	width: 100%;
+	width: auto;
 	height: 35px;
 	margin: 0px;
 	top: -1px;
@@ -35,16 +35,17 @@ div#primary_bar {
 }
 
 div#primary_bar div.bar_box {
-	display: inline;
-	position: absolute;
+	display: inline-block;
+/*	position: absolute;*/
 	height: 35px;
-	margin: 0;
-	padding: 0;
 	line-height: 35px;
+	margin: 0;
 	white-space: nowrap;
 	text-align: center;
 	vertical-align: middle;
 	border-left: 1px solid #ccc;
+	padding-left: 25px;
+	padding-right: 20px;
 }
 
 div#primary_bar div#logo {
@@ -62,20 +63,42 @@ img.site_logo {
 	border: 0;
 }
 
-div#primary_bar div#inbox {
+div#primary_left {
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+	float: left;
+	clear: none;
+/*	z-index: 1;*/
+	position: static;	
+}
+
+div#primary_right {
+	display: inline-block;
+	height: 35px;
+/*	line-height: 35px;*/
+	overflow: hidden;
+	vertical-align: middle;
+	float: right;
+	clear: none;
+/*	z-index: 2;*/
+/*	position: relative;*/
+}
+
+/*div#primary_bar div#inbox {
 	width: 90px;
 	right: 190px;
-}
+}*/
 
-div#primary_bar div#login {
+/*div#primary_bar div#login {
 	width: 90px;
 	right: 10px;
-}
+}*/
 
-div#primary_bar div#register {
+/*div#primary_bar div#register {
 	width: 90px;
 	right: 101px;
-}
+}*/
 
 a.primary_bar:link, a.primary_bar:visited, a.primary_bar:active, a.primary_bar:hover {
 	display: inline;
@@ -92,7 +115,7 @@ a.primary_bar:link, a.primary_bar:visited, a.primary_bar:active, a.primary_bar:h
  ***********************/
 div#secondary_bar {
 	display: block;
-	width: 100%;
+	width: auto;
 	height: 24px;
 	margin: 0px;
 	

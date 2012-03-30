@@ -27,20 +27,24 @@
 			</div>			
 			
 			<div id="primary_bar">
-				<div id="logo"><img class="site_logo" width="212" height="25" src="{{ asset('bundles/ccdncomponentcommon/images/layout/header/logo.png') }}" alt="site logo"></div>
-				{% if is_granted('ROLE_USER') %}
-				<div class="bar_box" id="login"><a class="primary_bar" href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout' |trans({}, 'FOSUserBundle') }}</a></div>
-				<div class="bar_box" id="register"><a class="primary_bar" href="{{ path('cc_profile_show') }}">{{ app.user.username }}</a></div>		
-				<div class="bar_box" id="inbox">
-					<a class="primary_bar" href="{{ path('cc_message_index') }}">
-						<img class="icon_16x16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Silver/16x16/16x16_email.png') }}" alt="inbox">
-						{{ unreadMessageCount() }}
-					</a>
+				<div id="primary_left">
+					<div id="logo"><img class="site_logo" width="212" height="25" src="{{ asset('bundles/ccdncomponentcommon/images/layout/header/logo.png') }}" alt="site logo"></div>
 				</div>
-				{% else %}
-				<div class="bar_box" id="login"><a class="primary_bar" href="{{ path('fos_user_security_login') }}">{{ 'layout.login' |trans({}, 'FOSUserBundle') }}</a></div>
-				<div class="bar_box" id="register"><a class="primary_bar" href="{{ path('fos_user_registration_register') }}">{{ 'layout.register' |trans({}, 'FOSUserBundle') }}</a></div>
-				{% endif %}
+				<div id="primary_right">
+					{% if is_granted('ROLE_USER') %}
+					<div class="bar_box">
+						<a class="primary_bar" href="{{ path('cc_message_index') }}">
+							<img class="icon_16x16" with="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Silver/16x16/16x16_email.png') }}" alt="inbox">
+							{{ unreadMessageCount() }}
+						</a>
+					</div>
+					<div class="bar_box"><a class="primary_bar" href="{{ path('cc_profile_show') }}">{{ app.user.username }}</a></div>		
+					<div class="bar_box"><a class="primary_bar" href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout' |trans({}, 'FOSUserBundle') }}</a></div>
+					{% else %}
+					<div class="bar_box" id="register"><a class="primary_bar" href="{{ path('fos_user_registration_register') }}">{{ 'layout.register' |trans({}, 'FOSUserBundle') }}</a></div>
+					<div class="bar_box" id="login"><a class="primary_bar" href="{{ path('fos_user_security_login') }}">{{ 'layout.login' |trans({}, 'FOSUserBundle') }}</a></div>
+					{% endif %}
+				</div>
 			</div>
 			
 		</div>

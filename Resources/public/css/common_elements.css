@@ -102,6 +102,18 @@ input.widget_submit {
 	text-transform: capitalize;
 	text-shadow: 0px 0px 2px #666;
 	white-space: nowrap;
+/*	margin: 0 8px 0 0px;
+	padding: 5px;
+	border: 1px solid #a8cafe;
+	border-radius: 5px;
+	background-color: #a8cafe;
+	
+	color: white;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
+	white-space: nowrap;*/
 }
 input.widget_submit:hover {
 	text-decoration: none;
