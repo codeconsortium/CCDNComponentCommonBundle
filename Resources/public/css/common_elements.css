@@ -331,6 +331,17 @@ div.common_box_panel {
 	clear: both;
 }
 
+div.common_table_panel {
+	display: block;
+	width: auto;
+	height: auto;
+	padding: 0px;
+	padding-right: -2px;
+	background-color: #fafafa;
+	overflow: hidden;
+	clear: both;
+}
+
 div.common_tool_strip {
 	display: block;
 	width: auto;
@@ -433,8 +444,8 @@ div.text_bubble_footer {
  * *********************************/
 table.common_list {
 	width: 100%;
-	border-spacing: 1px;
-	border-radius:2px;
+	border-spacing: 0px;
+	border-top: 1px solid #eee;
 }
 
 table.common_list thead { background-color: #f8fafd; }
@@ -454,13 +465,13 @@ table.common_list th {
 	vertical-align: middle;
 	padding: 5px;
 	text-transform: capitalize;
-	border-right: 1px solid #eee;
-	border-bottom: 1px solid #eee;
+/*	border-right: 1px solid #eee;*/
+/*	border-bottom: 1px solid #eee;*/
 }
 table.common_list td {
 	padding: 10px;
-	border-right: 1px solid #eee;
-	border-bottom: 1px solid #eee;
+/*	border-right: 1px solid #eee;*/
+	border-top: 1px solid #eee;
 }
 /* **********************************
  * COMMON PAGINATION

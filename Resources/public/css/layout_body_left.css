@@ -63,6 +63,15 @@ img.site_logo {
 	border: 0;
 }
 
+div#primary_bar div#search {
+/*	left: 10px;
+	top: -15px;*/
+	padding: 4px !important;
+	position: relative;
+	border: 0;
+	overflow: hidden;
+}
+
 div#primary_left {
 	display: inline-block;
 	overflow: hidden;
