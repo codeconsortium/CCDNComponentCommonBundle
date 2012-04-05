@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace CCDNComponent\CommonBundle\Entity\Manager;
+namespace CCDNComponent\CommonBundle\Manager;
 
 use Symfony\Component\DependencyInjection\ContainerAware;
 

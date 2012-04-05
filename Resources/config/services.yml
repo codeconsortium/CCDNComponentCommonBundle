@@ -1,13 +1,22 @@
 parameters:
     ccdn_component_common.bin.si.units.class:             CCDNComponent\CommonBundle\Component\BinSIUnits
+    
     ccdn_component_common.bin.si.units.extension.class:   CCDNComponent\CommonBundle\Extension\BinSIUnitsExtension
     ccdn_component_common.cycler.extension.class:         CCDNComponent\CommonBundle\Extension\CyclerExtension
     ccdn_component_common.div_ceil.extension.class:       CCDNComponent\CommonBundle\Extension\DivCeilExtension
     ccdn_component_common.param.extension.class:          CCDNComponent\CommonBundle\Extension\ParamExtension
 
 services:
+    
+    #
+    # Components.
+    #
     ccdn_component_common.bin.si.units:
         class: %ccdn_component_common.bin.si.units.class%
+        
+    #
+    # Twig Extensions.
+    #
     ccdn_component_common.binSIUnits.extension:
         class:  %ccdn_component_common.bin.si.units.extension.class%
         arguments: [@service_container]
