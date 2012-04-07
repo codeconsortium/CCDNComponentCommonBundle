@@ -72,12 +72,6 @@ a.sidebar:hover { text-decoration: underline; }
 a:link, a:visited, a:active { color: #4a89c6; text-decoration: none; font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
 a:hover { text-decoration: underline; }
 
-a.header_strip { font-size: small; font-weight: bold; }
-a.heading_link { font-size: medium; font-weight: bold; }
-
-a.username_small { font-size: small !important; font-weight: bold !important; text-transform: capitalize !important; }
-a.username_medium { font-size: medium !important; font-weight: bold !important; text-transform: capitalize !important; }
-
 a.date_link_small { font: small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;	border-bottom:1px dotted black;	text-decoration: none;}
 a.date_link_medium { font: medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; border-bottom:1px dotted black; text-decoration: none;}
 	
@@ -139,7 +133,7 @@ h6 { font: x-small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margi
 
 span.common_body { font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; vertical-align: top; }
 /*.common_note { font: bold x-small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }*/
-span.posted_at { font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; }
+span.posted_on { font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; }
 span.edited_on { font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; }
 span.deleted_on { font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; }
 

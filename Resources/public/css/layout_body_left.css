@@ -68,9 +68,9 @@ div#primary_bar div.bar_box {
 }
 
 div#primary_bar div#logo {
+	display: inline-block;
 	left: 0px;
 	padding: 0px !important;
-	position: absolute;
 	vertical-align: middle;
 	border: 0;
 }
@@ -84,10 +84,19 @@ img.site_logo {
 }
 
 div#primary_bar div#search {
-	padding: 4px !important;
-	position: relative;
-	border: 0;
-	overflow: hidden;
+	display: inline-block;
+	height: 35px;
+
+	margin-right: 0%;
+	margin-left: 0%;
+
+	white-space: nowrap;
+	text-align: center;
+	vertical-align: middle;
+/*	border-left: 1px solid #ccc;*/
+	padding-top: 2px;
+	padding-left: 25px;
+	padding-right: 20px;
 }
 
 a.primary_bar:link, a.primary_bar:visited, a.primary_bar:active, a.primary_bar:hover {
