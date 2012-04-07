@@ -2,20 +2,75 @@
 	font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 	color: #373737;
 }
+
+hr {
+	border: 0;
+	height: 1px;
+	color: #ddd;
+	background-color: #ddd;
+}
 /* **********************************
  * COMMON ICONS
  * *********************************/
-img.icon_16x16 { border: 0; margin: 0; padding: 0; width: 16px; height: 16px; vertical-align: middle; }
-img.icon_32x32 { border: 0; margin: 0; padding: 0; width: 32px; height: 32px; vertical-align: middle; }
+img.icon16 { border: 0; margin: 0; padding: 0; width: 16px; height: 16px; vertical-align: middle; }
+img.icon32 { border: 0; margin: 0; padding: 0; width: 32px; height: 32px; vertical-align: middle; }
 
 img.avatar { width: 100px; height: 100px; }
+
+img.button_16x16 {
+	width: 16px;
+	height: 16px;
+	border: 0px;
+	margin: 5px;
+	padding: 0px;
+	vertical-align: middle;
+}
+
+/* **********************************
+ * SIDEBAR
+ * *********************************/
+div.sidebar {
+	margin-bottom: 15px;
+}
+
+div.sidebar_header {
+	display: block;
+	width: auto;
+	padding: 5px;
+	border-bottom: 1px solid #ccc;
+}
+
+span.sidebar_header {
+	font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	font-size: medium; 
+	font-weight: bold;
+	color: #373737;
+}
+
+div.sidebar_panel {
+	display: block;
+	width: auto;
+	padding: 5px;
+	border-bottom: 1px solid #eee;
+}
+div.sidebar_panel:hover {
+ 	background-color: #eee;
+}
+
+a.sidebar:link, a.sidebar:visited, a.sidebar:active { 
+	font-size: small; 
+
+	font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	text-decoration: none;
+	color: #373737;
+}
+a.sidebar:hover { text-decoration: underline; }
+
 /* **********************************
  * COMMON LINKS
  * *********************************/
 a:link, a:visited, a:active { color: #4a89c6; text-decoration: none; font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
 a:hover { text-decoration: underline; }
-
-a.sidebar { font-size: small; font-weight: bold; color: #373737; }
 
 a.header_strip { font-size: small; font-weight: bold; }
 a.heading_link { font-size: medium; font-weight: bold; }
@@ -68,126 +123,26 @@ a.button_link_light:hover {
 	border: 1px solid #9bbbeb;
 	background-color: #73a4fe;
 }
-/************************
- * FORM ELEMENTS
- ***********************/
-td.form_label {
-	width: 20%;
-	vertical-align: top;
-	text-align: right;
-}
 
-td.form_widget {
-	width: 60%;
-	vertical-align: top;
-	text-align: left;
-}
-
-td.form_tool_strip {
-	width: 100%;
+a.section_sub_header_link {
 	vertical-align: middle;
-	text-align: center;
-}
-
-input.widget_submit {
-	margin: 0 8px 0 0px;
-	padding: 5px;
-	border: 1px solid #a8cafe;
-	border-radius: 5px;
-	background-color: #a8cafe;
-	
-	color: white;
-	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-align: left;
-	text-transform: capitalize;
-	text-shadow: 0px 0px 2px #666;
-	white-space: nowrap;
-/*	margin: 0 8px 0 0px;
-	padding: 5px;
-	border: 1px solid #a8cafe;
-	border-radius: 5px;
-	background-color: #a8cafe;
-	
-	color: white;
-	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-align: left;
-	text-transform: capitalize;
-	text-shadow: 0px 0px 2px #666;
-	white-space: nowrap;*/
-}
-input.widget_submit:hover {
-	text-decoration: none;
-	border: 1px solid #9bbbeb;
-	background-color: #73a4fe;
-}
-
-select.widget_select {
-	margin: 5px 8px 5px 0px;
-	padding: 5px;
-	border: 1px solid #a8cafe;
-	border-radius: 5px;
-	background-color: #a8cafe;
-	
-	color: #000;
-	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-align: left;
-	text-transform: capitalize;
-	text-shadow: 0px 0px 2px #666;
-	white-space: nowrap;
-}
-select.widget_select:hover {
-	text-decoration: none;
-	border: 1px solid #9bbbeb;
-	background-color: #73a4fe;
-}
-option.widget_select {
-	background-color: #fff;
-	color: #000;
-	text-shadow: none;
-}
-
-
-label.checkbox_widget_label {
-	font: x-small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-
-label.widget_label {
-	overflow: hidden;
-	margin: 20px;
-}
-
-input.widget_text {
-	display: block;
-	width: 500px;
-	overflow: hidden;
-	font: large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-}
-
-textarea.widget_textarea {
-	display: block;
-	width: 500px;
-	height: 200px;
-	overflow: scroll;
 }
 /************************
  * COMMON SPANS
  ***********************/
-.common_h1 { font: x-large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
-.common_h2 { font: large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
-.common_h3 { font: medium "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
+h1 { font: xx-large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
+h2 { font: x-large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
+h3 { font: large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
+h4 { font: medium "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
+h5 { font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
+h6 { font: x-small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
 
-.heading_glow {
-	color: #eee;
-	font: bold medium "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-	text-shadow: #111 0px -1px 1px;
-	text-transform: capitalize;
-	text-decoration: none;
-	text-align: center;
-	vertical-align: middle;
-}
+span.common_body { font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; vertical-align: top; }
+/*.common_note { font: bold x-small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }*/
+span.posted_at { font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; }
+span.edited_on { font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; }
+span.deleted_on { font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; }
 
-.common_body { font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
-.common_note { font: bold x-small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
 
 span.label_small { font: small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: gray; }
 span.label_medium {	font: medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: gray; }
@@ -197,6 +152,26 @@ span.stat_xsmall { font: x-small "Helvetica Neue", Arial, Helvetica, Geneva, san
 span.stat_small { font: small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #373737; }
 span.stat_medium {	font: medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #373737; }
 span.stat_large { font: large "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #373737; }
+
+/************************
+ * COMMON FLASH BOXES
+ ***********************/
+/*.flash_notice {
+	margin-left: 5px;
+	padding-left: 25px;
+	background: url(../images/icons/Black/16x16/16x16_check.png) no-repeat;
+
+	line-height: 1.5;
+	font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+}*/
+
+div.flash_notice { background-color: #a0d8fd; padding: 5px; }
+div.flash_warning { background-color: #fec499; padding: 5x; }
+div.flash_severe { background-color: #ff9896; padding: 5px; }
+
+span.flash {
+	font: medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #373737; 
+}
 
 /************************
  * COMMON ALIGNMENTS
@@ -229,27 +204,7 @@ span.stat_large { font: large "Helvetica Neue", Arial, Helvetica, Geneva, sans-s
 .padding_2 { padding: 2px !important; }
 .padding_5 { padding: 5px !important; }
 .padding_10 { padding: 10px !important; }
-/************************
- * COMMON BACKGROUNDS
- ***********************/
-.bg_header_smoke { background: url(../images/common/header_bg_smoke.png) repeat-x !important; }
-.bg_header_item { /*background-color: #f8faff !important;*/}
-.bg_highlight_light { background-color: #fafafa !important; }
-.bg_highlight_red { background-color: #ff9896 !important; }
-.bg_highlight_orange { background-color: #fec499; }
 
-.bg_flash_message {	background-color: #fffcc7 !important; }
-/************************
- * COMMON FLASH BOXES
- ***********************/
-.flash_notice {
-	margin-left: 5px;
-	padding-left: 25px;
-	background: url(../images/icons/Black/16x16/16x16_check.png) no-repeat;
-
-	line-height: 1.5;
-	font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-}
 /************************
  * COMMON BOXES
  ***********************/ 
@@ -276,73 +231,69 @@ div.float_right {
 	position: relative;
 }
 
-div.common_box_5 {
+div.section_wrap_square {
 	display: block;
 	width: auto;
 	padding: 0px;
 	margin: 10px;
 	overflow: hidden;
-	border: 1px solid #eaeaea; /*#dfdfdf;*/
-	border-radius: 5px;
 }
 
-div.common_box_10 {
+div.section_header {
 	display: block;
 	width: auto;
-	padding: 0px;
-	margin: 10px;
-	overflow: hidden;
-	border-radius: 10px;
-}
-
-div.common_box_header {
-	display: block;
-	width: auto;
-	height: 23px;
+	height: auto;
+	margin-bottom: 5px;
 	padding: 5px;
-	text-align: center;
+	text-align: left;
 	vertical-align: middle;
 	overflow: hidden;
 	clear: both;
+	
+	border-bottom: 1px solid #eee;
 }
 
-div.common_box_sub_header {
+div.section_sub_header {
 	display: block;
 	width: auto;
-	height: 25px;
-	line-height: 25px;
-	white-space: nowrap;
+	height: auto;
+	margin-bottom: 5px;
 	padding: 5px;
-	vertical-align: middle;
-	background-color: #f6f6f6;
-	border-top: 1px solid #eee;
 	overflow: hidden;
 	clear: both;
+
+	vertical-align: middle;
+
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background-color: #fafafa;
 }
 
-div.common_box_panel {
+div.section_panel {
 	display: block;
 	width: auto;
 	height: auto;
 	padding: 5px;
-	background-color: #fafafa;
-	border-top: 1px solid #eee;
+	margin-bottom: 5px;
 	overflow: hidden;
 	clear: both;
 }
 
-div.common_table_panel {
+div.section_table_panel {
 	display: block;
 	width: auto;
 	height: auto;
 	padding: 0px;
-	padding-right: -2px;
-	background-color: #fafafa;
+	margin-bottom: 10px;
 	overflow: hidden;
 	clear: both;
+
+	background-color: #fefefe;
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eaeaea;
 }
 
-div.common_tool_strip {
+div.section_tool_strip {
 	display: block;
 	width: auto;
 	height: 30px;
@@ -351,8 +302,6 @@ div.common_tool_strip {
 	white-space: nowrap;
 	margin: 0px;
 	padding: 5px;
-	background-color: #fafafa;
-	border-top: 1px solid #eee;
 	overflow: hidden;
 	clear: both;
 }
@@ -363,115 +312,248 @@ div.scrollable_panel {
 	overflow: auto;
 }
 
-/************************
- * COMMON CHAT BUBBLE ITEM
- ***********************/
-div.text_bubble {
-	display: block;
-	width: auto;
-	padding: 0px;
-	margin: 10px;
-	overflow: visible;
-	background-color: white;
-	position: relative;
-	top: 5px;
-	z-index: 1;
-}
-div.text_bubble_deleted {
-	background-color: #dee0e0;
-	text-align: center;
-	vertical-align: middle;
-}
-img.text_bubble_chevron {
-	border: 0;
-	margin: 0;
-	padding: 0;
-	position: absolute;
-	left: 35px;
-	top: -19px;
-	z-index: 3;
-	visibility: visible;
-	overflow: visible;
-}
-
-div.text_bubble_header {
-	display: block;
-	width: auto;
-	height: 35px;
-	line-height: 35px;
-	margin: 0px;
-	padding: 0px;
-	vertical-align: middle;
-	
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	border-top: 1px solid #cfcfcf;
-	border-left: 1px solid #cfcfcf;
-	border-right: 1px solid #cfcfcf;	
-/*	background-color: #fcfcfc;*/
-	text-align: right;
-	
-	border-bottom: 1px solid #cfcfcf;
-	background-color: #efefef;
-}
-
-div.text_bubble_body {
-	display: block;
-	width: auto;
-	margin: 0px;
-	padding: 15px;
-	border-left: 1px solid #cfcfcf;
-	border-right: 1px solid #cfcfcf;
-	border-bottom: 1px solid #cfcfcf;
-	background-color: white;
-}
-
-div.text_bubble_footer {
-	display: block;
-	width: auto;
-	margin: 0px;
-	padding: 8px;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	border-left: 1px solid #cfcfcf;
-	border-right: 1px solid #cfcfcf;
-	border-bottom: 1px solid #cfcfcf;
-/*	background-color: #fcfcfc;*/
-	background-color: #efefef;
-}
 /* **********************************
  * COMMON LIST TABLE
  * *********************************/
 table.common_list {
 	width: 100%;
 	border-spacing: 0px;
-	border-top: 1px solid #eee;
+	border-radius:2px;
 }
 
 table.common_list thead { background-color: #f8fafd; }
 table.common_list tbody { }
 table.common_list tfoot { background-color: #f8fafd; }
 
-tr.row_odd {
-	background-color: #fafcff;
-}
+tr.row_odd { background-color: #fafcff; }
+tr.row_even { background-color: #f6faff; }
 
-tr.row_even {
-	background-color: #f6faff;
-}
+tr.row_odd:hover { background-color: #dde6ec; }
+tr.row_even:hover { background-color: #dde6ec; }
 
-table.common_list th {
-	text-align: left;
-	vertical-align: middle;
-	padding: 5px;
-	text-transform: capitalize;
-/*	border-right: 1px solid #eee;*/
-/*	border-bottom: 1px solid #eee;*/
-}
-table.common_list td {
+
+table.common_list th.left {
 	padding: 10px;
-/*	border-right: 1px solid #eee;*/
-	border-top: 1px solid #eee;
+	vertical-align: middle;
+	text-align: left;
+	text-transform: capitalize;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+table.common_list th.center {
+	padding: 10px;
+	vertical-align: middle;
+	text-align: center;
+	text-transform: capitalize;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+table.common_list th.icon {
+	width: 18px;
+	padding: 4px;
+	vertical-align: middle;
+	text-align: center;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+table.common_list td.left {
+	padding: 10px;
+	vertical-align: top;
+	text-align: left;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+table.common_list td.center {
+	padding: 10px;
+	vertical-align: top;
+	text-align: center;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+table.common_list td.right {
+	padding: 10px;
+	vertical-align: top;
+	text-align: right;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+table.common_list td.icon16 {
+	width: 21px;
+	padding: 5px;
+	vertical-align: middle;
+	text-align: center;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+table.common_list td.icon32 {
+	width: 42px;
+	padding: 5px;
+	vertical-align: middle;
+	text-align: center;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+span.table_header { font: bold medium "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; text-transform: capitalize; }
+span.table_label { font: bold medium "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; text-transform: capitalize; }
+span.table_data { font: medium "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; text-transform: capitalize; }
+span.table_empty { font: bold medium "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; margin: 50px; }
+
+/************************
+ * FORM ELEMENTS
+ ***********************/
+td.form_label {
+	width: 20%;
+	padding: 10px;
+	
+	vertical-align: top;
+	text-align: right;
+	
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+td.form_widget {
+	width: 60%;
+	padding: 10px;
+
+	vertical-align: top;
+	text-align: left;
+
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+td.form_tool_strip {
+	width: 100%;
+	padding: 10px;
+
+	vertical-align: middle;
+	text-align: center;
+	
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+input.widget_submit {
+	margin: 0 8px 0 0px;
+	padding: 5px;
+	border: 1px solid #a8cafe;
+	border-radius: 5px;
+	background-color: #a8cafe;
+	
+	color: white;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
+	white-space: nowrap;
+}
+input.widget_submit:hover {
+	text-decoration: none;
+	border: 1px solid #9bbbeb;
+	background-color: #73a4fe;
+}
+
+input.widget_submit_prominent {
+	margin: 0 8px 0 0px;
+	padding: 5px;
+	border: 1px solid #9bbbeb;
+	border-radius: 5px;
+	background-color: #73a4fe;
+	
+	color: white;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
+	white-space: nowrap;
+}
+input.widget_submit_prominent:hover {
+	text-decoration: none;
+	border: 1px solid #488bfd;
+	background-color: #3f6ffe;
+}
+
+select.widget_select {
+	margin: 5px 8px 5px 0px;
+	padding: 5px;
+	border: 1px solid #a8cafe;
+	border-radius: 5px;
+	background-color: #a8cafe;
+	
+	color: #000;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
+	white-space: nowrap;
+}
+select.widget_select:hover {
+	text-decoration: none;
+	border: 1px solid #9bbbeb;
+	background-color: #73a4fe;
+}
+option.widget_select {
+	background-color: #fff;
+	color: #000;
+	text-shadow: none;
+}
+
+
+label.checkbox_widget_label {
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+label.widget_label {
+	overflow: hidden;
+	margin: 20px;
+	font: bold medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: capitalize;
+}
+
+input.widget_text {
+	display: block;
+	width: 500px;
+	overflow: hidden;
+	font: large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+}
+
+textarea.widget_textarea {
+	display: block;
+	width: 500px;
+	height: 200px;
+	overflow: scroll;
+}
+/************************
+ * CHAT BUBBLE
+ ***********************/
+div.round_box {
+	display: block;
+	width: auto;
+	padding: 10px;
+	margin: 10px;
+	overflow: visible;
+	background-color: white;
+
+	vertical-align: top;	
+	z-index: 1;	
+	
+	border-radius: 10px;
+	border: 2px solid #ddd;
+}
+
+img.text_bubble_chevron {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	left: -30px;
+	top: 30px;
+	z-index: 3;
+	visibility: visible;
+	overflow: visible;
 }
 /* **********************************
  * COMMON PAGINATION
@@ -483,8 +565,10 @@ div.pagerfanta {
 	line-height: 30px;
 	vertical-align: middle;
 	padding: 5px;
-	background-color: #fafafa;
-	border-top: 1px solid #eee;
+/*	background-color: #fafafa;
+/*	border-top: 1px solid #eee;
+	border-left: 1px solid #eaeaea;
+	border-right: 1px solid #eaeaea;*/
 	overflow: hidden;
 	clear: both;
 	/*

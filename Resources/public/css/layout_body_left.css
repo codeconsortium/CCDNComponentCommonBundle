@@ -31,27 +31,45 @@ div#primary_bar {
 	overflow: hidden;
 	list-style-position: inside;
 	list-style-type: none;
-	background-image: url(../images/layout/header/upper_bar_bg.png);
+	/*background-image: url(../images/layout/header/upper_bar_bg.png);*/
+	background-color: #eee;
+}
+
+
+div#primary_left {
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+	float: left;
+	clear: none;
+	position: static;	
+}
+
+div#primary_right {
+	display: inline-block;
+	height: 35px;
+	overflow: hidden;
+	vertical-align: middle;
+	float: right;
+	clear: none;
 }
 
 div#primary_bar div.bar_box {
 	display: inline-block;
-/*	position: absolute;*/
 	height: 35px;
 	line-height: 35px;
 	margin: 0;
 	white-space: nowrap;
 	text-align: center;
 	vertical-align: middle;
-	border-left: 1px solid #ccc;
+/*	border-left: 1px solid #ccc;*/
 	padding-left: 25px;
 	padding-right: 20px;
 }
 
 div#primary_bar div#logo {
-	left: 10px;
-/*	top: -15px;*/
-	padding: 4px !important;
+	left: 0px;
+	padding: 0px !important;
 	position: absolute;
 	border: 0;
 }
@@ -64,58 +82,19 @@ img.site_logo {
 }
 
 div#primary_bar div#search {
-/*	left: 10px;
-	top: -15px;*/
 	padding: 4px !important;
 	position: relative;
 	border: 0;
 	overflow: hidden;
 }
 
-div#primary_left {
-	display: inline-block;
-	overflow: hidden;
-	vertical-align: middle;
-	float: left;
-	clear: none;
-/*	z-index: 1;*/
-	position: static;	
-}
-
-div#primary_right {
-	display: inline-block;
-	height: 35px;
-/*	line-height: 35px;*/
-	overflow: hidden;
-	vertical-align: middle;
-	float: right;
-	clear: none;
-/*	z-index: 2;*/
-/*	position: relative;*/
-}
-
-/*div#primary_bar div#inbox {
-	width: 90px;
-	right: 190px;
-}*/
-
-/*div#primary_bar div#login {
-	width: 90px;
-	right: 10px;
-}*/
-
-/*div#primary_bar div#register {
-	width: 90px;
-	right: 101px;
-}*/
-
 a.primary_bar:link, a.primary_bar:visited, a.primary_bar:active, a.primary_bar:hover {
 	display: inline;
-	color: #eee;
-	font: bold medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #555;
+	font: small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-transform: capitalize;
 	text-decoration: none;
-	text-shadow: #111 0px -1px 1px;
+	text-shadow: #eee 0px 0px 0px;
 }
 
 
@@ -174,13 +153,14 @@ div.left_column_container {
 	padding: 0px;
 	overflow: hidden;
 	float: left;
-	width: 100%;
+	width: 100%;	
 }
 
 div.left_column {
 	margin: 8px 205px 5px 5px;
 	padding: 1px;
 	overflow: hidden;
+	border-right: 1px solid #eee;
 }
 
 div.right_column_container {
