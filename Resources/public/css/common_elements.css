@@ -124,12 +124,12 @@ a.section_sub_header_link {
 /************************
  * COMMON SPANS
  ***********************/
-h1 { font: xx-large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
-h2 { font: x-large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
-h3 { font: large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
-h4 { font: medium "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
-h5 { font: small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
-h6 { font: x-small "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
+h1 { font: 14pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
+h2 { font: 14pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
+h3 { font: 13pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
+h4 { font: 12pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
+h5 { font: 11pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
+h6 { font: 10pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; margin: 5px; padding: 0px; text-transform: capitalize; }
 
 span.common_head { font: 11pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; }
 span.common_body { font: 10pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; vertical-align: top; }
