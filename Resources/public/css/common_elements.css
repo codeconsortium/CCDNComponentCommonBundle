@@ -284,10 +284,6 @@ div.section_table_panel {
 	margin-bottom: 10px;
 	overflow: hidden;
 	clear: both;
-
-	background-color: #fefefe;
-	border-top: 1px solid #eee;
-	border-left: 1px solid #eaeaea;
 }
 
 div.section_tool_strip {
@@ -316,6 +312,10 @@ table.common_list {
 	width: 100%;
 	border-spacing: 0px;
 	border-radius:2px;
+	
+	background-color: #fefefe;
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eaeaea;
 }
 
 table.common_list thead { background-color: #f8fafd; }
