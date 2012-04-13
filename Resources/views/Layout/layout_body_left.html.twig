@@ -11,8 +11,15 @@
 		
 		{% block javascripts %}
 		<script src="{{ asset('bundles/ccdncomponentcommon/js/jquery-1.7.1.min.js') }}" type="text/javascript"></script>
+		<script src="{{ asset('bundles/ccdncomponentcommon/js/jquery.tipsy.js') }}" type="text/javascript"></script>
+		
 		{% endblock %}
 
+		<script type='text/javascript'>
+			$(function() {
+				$('a[rel=tipsy]').tipsy({fade: true, gravity: 'n'});
+			});
+		</script>
     </head>
     <body>
 		
