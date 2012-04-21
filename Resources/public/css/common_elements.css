@@ -51,18 +51,18 @@ div.sidebar_panel {
 	display: block;
 	width: auto;
 	padding: 5px;
-	border-bottom: 1px solid #eee;
+/*	border-bottom: 1px solid #eee;*/
 }
 div.sidebar_panel:hover {
  	background-color: #eee;
 }
 
-a.sidebar:link, a.sidebar:visited, a.sidebar:active { 
-	font-size: small; 
+a.sidebar:link, a.sidebar:visited, a.sidebar:active {
+	/*color: #373737;*/
 
-	font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 	text-decoration: none;
-	color: #373737;
+	color: #4a89c6;
+	font: 11pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 }
 a.sidebar:hover { text-decoration: underline; }
 
