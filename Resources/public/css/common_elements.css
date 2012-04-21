@@ -72,6 +72,18 @@ a.sidebar:hover { text-decoration: underline; }
 a:link, a:visited, a:active { color: #4a89c6; text-decoration: none; font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; }
 a:hover { text-decoration: underline; }
 
+h1 a:link, a:visited, a:active { color: #4a89c6; text-decoration: none; font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; font-weight: bold; }
+h1 a:hover { text-decoration: underline; }
+
+h2 a:link, a:visited, a:active { color: #4a89c6; text-decoration: none; font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; font-weight: bold; }
+h2 a:hover { text-decoration: underline; }
+
+h3 a:link, a:visited, a:active { color: #4a89c6; text-decoration: none; font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; font-weight: bold; }
+h3 a:hover { text-decoration: underline; }
+
+h4 a:link, a:visited, a:active { color: #4a89c6; text-decoration: none; font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; font-weight: bold; }
+h4 a:hover { text-decoration: underline; }
+
 a.date_link_small { font: small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;	border-bottom:1px dotted black;	text-decoration: none;}
 a.date_link_medium { font: medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; border-bottom:1px dotted black; text-decoration: none;}
 	
@@ -323,10 +335,10 @@ table.common_list tbody { }
 table.common_list tfoot { background-color: #f8fafd; }
 
 tr.row_odd { background-color: #fafcff; }
-tr.row_even { background-color: #f6faff; }
+tr.row_even { background-color: #f9faff; }
 
-tr.row_odd:hover { background-color: #dde6ec; }
-tr.row_even:hover { background-color: #dde6ec; }
+tr.row_odd:hover { background-color: #ebf0f0; }
+tr.row_even:hover { background-color: #ebf0f0; } /* #dde6ec; */
 
 
 table.common_list th.left {
@@ -396,6 +408,9 @@ span.table_header { font: bold 11pt "Helvetica Neue", Helvetica, Arial, Geneva, 
 span.table_label { font: bold 10pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; text-transform: capitalize; }
 span.table_data { font: 10pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; text-transform: capitalize; }
 span.table_empty { font: bold medium "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; color: #555; margin: 50px; }
+
+span.table_data a:link, a:visited, a:active { color: #4a89c6; text-decoration: none; font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; font-weight: bold; }
+span.table_data a:hover { text-decoration: underline; }
 
 /************************
  * FORM ELEMENTS
