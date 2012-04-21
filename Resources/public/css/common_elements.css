@@ -597,18 +597,22 @@ div.pagerfanta {
 	margin: 5px 8px 5px 0px;
 	padding: 5px;
 	border-radius: 5px;
-	color: white;
-	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #757575;
+	font: bold 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
 	text-decoration: none;
 	text-transform: capitalize;
-	text-shadow: 0px 0px 2px #666;
+	text-shadow: 0px 0px 1px #666;
 	white-space: nowrap;
-	background-color: #73a4fe;
-	border: 1px solid #9bbbeb;
+	/*background-color: #73a4fe;*/
+	/*border: 1px solid #9bbbeb;*/
+	border: 1px solid #c4ccea;
+	/*background-color: #d3e0ff;*/
+	background-color: #dde6ec;
 }
 .pagerfanta a:hover {
 	text-decoration: none;
+	color: white;
 	border: 1px solid #3f6ffe;
 	background-color: #488bfd;
 }
