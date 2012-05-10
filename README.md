@@ -19,6 +19,11 @@ Available on github <http://www.github.com/codeconsortium/>
 For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.
 
+Icons courtesy of http://pc.de/icons/ licensed under http://creativecommons.org/licenses/by/3.0/
+
+Emoticons courtesy of freesmileys.org licensed here http://www.freesmileys.org/copyright.php
+
+Other graphics are works of CodeConsortium.
 
 Dependencies:
 -------------
