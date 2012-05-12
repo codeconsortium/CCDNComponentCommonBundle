@@ -1,4 +1,4 @@
-body { padding: 0px; }
+body { margin: 0px; padding: 0px; }
 
 /************************
  * Page Header
@@ -195,7 +195,34 @@ div.right_column {
  ***********************/
 
 div#footer {
-	width: 100%;
+/*	width: 100%;
 	height: 100px;
+	padding: 10px;
 	clear: both;
+	border-top: 1px solid #eee;
+	background-color: #eee;*/
+	display: block;
+/*	position: fixed;*/
+	width: auto;
+	margin: 0px;
+	padding: 20px;
+	left: -1px;
+	right: -1px;
+	bottom:  -1px;
+/*	top: -1px;
+	z-index: 20;*/
+	clear: both;
+	overflow: hidden;
+/*	border-bottom: 1px solid #DDD;*/
+	border-top: 1px solid #eee;
+	background-color: #ddd;
+	text-align: center;
+}
+
+span.footnote {
+	text-align: center;
+	text-decoration: none;
+	color: #bbb;
+	font: 11pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	
 }
