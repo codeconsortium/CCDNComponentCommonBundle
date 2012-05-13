@@ -1,4 +1,4 @@
-body { margin: 0px; padding: 0px; }
+body { margin: 0px; padding: 0px; background-color: #ddd; }
 
 /************************
  * Page Header
@@ -154,7 +154,9 @@ div#body {
 	vertical-align: top;
 	margin: 0px;
 	padding: 0px;
-	margin-top: 90px;
+	margin-top: 60px;
+	background-color: #ffffff;
+	min-height: 800px;
 }
 
 div.left_column_container {
@@ -165,6 +167,7 @@ div.left_column_container {
 	overflow: hidden;
 	float: left;
 	width: 100%;	
+	background-color: #ffffff;
 }
 
 div.left_column {
@@ -224,5 +227,4 @@ span.footnote {
 	text-decoration: none;
 	color: #bbb;
 	font: 11pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-	
 }
