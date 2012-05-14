@@ -27,10 +27,14 @@
 		
 		<div id="header">
 			<div id="secondary_bar">
-				<a class="nav_link" href="{{ path('cc_dashboard_index') }}">Dashboard</a>
+				{% set header_links = param('ccdn_component_common.header_bar_links') %}
+				{% for row, link in header_links %}
+					<a class="nav_link" href="{{ path(link['route']) }}">{{ link['label'] | trans({}, link['bundle']) }}</a>
+				{% endfor %}
+{#				<a class="nav_link" href="{{ path('cc_dashboard_index') }}">Dashboard</a>
 				<a class="nav_link" href="{{ path('cc_members_index') }}">{{ 'layout.header_links.members' | trans({}, 'CCDNComponentCommonBundle') }}</a>
 				<a class="nav_link" href="{{ path('cc_forum_category_index') }}">{{ 'layout.header_links.forum' | trans({}, 'CCDNComponentCommonBundle') }}</a>
-			{#	<a class="nav_link" href="">{{ 'layout.header_links.downloads' | trans({}, 'CCDNComponentCommonBundle') }}</a>
+				<a class="nav_link" href="">{{ 'layout.header_links.downloads' | trans({}, 'CCDNComponentCommonBundle') }}</a>
 				<a class="nav_link" href="">{{ 'layout.header_links.answers' | trans({}, 'CCDNComponentCommonBundle') }}</a>
 				<a class="nav_link" href="">{{ 'layout.header_links.articles' | trans({}, 'CCDNComponentCommonBundle') }}</a>
 				<a class="nav_link" href="">{{ 'layout.header_links.knowledge_base' | trans({}, 'CCDNComponentCommonBundle') }}</a>#}

@@ -60,4 +60,18 @@ and then run `bin/vendors install` script.
 	php app/console assets:install --symlink web/
 ```
 	
+
+If you wish to add a link to the header links in the default template of the common bundle, then add this to your app/config.
+
+```sh
+#
+# for CCDNComponent CommonBundle
+#
+ccdn_component_common:
+    header_bar_links:
+        - { bundle: CCDNComponentDashboardBundle, label: 'layout.header_links.dashboard', route: 'cc_dashboard_index' }
+        - { bundle: CCDNUserMemberBundle, label: 'layout.header_links.members', route: 'cc_members_index'}
+        - { bundle: CCDNForumForumBundle, label: 'layout.header_links.forum', route: cc_forum_index }
+```
+
 Then your done, if you need further help/support, have suggestions or want to contribute please join the community at [www.codeconsortium.com](http://www.codeconsortium.com)

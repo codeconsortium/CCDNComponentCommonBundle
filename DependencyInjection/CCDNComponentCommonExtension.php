@@ -38,5 +38,8 @@ class CCDNComponentCommonExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+
+		$container->setParameter('ccdn_component_common.header_bar_links', $config['header_bar_links']);
+
     }
 }
