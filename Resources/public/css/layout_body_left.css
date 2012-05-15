@@ -1,4 +1,4 @@
-body { margin: 0px; padding: 0px; background-color: #ddd; }
+body { margin: 0px; padding: 0px; /*background-color: #ddd;*/ }
 
 /************************
  * Page Header
@@ -155,7 +155,6 @@ div#body {
 	margin: 0px;
 	padding: 0px;
 	margin-top: 60px;
-	background-color: #ffffff;
 	min-height: 800px;
 }
 
@@ -167,7 +166,6 @@ div.left_column_container {
 	overflow: hidden;
 	float: left;
 	width: 100%;	
-	background-color: #ffffff;
 }
 
 div.left_column {
@@ -180,7 +178,7 @@ div.left_column {
 div.right_column_container {
 	vertical-align: top;
 	display: block;
-	margin: 0px 0px 0px -205px;
+	margin: 0px 0px 0px -210px;
 	padding: 0px;
 	overflow: hidden;
 	float: right;

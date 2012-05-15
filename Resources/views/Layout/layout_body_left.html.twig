@@ -49,20 +49,20 @@
 				<div id="primary_right">
 					{% if is_granted('ROLE_USER') %}
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path('cc_message_index') }}" rel="tipsy" title="Inbox"><img class="icon16" with="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_email.png') }}" alt="inbox">&nbsp;{{ unreadMessageCount() }}</a>
+						<a class="primary_bar" href="{{ path('cc_message_index') }}" rel="tipsy" title="Inbox"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_email.png') }}" alt="inbox">&nbsp;{{ unreadMessageCount() }}</a>
 					</div>
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path('cc_profile_show') }}" rel="tipsy" title="Account"><img class="icon16" with="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_account.png') }}" alt="account">&nbsp;{{ app.user.username }}</a>
+						<a class="primary_bar" href="{{ path('cc_profile_show') }}" rel="tipsy" title="Account"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_account.png') }}" alt="account">&nbsp;{{ app.user.username }}</a>
 					</div>		
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path('fos_user_security_logout') }}" rel="tipsy" title="Sign out"><img class="icon16" with="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_out.png') }}" alt="sign out">&nbsp;{{ 'layout.logout' |trans({}, 'FOSUserBundle') }}</a>
+						<a class="primary_bar" href="{{ path('fos_user_security_logout') }}" rel="tipsy" title="Sign out"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_out.png') }}" alt="sign out">&nbsp;{{ 'layout.logout' |trans({}, 'FOSUserBundle') }}</a>
 					</div>
 					{% else %}
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path('fos_user_registration_register') }}" rel="tipsy" title="Register"><img class="icon16" with="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_up.png') }}" alt="register">&nbsp;{{ 'layout.register' |trans({}, 'FOSUserBundle') }}</a>
+						<a class="primary_bar" href="{{ path('fos_user_registration_register') }}" rel="tipsy" title="Register"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_up.png') }}" alt="register">&nbsp;{{ 'layout.register' |trans({}, 'FOSUserBundle') }}</a>
 					</div>
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path('fos_user_security_login') }}" rel="tipsy" title="Sign in"><img class="icon16" with="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_in.png') }}" alt="sign in">&nbsp;{{ 'layout.login' |trans({}, 'FOSUserBundle') }}</a>
+						<a class="primary_bar" href="{{ path('fos_user_security_login') }}" rel="tipsy" title="Sign in"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_in.png') }}" alt="sign in">&nbsp;{{ 'layout.login' |trans({}, 'FOSUserBundle') }}</a>
 					</div>
 					{% endif %}
 				</div>
