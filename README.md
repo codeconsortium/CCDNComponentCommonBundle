@@ -2,10 +2,9 @@ CCDNComponent CommonBundle README.
 ==================================
 
   
-Notes:  
-------
+## Notes:  
   
-This bundle is for the symfony framework and thusly requires Symfony 2.0.x and PHP 5.3.6
+This bundle is for the symfony framework and requires Symfony 2.0.x and PHP 5.3.6
   
 This project uses Doctrine 2.0.x and so does not require any specific database.
   
@@ -25,53 +24,45 @@ Emoticons courtesy of freesmileys.org licensed here http://www.freesmileys.org/c
 
 Other graphics are works of CodeConsortium.
 
-Dependencies:
--------------
+## Description.
+
+This is a complimentary AdminBundle for forum management of the [CCDNForum ForumBundle](https://github.com/codeconsortium/CCDNForumForumBundle) for Symfony (2.0.11).
+
+You will need to look at [CCDNForum ForumBundle](https://github.com/codeconsortium/CCDNForumForumBundle) and install it along with its dependencies before using this bundle.
+
+## Features.
+
+CommonBundle Provides the following features:
 
 
-Installation:
--------------
-    
-1) Download and install the dependencies.
-   
-   You can set deps to include:
 
-```sh
-[CCDNComponentCommonBundle]
-    git=http://github.com/codeconsortium/CommonBundle.git
-    target=/bundles/CCDNComponent/CommonBundle
-```
-add to your autoload:
+Before installation of this bundle, you can download the [Sandbox](https://github.com/codeconsortium/CCDNForumSandBox) for testing/development and feature review, or alternatively see the product in use at [CodeConsortium](http://www.codeconsortium.com).
 
-```php
-    'CCDNComponent'    => __DIR__.'/../vendor/bundles',
-```
-and then run `bin/vendors install` script.
+## Documentation.
 
-2) In your AppKernel.php add the following bundles to the registerBundles method array:  
+Documentation can be found in the `Resources/doc/index.md` file in this bundle:
 
-```php
-	new CCDNComponent\CommonBundle\CCDNComponentCommonBundle(),
-```
-	
-3) Symlink assets to your public web directory by running this in the command line:
+[Read the Documentation](http://github.com/codeconsortium/CommonBundle/blob/master/Resources/doc/index.md).
 
-```sh
-	php app/console assets:install --symlink web/
-```
-	
+## Installation.
 
-If you wish to add a link to the header links in the default template of the common bundle, then add this to your app/config.
+All the installation instructions are located in [documentation](http://github.com/codeconsortium/CommonBundle/blob/master/Resources/doc/Install.md).
 
-```sh
-#
-# for CCDNComponent CommonBundle
-#
-ccdn_component_common:
-    header_bar_links:
-        - { bundle: CCDNComponentDashboardBundle, label: 'layout.header_links.dashboard', route: 'cc_dashboard_index' }
-        - { bundle: CCDNUserMemberBundle, label: 'layout.header_links.members', route: 'cc_members_index'}
-        - { bundle: CCDNForumForumBundle, label: 'layout.header_links.forum', route: cc_forum_index }
-```
+## License.
 
-Then your done, if you need further help/support, have suggestions or want to contribute please join the community at [www.codeconsortium.com](http://www.codeconsortium.com)
+This software is licensed under the MIT license. See the complete license file in the bundle:
+
+	Resources/meta/LICENSE
+
+[Read the License](http://github.com/codeconsortium/CommonBundle/blob/master/Resources/meta/LICENSE).
+
+## About.
+
+[CCDNComponent CommonBundle](http://github.com/codeconsortium/CommonBundle) is free software from [Code Consortium](http://www.codeconsortium.com). 
+See also the list of [contributors](http://github.com/codeconsortium/CommonBundle/contributors).
+
+## Reporting an issue or feature request.
+
+Issues and feature requests are tracked in the [Github issue tracker](http://github.com/codeconsortium/CommonBundle/issues).
+
+Discussions and debates on the project can be further discussed at [Code Consortium](http://www.codeconsortium.com).
