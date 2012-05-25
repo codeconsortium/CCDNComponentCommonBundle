@@ -1,0 +1,95 @@
+/* **********************************
+ * BUTTONS
+ * *********************************/
+.button {
+	margin: 5px 5px 5px 0px;
+	padding: 7px;
+	border-radius: 2px;
+	color: #757575;
+	font: bold 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-decoration: none;
+	text-transform: capitalize;
+	text-shadow: 0px 0px 3px #ddd;
+	white-space: nowrap;
+	border: 1px solid #ccc;
+	background-color: #eee;
+}
+.button a:hover {
+	text-decoration: none;
+	color: white;
+	border: 1px solid #3f6ffe;
+	background-color: #488bfd;
+}
+.button img {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: middle;
+}
+/* **********************************
+ * COMMON PAGINATION
+ * *********************************/
+div.pagerfanta {
+	display: block;
+	width: auto;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	padding: 5px;
+/*	background-color: #fafafa;
+/*	border-top: 1px solid #eee;
+	border-left: 1px solid #eaeaea;
+	border-right: 1px solid #eaeaea;*/
+	overflow: hidden;
+	clear: both;
+	/*
+	display: inline-block;
+	height: 30px;
+	line-height: 28px;
+	vertical-align: middle;*/
+}
+.paginate {margin-left: 10px;}	
+.pagerfanta {}
+.pagerfanta a, .pagerfanta span {
+/*	margin: 2px 5px 2px 0px;
+	padding: 5px;*/
+	margin: 5px 5px 5px 0px;
+	padding: 7px;
+	border-radius: 2px;
+	color: #757575;
+	font: bold 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-decoration: none;
+	text-transform: capitalize;
+	text-shadow: 0px 0px 3px #ddd;
+	white-space: nowrap;
+	/*background-color: #73a4fe;*/
+	/*border: 1px solid #9bbbeb;*/
+	/*border: 1px solid #c4ccea;*/
+	border: 1px solid #ccc;
+	/*background-color: #d3e0ff;*/
+/*	background-color: #dde6ec;*/
+	background-color: #eee;
+}
+.pagerfanta a:hover {
+	text-decoration: none;
+	color: white;
+	border: 1px solid #3f6ffe;
+	background-color: #488bfd;
+}
+.pagerfanta .dots {border-width: 0;}
+.pagerfanta .current {
+/*	border: 1px solid #b3dbfc;
+	background-color: #d7e6ff;*/
+	border: 1px solid #d0d0d0;
+	background-color: #e0e0e0;
+	color: #000;
+	font-style: italic;
+}
+.pagerfanta .disabled {
+	text-shadow: none;
+	border: 1px solid #d0d0d0;
+	background-color: #e0e0e0;
+	color: #cfcfcf;
+}
