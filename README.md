@@ -46,7 +46,7 @@ CommonBundle Provides the following features:
 	2. jquery.checkboxes.js is for creating a check-all box.
 	3. jquery.tipsy.js is for creating hover tool-tips in the style of github/youtube etc.
 
-Before installation of this bundle, you can download the [Sandbox](https://github.com/codeconsortium/CCDNForumSandBox) for testing/development and feature review, or alternatively see the product in use at [CodeConsortium](http://www.codeconsortium.com).
+Before installation of this bundle, you can download the [Sandbox](https://github.com/codeconsortium/CCDNSandBox) for testing/development and feature review, or alternatively see the product in use at [CodeConsortium](http://www.codeconsortium.com).
 
 ## Documentation.
 
