@@ -1,4 +1,4 @@
-body { margin: 0px; padding: 0px; /*background-color: #ddd;*/ }
+body { margin: 0px; padding: 0px; background-color: #f1f1f1; }
 
 /************************
  * Page Header
@@ -15,7 +15,7 @@ div#header {
 	z-index: 20;
 	clear: both;
 	overflow: hidden;
-	border-bottom: 1px solid #DDD;
+/*	border-bottom: 1px solid #DDD;*/
 }
 
 
@@ -32,7 +32,8 @@ div#primary_bar {
 	list-style-position: inside;
 	list-style-type: none;
 	/*background-image: url(../images/layout/header/upper_bar_bg.png);*/
-	background-color: #eee;
+	/*background-color: #eee;*/
+	background-color: #f1f1f1;
 }
 
 
@@ -155,13 +156,12 @@ a.nav_link:hover {
 div#body {
 	width: 100%;
 	vertical-align: top;
-	margin: 0px;
+	margin: 80px 0 0px 0px;
 	padding: 0px;
-	margin-top: 80px;
 	min-height: 800px;
 }
 
-div.left_column_container {
+div.left_column_container {	
 	vertical-align: top;
 	display: block;
 	margin: 0px;
@@ -172,10 +172,14 @@ div.left_column_container {
 }
 
 div.left_column {
+/*	background-color: #fff;*/
+	
 	margin: 8px 205px 5px 5px;
-	padding: 1px;
+	padding: 0px;
 	overflow: hidden;
-	border-right: 1px solid #eee;
+/*	border-right: 1px solid #eee;*/
+/*	border: 1px solid #ccc;
+	border-radius: 5px;*/
 }
 
 div.right_column_container {
@@ -189,9 +193,13 @@ div.right_column_container {
 }
 
 div.right_column {
+/*	background-color: #fff;*/
+	
 	margin: 8px 5px 5px;
-	padding: 1px;
+	padding: 0px;
 	overflow: hidden;
+/*	border: 1px solid #ccc;
+	border-radius: 5px;*/
 }
 
 /************************
@@ -218,14 +226,13 @@ div#footer {
 	clear: both;
 	overflow: hidden;
 /*	border-bottom: 1px solid #DDD;*/
-	border-top: 1px solid #eee;
-	background-color: #ddd;
+	background-color: #f1f1f1;
 	text-align: center;
 }
 
 span.footnote {
 	text-align: center;
 	text-decoration: none;
-	color: #bbb;
+	color: #aaa;
 	font: 11pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 }

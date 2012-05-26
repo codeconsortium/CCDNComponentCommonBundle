@@ -172,12 +172,50 @@ div.float_right {
 	position: relative;
 }
 
-div.section_wrap_square {
+div.section_wrap_top {
 	display: block;
 	width: auto;
-	padding: 0px;
-	margin: 10px;
+	padding: 10px;
+	margin: 0px;
 	overflow: hidden;
+	border: 1px solid #ddd;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: #fff;
+}
+div.section_wrap_middle {
+	display: block;
+	width: auto;
+	padding: 10px;
+	margin: 0px;
+	overflow: hidden;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	background-color: #fff;
+}
+div.section_wrap_bottom {
+	display: block;
+	width: auto;
+	padding: 10px;
+	margin: 0px 0px 10px;
+	overflow: hidden;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: #fff;
+}
+div.section_wrap_standalone {
+	display: block;
+	width: auto;
+	padding: 10px;
+	margin: 0px 0px 10px;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: #fff;
 }
 
 div.section_header {
