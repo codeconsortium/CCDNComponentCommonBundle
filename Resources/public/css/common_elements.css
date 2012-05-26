@@ -116,6 +116,10 @@ span.stat_small { font: small "Helvetica Neue", Arial, Helvetica, Geneva, sans-s
 span.stat_medium {	font: medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #373737; }
 span.stat_large { font: large "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #373737; }
 
+span.item_timestamp {
+	 font: bold 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #aaa; 
+}
+
 /************************
  * COMMON FLASH BOXES
  ***********************/
