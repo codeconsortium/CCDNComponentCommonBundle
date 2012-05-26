@@ -51,15 +51,12 @@ div.sidebar_panel {
 	display: block;
 	width: auto;
 	padding: 5px;
-/*	border-bottom: 1px solid #eee;*/
 }
 div.sidebar_panel:hover {
  	background-color: #eee;
 }
 
 a.sidebar:link, a.sidebar:visited, a.sidebar:active {
-	/*color: #373737;*/
-
 	text-decoration: none;
 	color: #4a89c6;
 	font: 11pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
@@ -87,49 +84,6 @@ h4 a:hover { text-decoration: underline; }
 a.date_link_small { font: small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;	border-bottom:1px dotted black;	text-decoration: none;}
 a.date_link_medium { font: medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; border-bottom:1px dotted black; text-decoration: none;}
 	
-a.button_link:link, a.button_link:visited, a.button_link:active {
-/*	margin: 5px 8px 5px 0px;*/
-	margin: 0 8px 0 0px;
-	padding: 5px;
-	border: 1px solid #a8cafe;
-	border-radius: 5px;
-	background-color: #a8cafe;
-	
-	color: white;
-	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-align: left;
-	text-transform: capitalize;
-	text-shadow: 0px 0px 2px #666;
-	white-space: nowrap;
-}
-a.button_link:hover {
-	text-decoration: none;
-	border: 1px solid #9bbbeb;
-	background-color: #73a4fe;
-}
-
-a.button_link_light:link, a.button_link_light:visited, a.button_link_light:active {
-/*	margin: 5px 8px 5px 0px;*/
-	margin: 0 8px 0 0px;
-	padding: 5px;
-	border: 1px solid #a5c6fa;
-	border-radius: 5px;
-	background-color: #a8cafe;
-	
-	color: white;
-	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-align: left;
-	text-decoration: none;
-	text-transform: capitalize;
-	text-shadow: 0px 0px 2px #666;
-	white-space: nowrap;
-}
-a.button_link_light:hover {
-	text-decoration: none;
-	border: 1px solid #9bbbeb;
-	background-color: #73a4fe;
-}
-
 a.section_sub_header_link {
 	vertical-align: middle;
 }
@@ -191,28 +145,6 @@ span.flash {
 .v_align_top { vertical-align: top !important; }
 .v_align_middle { vertical-align: middle !important; }
 .v_align_bottom { vertical-align: bottom !important; }
- /************************
- * COMMON MARGINS
- ***********************/
-.margin_0 { margin: 0px !important; }
-.margin_1 { margin: 1px !important; }
-.margin_2 { margin: 2px !important; }
-.margin_5 {	margin: 5px !important; }
-.margin_10 { margin: 10px !important; }
-
-.margin_bottom_0 { margin-bottom: 0px !important; }
-.margin_bottom_1 { margin-bottom: 1px !important; }
-.margin_bottom_2 { margin-bottom: 2px !important; }
-.margin_bottom_5 { margin-bottom: 5px !important; }
-.margin_bottom_10 { margin-bottom: 10px !important; }
-/************************
- * COMMON PADDING
- ***********************/
-.padding_0 { padding: 0px !important; }
-.padding_1 { padding: 1px !important; }
-.padding_2 { padding: 2px !important; }
-.padding_5 { padding: 5px !important; }
-.padding_10 { padding: 10px !important; }
 
 /************************
  * COMMON BOXES
@@ -258,8 +190,6 @@ div.section_header {
 	vertical-align: middle;
 	overflow: hidden;
 	clear: both;
-	
-/*	border-bottom: 1px solid #eee;*/
 }
 
 div.section_sub_header {
@@ -413,132 +343,6 @@ span.table_empty { font: bold medium "Helvetica Neue", Helvetica, Arial, Geneva,
 span.table_data a:link, a:visited, a:active { color: #4a89c6; text-decoration: none; font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; font-weight: bold; }
 span.table_data a:hover { text-decoration: underline; }
 
-/************************
- * FORM ELEMENTS
- ***********************/
-td.form_label {
-	width: 20%;
-	padding: 10px;
-	
-	vertical-align: top;
-	text-align: right;
-	
-	border-right: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-}
-
-td.form_widget {
-	width: 60%;
-	padding: 10px;
-
-	vertical-align: top;
-	text-align: left;
-
-	border-right: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-}
-
-td.form_tool_strip {
-	width: 100%;
-	padding: 10px;
-
-	vertical-align: middle;
-	text-align: center;
-	
-	border-right: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-}
-
-input.widget_submit {
-	margin: 0 8px 0 0px;
-	padding: 5px;
-	border: 1px solid #a8cafe;
-	border-radius: 5px;
-	background-color: #a8cafe;
-	
-	color: white;
-	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-align: left;
-	text-transform: capitalize;
-	text-shadow: 0px 0px 2px #666;
-	white-space: nowrap;
-}
-input.widget_submit:hover {
-	text-decoration: none;
-	border: 1px solid #9bbbeb;
-	background-color: #73a4fe;
-}
-
-input.widget_submit_prominent {
-	margin: 0 8px 0 0px;
-	padding: 5px;
-	border: 1px solid #9bbbeb;
-	border-radius: 5px;
-	background-color: #73a4fe;
-	
-	color: white;
-	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-align: left;
-	text-transform: capitalize;
-	text-shadow: 0px 0px 2px #666;
-	white-space: nowrap;
-}
-input.widget_submit_prominent:hover {
-	text-decoration: none;
-	border: 1px solid #488bfd;
-	background-color: #3f6ffe;
-}
-
-select.widget_select {
-	margin: 5px 8px 5px 0px;
-	padding: 5px;
-	border: 1px solid #a8cafe;
-	border-radius: 5px;
-	background-color: #a8cafe;
-	
-	color: #000;
-	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-align: left;
-	text-transform: capitalize;
-	text-shadow: 0px 0px 2px #666;
-	white-space: nowrap;
-}
-select.widget_select:hover {
-	text-decoration: none;
-	border: 1px solid #9bbbeb;
-	background-color: #73a4fe;
-}
-option.widget_select {
-	background-color: #fff;
-	color: #000;
-	text-shadow: none;
-}
-
-
-label.checkbox_widget_label {
-	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-}
-
-label.widget_label {
-	overflow: hidden;
-	margin: 20px;
-	font: bold medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-transform: capitalize;
-}
-
-input.widget_text {
-	display: block;
-	width: 500px;
-	overflow: hidden;
-	font: large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
-}
-
-textarea.widget_textarea {
-	display: block;
-	width: 500px;
-	height: 200px;
-	overflow: scroll;
-}
 /************************
  * CHAT BUBBLE
  ***********************/

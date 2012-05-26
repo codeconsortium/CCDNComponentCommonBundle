@@ -1,11 +1,138 @@
+/************************
+ * FORM ELEMENTS
+ ***********************/
+td.form_label {
+	width: 20%;
+	padding: 10px;
+	
+	vertical-align: top;
+	text-align: right;
+	
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+td.form_widget {
+	width: 60%;
+	padding: 10px;
+
+	vertical-align: top;
+	text-align: left;
+
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+td.form_tool_strip {
+	width: 100%;
+	padding: 10px;
+
+	vertical-align: middle;
+	text-align: center;
+	
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+input.widget_submit {
+	margin: 0 8px 0 0px;
+	padding: 5px;
+	border: 1px solid #a8cafe;
+	border-radius: 5px;
+	background-color: #a8cafe;
+	
+	color: white;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
+	white-space: nowrap;
+}
+input.widget_submit:hover {
+	text-decoration: none;
+	border: 1px solid #9bbbeb;
+	background-color: #73a4fe;
+}
+
+input.widget_submit_prominent {
+	margin: 0 8px 0 0px;
+	padding: 5px;
+	border: 1px solid #9bbbeb;
+	border-radius: 5px;
+	background-color: #73a4fe;
+	
+	color: white;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
+	white-space: nowrap;
+}
+input.widget_submit_prominent:hover {
+	text-decoration: none;
+	border: 1px solid #488bfd;
+	background-color: #3f6ffe;
+}
+
+select.widget_select {
+	margin: 5px 8px 5px 0px;
+	padding: 5px;
+	border: 1px solid #a8cafe;
+	border-radius: 5px;
+	background-color: #a8cafe;
+	
+	color: #000;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
+	white-space: nowrap;
+}
+select.widget_select:hover {
+	text-decoration: none;
+	border: 1px solid #9bbbeb;
+	background-color: #73a4fe;
+}
+option.widget_select {
+	background-color: #fff;
+	color: #000;
+	text-shadow: none;
+}
+
+
+label.checkbox_widget_label {
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+label.widget_label {
+	overflow: hidden;
+	margin: 20px;
+	font: bold medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: capitalize;
+}
+
+input.widget_text {
+	display: block;
+	width: 500px;
+	overflow: hidden;
+	font: large "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+}
+
+textarea.widget_textarea {
+	display: block;
+	width: 500px;
+	height: 200px;
+	overflow: scroll;
+}
+
 /* **********************************
  * BUTTONS
  * *********************************/
-.button {
+.button_silver {
 	margin: 5px 5px 5px 0px;
 	padding: 7px;
 	border-radius: 2px;
-	color: #757575;
+	color: #777;
 	font: bold 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
 	text-decoration: none;
@@ -15,7 +142,7 @@
 	border: 1px solid #ccc;
 	background-color: #eee;
 }
-.button a:hover {
+.button_silver a:hover {
 	text-decoration: none;
 	color: white;
 	border: 1px solid #3f6ffe;
@@ -27,6 +154,47 @@
 	padding: 0px;
 	vertical-align: middle;
 }
+
+a.button_red:link, a.button_red:visited, a.button_red:active {
+	margin: 0 8px 0 0px;
+	padding: 5px;
+	border: 1px solid #a8cafe;
+	border-radius: 5px;
+	background-color: #a8cafe;
+	
+	color: white;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
+	white-space: nowrap;
+}
+a.button_red:hover {
+	text-decoration: none;
+	border: 1px solid #9bbbeb;
+	background-color: #73a4fe;
+}
+
+a.button_blue:link, a.button_blue:visited, a.button_blue:active {
+	margin: 0 8px 0 0px;
+	padding: 5px;
+	border: 1px solid #a5c6fa;
+	border-radius: 5px;
+	background-color: #a8cafe;
+	
+	color: white;
+	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	text-decoration: none;
+	text-transform: capitalize;
+	text-shadow: 0px 0px 2px #666;
+	white-space: nowrap;
+}
+a.button_blue:hover {
+	text-decoration: none;
+	border: 1px solid #9bbbeb;
+	background-color: #73a4fe;
+}
 /* **********************************
  * COMMON PAGINATION
  * *********************************/
@@ -37,39 +205,23 @@ div.pagerfanta {
 	line-height: 30px;
 	vertical-align: middle;
 	padding: 5px;
-/*	background-color: #fafafa;
-/*	border-top: 1px solid #eee;
-	border-left: 1px solid #eaeaea;
-	border-right: 1px solid #eaeaea;*/
 	overflow: hidden;
 	clear: both;
-	/*
-	display: inline-block;
-	height: 30px;
-	line-height: 28px;
-	vertical-align: middle;*/
 }
 .paginate {margin-left: 10px;}	
 .pagerfanta {}
 .pagerfanta a, .pagerfanta span {
-/*	margin: 2px 5px 2px 0px;
-	padding: 5px;*/
 	margin: 5px 5px 5px 0px;
 	padding: 7px;
 	border-radius: 2px;
-	color: #757575;
+	color: #777;
 	font: bold 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
 	text-decoration: none;
 	text-transform: capitalize;
 	text-shadow: 0px 0px 3px #ddd;
 	white-space: nowrap;
-	/*background-color: #73a4fe;*/
-	/*border: 1px solid #9bbbeb;*/
-	/*border: 1px solid #c4ccea;*/
 	border: 1px solid #ccc;
-	/*background-color: #d3e0ff;*/
-/*	background-color: #dde6ec;*/
 	background-color: #eee;
 }
 .pagerfanta a:hover {
@@ -80,8 +232,6 @@ div.pagerfanta {
 }
 .pagerfanta .dots {border-width: 0;}
 .pagerfanta .current {
-/*	border: 1px solid #b3dbfc;
-	background-color: #d7e6ff;*/
 	border: 1px solid #d0d0d0;
 	background-color: #e0e0e0;
 	color: #000;
