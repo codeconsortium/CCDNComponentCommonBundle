@@ -152,7 +152,26 @@ span.flash {
 
 /************************
  * COMMON BOXES
- ***********************/ 
+ ***********************/
+div.box_notice {
+	display: inline-block;
+	padding: 8px;
+	border-radius: 4px;
+	background-color: #a0d8fd;
+}
+div.box_warning { 
+	display: inline-block;
+	padding: 8px;
+	border-radius: 4px;
+	background-color: #fec499; 
+}
+div.box_severe { 
+	display: inline-block;
+	padding: 8px;
+	border-radius: 4px;
+	background-color: #ff9896; 
+}
+ 
 div.row { display: block; width: auto; height: auto; overflow: hidden; vertical-align: top; clear: both; }
 div.column { display: inline-block; width: auto; height: auto; overflow: hidden; vertical-align: top; }
 
