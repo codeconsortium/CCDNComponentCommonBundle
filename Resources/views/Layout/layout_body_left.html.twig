@@ -50,7 +50,8 @@
 				<div id="primary_right">
 					{% if is_granted('ROLE_USER') %}
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path('cc_message_index') }}" rel="tipsy" title="Inbox"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_email.png') }}" alt="inbox">&nbsp;{{ unreadMessageCount() }}</a>
+						{% set message_count = unreadMessageCount() %}
+						<a class="primary_bar" href="{{ path('cc_message_index') }}" rel="tipsy" title="{{ 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') }}"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_email.png') }}" alt="inbox">&nbsp;{{ message_count }}</a>
 					</div>
 					<div class="bar_box">
 						<a class="primary_bar" href="{{ path('cc_profile_show') }}" rel="tipsy" title="Account"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_account.png') }}" alt="account">&nbsp;{{ app.user.username }}</a>
