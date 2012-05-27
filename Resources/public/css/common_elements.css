@@ -265,9 +265,10 @@ div.section_table_panel {
 	width: auto;
 	height: auto;
 	padding: 0px;
-	margin-bottom: 10px;
+	margin: 5px;
 	overflow: hidden;
 	clear: both;
+	border: 3px solid #eee;
 }
 
 div.section_tool_strip {
