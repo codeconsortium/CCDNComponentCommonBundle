@@ -1,9 +1,7 @@
 {% for key, message in app.session.getFlashes() %}
-<div class="section_wrap_square">
-	<div class="flash_{{ key }}">
-		<span class="flash">
-	    {{ message|trans }}
-		</span>
-	</div>
+<div class="flash_{{ key }}">
+	<span class="flash">
+    {{ message|trans }}
+	</span>
 </div>
 {% endfor %}
