@@ -245,8 +245,8 @@ div.section_header {
 	display: block;
 	width: auto;
 	height: auto;
-	margin-bottom: 5px;
-	padding: 5px;
+	margin-bottom: 0px;
+	padding: 0px;
 	text-align: left;
 	vertical-align: middle;
 	overflow: hidden;

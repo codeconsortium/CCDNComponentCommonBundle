@@ -34,7 +34,7 @@ td.form_tool_strip {
 	border-bottom: 1px solid #eee;
 }
 
-input.widget_submit {
+/*input.widget_submit {
 	margin: 0 8px 0 0px;
 	padding: 5px;
 	border: 1px solid #a8cafe;
@@ -72,7 +72,7 @@ input.widget_submit_prominent:hover {
 	text-decoration: none;
 	border: 1px solid #488bfd;
 	background-color: #3f6ffe;
-}
+}*/
 
 select.widget_select {
 	margin: 5px 8px 5px 0px;
@@ -135,10 +135,13 @@ textarea.widget_textarea {
 	vertical-align: middle;
 }*/
 
-.button_link_silver:link, a.button_link_silver:visited, a.button_link_silver:active  {
+.button_link_silver, .button_link_silver:link, .button_link_silver:visited, .button_link_silver:active  {
 	margin: 5px 5px 5px 0px;
 	padding: 7px;
-	border-radius: 2px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	
 	color: #4a89c6;
 	font: bold 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
@@ -146,20 +149,21 @@ textarea.widget_textarea {
 	text-transform: capitalize;
 	text-shadow: 0px 0px 3px #ddd;
 	white-space: nowrap;
-	border: 1px solid #ccc;
-	background-color: #eee;
 }
 .button_link_silver:hover {
-	text-decoration: none;
-	color: white !important;
+	color: #fff !important;
+	text-decoration: none !important;
 	border: 1px solid #3f6ffe !important;
 	background-color: #488bfd !important;
 }
 
-.button_silver:link, a.button_silver:visited, a.button_silver:active  {
+.button_silver, .button_silver:link, .button_silver:visited, .button_silver:active  {
 	margin: 5px 5px 5px 0px;
 	padding: 7px;
-	border-radius: 2px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	
 	color: #777;
 	font: bold 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
@@ -167,21 +171,23 @@ textarea.widget_textarea {
 	text-transform: capitalize;
 	text-shadow: 0px 0px 3px #ddd;
 	white-space: nowrap;
-	border: 1px solid #ccc;
-	background-color: #eee;
+
 }
 .button_silver:hover {
-	text-decoration: none;
-	color: white;
-	border: 1px solid #3f6ffe;
-	background-color: #488bfd;
+	color: #fff !important;
+	text-decoration: none !important;
+	border: 1px solid #3f6ffe !important;
+	background-color: #488bfd !important;
 }
 
 
-a.button_red:link, a.button_red:visited, a.button_red:active {
+.button_red, .button_red:link, .button_red:visited, .button_red:active {
 	margin: 5px 5px 5px 0px;
 	padding: 7px;
-	border-radius: 3px;
+	border-radius: 4px;
+	border: 1px solid #ff0000;
+	background-color: #ed6957;
+
 	color: #fff;
 	font: bold 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
@@ -189,35 +195,34 @@ a.button_red:link, a.button_red:visited, a.button_red:active {
 	text-transform: capitalize;
 	text-shadow: 0px 0px 3px #ddd;
 	white-space: nowrap;
-	border: 1px solid #f62300;
-	background-color: #ed6957;
 }
-a.button_red:hover {
-	text-decoration: none;
-	color: white !important;
+.button_red:hover {
+	color: #fff !important;
+	text-decoration: none !important;
 	border: 1px solid #3f6ffe !important;
 	background-color: #488bfd !important;
 }
 
-a.button_blue:link, a.button_blue:visited, a.button_blue:active {
-	margin: 0 8px 0 0px;
-	padding: 5px;
+.button_blue, .button_blue:link, .button_blue:visited, .button_blue:active {
+	margin: 5px 5px 5px 0px;
+	padding: 7px;
+	border-radius: 4px;
 	border: 1px solid #a5c6fa;
-	border-radius: 5px;
 	background-color: #a8cafe;
 	
-	color: white;
+	color: #fff;
 	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-align: left;
 	text-decoration: none;
 	text-transform: capitalize;
-	text-shadow: 0px 0px 2px #666;
+	text-shadow: 0px 0px 3px #ddd;
 	white-space: nowrap;
 }
-a.button_blue:hover {
-	text-decoration: none;
-	border: 1px solid #9bbbeb;
-	background-color: #73a4fe;
+.button_blue:hover {
+	color: #fff !important;
+	text-decoration: none !important;
+	border: 1px solid #9bbbeb !important;
+	background-color: #73a4fe !important;
 }
 /* **********************************
  * COMMON PAGINATION
