@@ -1,0 +1,7 @@
+cc_moderator_cp:
+    pattern: /{_locale}/dashboard/moderator
+    defaults: { _controller: CCDNComponentDashboardBundle:Dashboard:show, _locale: en }
+    
+cc_admin_cp:
+    pattern: /{_locale}/dashboard/admin
+    defaults: { _controller: CCDNComponentDashboardBundle:Dashboard:show, _locale: en }
