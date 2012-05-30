@@ -20,7 +20,7 @@
 
 		<script type='text/javascript'>
 			$(function() {
-				$('a[rel=tipsy]').tipsy({fade: true, gravity: 'n'});
+				$('a[data-tipsy=north]').tipsy({fade: true, gravity: 'n'});
 			});
 		</script>
     </head>
@@ -52,23 +52,23 @@
 					<div class="bar_box">
 						{% set message_count = unreadMessageCount() %}
 						{% if message_count > 0 %}
-						<a class="button_red" href="{{ path('cc_message_index') }}" rel="tipsy" title="{{ 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') }}"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Silver/16x16/16x16_email.png') }}" alt="inbox">&nbsp;{{ message_count }}</a>
+						<a class="button_red" href="{{ path('cc_message_index') }}" data-tipsy="north" title="{{ 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') }}"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Silver/16x16/16x16_email.png') }}" alt="inbox">&nbsp;{{ message_count }}</a>
 						{% else %}
-						<a class="primary_bar" href="{{ path('cc_message_index') }}" rel="tipsy" title="{{ 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') }}"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_email.png') }}" alt="inbox">&nbsp;{{ message_count }}</a>				
+						<a class="primary_bar" href="{{ path('cc_message_index') }}" data-tipsy="north" title="{{ 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') }}"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_email.png') }}" alt="inbox">&nbsp;{{ message_count }}</a>				
 						{% endif %}
 					</div>
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path('cc_profile_show') }}" rel="tipsy" title="Account"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_account.png') }}" alt="account">&nbsp;{{ app.user.username }}</a>
+						<a class="primary_bar" href="{{ path('cc_profile_show') }}" data-tipsy="north" title="Account"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_account.png') }}" alt="account">&nbsp;{{ app.user.username }}</a>
 					</div>		
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path('fos_user_security_logout') }}" rel="tipsy" title="Sign out"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_out.png') }}" alt="sign out">&nbsp;{{ 'layout.logout' |trans({}, 'FOSUserBundle') }}</a>
+						<a class="primary_bar" href="{{ path('fos_user_security_logout') }}" data-tipsy="north" title="Sign out"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_out.png') }}" alt="sign out">&nbsp;{{ 'layout.logout' |trans({}, 'FOSUserBundle') }}</a>
 					</div>
 					{% else %}
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path('fos_user_registration_register') }}" rel="tipsy" title="Register"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_up.png') }}" alt="register">&nbsp;{{ 'layout.register' |trans({}, 'FOSUserBundle') }}</a>
+						<a class="primary_bar" href="{{ path('fos_user_registration_register') }}" data-tipsy="north" title="Register"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_up.png') }}" alt="register">&nbsp;{{ 'layout.register' |trans({}, 'FOSUserBundle') }}</a>
 					</div>
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path('fos_user_security_login') }}" rel="tipsy" title="Sign in"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_in.png') }}" alt="sign in">&nbsp;{{ 'layout.login' |trans({}, 'FOSUserBundle') }}</a>
+						<a class="primary_bar" href="{{ path('fos_user_security_login') }}" data-tipsy="north" title="Sign in"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_in.png') }}" alt="sign in">&nbsp;{{ 'layout.login' |trans({}, 'FOSUserBundle') }}</a>
 					</div>
 					{% endif %}
 				</div>
