@@ -50,18 +50,24 @@ span.sidebar_header {
 div.sidebar_panel {
 	display: block;
 	width: auto;
-	padding: 5px;
+	padding: 0px;
 }
 div.sidebar_panel:hover {
- 	background-color: #eee;
+/* 	background-color: #eee;*/
+	background-color: #4a89c6;
 }
 
 a.sidebar:link, a.sidebar:visited, a.sidebar:active {
+	display: block;	
+	padding: 4px;
 	text-decoration: none;
 	color: #4a89c6;
 	font: 11pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
 }
-a.sidebar:hover { text-decoration: underline; }
+a.sidebar:hover { 
+	text-decoration: none;
+	color: #fff;
+}
 
 /* **********************************
  * COMMON LINKS
@@ -156,20 +162,33 @@ span.flash {
 div.box_notice {
 	display: inline-block;
 	padding: 8px;
-	border-radius: 4px;
 	background-color: #a0d8fd;
+	border-radius: 4px;
+	border-bottom: 1px solid #eee;
+	border-top: 1px double #ccc;
+	border-right: 1px solid #eee;
+	border-left: 1px solid #ccc;
 }
 div.box_warning { 
 	display: inline-block;
 	padding: 8px;
-	border-radius: 4px;
 	background-color: #fec499; 
+	border-radius: 4px;
+	border-bottom: 1px solid #eee;
+	border-top: 1px double #ccc;
+	border-right: 1px solid #eee;
+	border-left: 1px solid #ccc;
 }
 div.box_severe { 
 	display: inline-block;
 	padding: 8px;
-	border-radius: 4px;
 	background-color: #ff9896; 
+
+	border-radius: 4px;
+	border-bottom: 1px solid #eee;
+	border-top: 1px double #ccc;
+	border-right: 1px solid #eee;
+	border-left: 1px solid #ccc;
 }
  
 div.row { display: block; width: auto; height: auto; overflow: hidden; vertical-align: top; clear: both; }
@@ -198,7 +217,7 @@ div.float_right {
 div.section_wrap_top {
 	display: block;
 	width: auto;
-	padding: 10px;
+	padding: 5px;
 	margin: 0px;
 	overflow: hidden;
 	border: 1px solid #ddd;
@@ -209,7 +228,7 @@ div.section_wrap_top {
 div.section_wrap_middle {
 	display: block;
 	width: auto;
-	padding: 10px;
+	padding: 5px;
 	margin: 0px;
 	overflow: hidden;
 	border-bottom: 1px solid #ddd;
@@ -220,7 +239,7 @@ div.section_wrap_middle {
 div.section_wrap_bottom {
 	display: block;
 	width: auto;
-	padding: 10px;
+	padding: 5px;
 	margin: 0px 0px 10px;
 	overflow: hidden;
 	border-bottom: 1px solid #ddd;
@@ -233,7 +252,7 @@ div.section_wrap_bottom {
 div.section_wrap_standalone {
 	display: block;
 	width: auto;
-	padding: 10px;
+	padding: 5px;
 	margin: 0px 0px 10px;
 	overflow: hidden;
 	border: 1px solid #ddd;
@@ -245,7 +264,7 @@ div.section_header {
 	display: block;
 	width: auto;
 	height: auto;
-	margin-bottom: 0px;
+	margin: 0px;
 	padding: 0px;
 	text-align: left;
 	vertical-align: middle;
@@ -257,13 +276,11 @@ div.section_sub_header {
 	display: block;
 	width: auto;
 	height: auto;
-	margin-bottom: 5px;
-	padding: 5px;
+	margin: 0 0 5px;
+	padding: 0px;
 	overflow: hidden;
 	clear: both;
-
 	vertical-align: middle;
-
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	background-color: #fafafa;
@@ -273,8 +290,8 @@ div.section_panel {
 	display: block;
 	width: auto;
 	height: auto;
-	padding: 5px;
-	margin-bottom: 5px;
+	margin: 0 0 5px;
+	padding: 0px;
 	overflow: hidden;
 	clear: both;
 }
@@ -283,8 +300,8 @@ div.section_table_panel {
 	display: block;
 	width: auto;
 	height: auto;
-	padding: 0px;
 	margin: 5px;
+	padding: 0px;
 	overflow: hidden;
 	clear: both;
 	border: 3px solid #eee;
@@ -301,7 +318,7 @@ div.section_tool_strip {
 	padding: 5px;
 	overflow: hidden;
 	clear: both;
-	border-top: 1px solid #eee;
+/*	border-top: 1px solid #eee;*/
 }
 
 
