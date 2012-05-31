@@ -5,6 +5,7 @@ parameters:
     ccdn_component_common.cycler.extension.class:         CCDNComponent\CommonBundle\Extension\CyclerExtension
     ccdn_component_common.div_ceil.extension.class:       CCDNComponent\CommonBundle\Extension\DivCeilExtension
     ccdn_component_common.param.extension.class:          CCDNComponent\CommonBundle\Extension\ParamExtension
+    ccdn_component_common.trunc_dot.extension.class:      CCDNComponent\CommonBundle\Extension\TruncDotExtension
 
 services:
     
@@ -33,5 +34,9 @@ services:
             - { name: twig.extension }
     ccdn_component_common.div_ceil.extension:
         class:  %ccdn_component_common.div_ceil.extension.class%
+        tags:
+            - { name: twig.extension }
+    ccdn_component_common.trunc_dot.extension:
+        class:  %ccdn_component_common.trunc_dot.extension.class%
         tags:
             - { name: twig.extension }
