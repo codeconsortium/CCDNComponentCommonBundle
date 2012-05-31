@@ -125,6 +125,9 @@ span.stat_large { font: large "Helvetica Neue", Arial, Helvetica, Geneva, sans-s
 span.item_timestamp {
 	 font: bold 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #aaa; 
 }
+span.item_timestamp_medium {
+	 font: bold 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #aaa; 
+}
 
 /************************
  * COMMON FLASH BOXES
@@ -143,7 +146,7 @@ div.flash_warning { background-color: #fec499; padding: 5x; }
 div.flash_severe { background-color: #ff9896; padding: 5px; }
 
 span.flash {
-	font: medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #373737; 
+	font: medium "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #373737;
 }
 
 /************************
@@ -161,6 +164,7 @@ span.flash {
  ***********************/
 div.box_notice {
 	display: inline-block;
+	margin: 2px;
 	padding: 8px;
 	background-color: #a0d8fd;
 	border-radius: 4px;
@@ -171,6 +175,7 @@ div.box_notice {
 }
 div.box_warning { 
 	display: inline-block;
+	margin: 2px;
 	padding: 8px;
 	background-color: #fec499; 
 	border-radius: 4px;
@@ -181,9 +186,9 @@ div.box_warning {
 }
 div.box_severe { 
 	display: inline-block;
+	margin: 2px;
 	padding: 8px;
-	background-color: #ff9896; 
-
+	background-color: #ff9896;
 	border-radius: 4px;
 	border-bottom: 1px solid #eee;
 	border-top: 1px double #ccc;
