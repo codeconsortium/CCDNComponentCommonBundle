@@ -7,15 +7,16 @@ No depedencies for this bundle.
 
 ## Installation:
 
-Installation takes only 7 steps:
+Installation takes only 8 steps:
 
 1. Download and install the dependencies.
 2. Register bundles with autoload.php.
 3. Register bundles with AppKernel.php.  
 4. Run vendors install script.
-5. Update your app/config/config.yml. 
-6. Symlink assets to your public web directory.
-7. Warmup the cache.
+5. Update your app/config/routing.yml
+6. Update your app/config/config.yml. 
+7. Symlink assets to your public web directory.
+8. Warmup the cache.
 
 ### Step 1: Download and install the dependencies.
    
@@ -63,7 +64,17 @@ From your projects root Symfony directory on the command line run:
 $ php bin/vendors install
 ```
 
-### Step 5: Update your app/config/config.yml. 
+### Step 5: Update your app/config/routing.yml.
+
+In your app/config/routing.yml add:  
+
+``` yml
+CCDNComponentCommonBundle:
+    resource: "@CCDNComponentCommonBundle/Resources/config/routing.yml"
+    prefix: /
+```
+
+### Step 6: Update your app/config/config.yml. 
 
 ``` yml
 #
@@ -73,7 +84,7 @@ ccdn_component_common:
     header_bar_links:
 ```
 
-### Step 6: Symlink assets to your public web directory.
+### Step 7: Symlink assets to your public web directory.
 
 From your projects root Symfony directory on the command line run:
 
@@ -81,7 +92,7 @@ From your projects root Symfony directory on the command line run:
 $ php app/console assets:install --symlink web/
 ```
 
-### Step 7: Warmup the cache.
+### Step 8: Warmup the cache.
 
 From your projects root Symfony directory on the command line run:
 
