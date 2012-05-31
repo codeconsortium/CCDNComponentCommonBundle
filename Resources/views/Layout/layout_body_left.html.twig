@@ -20,7 +20,14 @@
 
 		<script type='text/javascript'>
 			$(function() {
+				$('a[data-tipsy=north_west]').tipsy({fade: true, gravity: 'nw'});
 				$('a[data-tipsy=north]').tipsy({fade: true, gravity: 'n'});
+				$('a[data-tipsy=north_east]').tipsy({fade: true, gravity: 'ne'});
+				$('a[data-tipsy=west]').tipsy({fade: true, gravity: 'w'});
+				$('a[data-tipsy=east]').tipsy({fade: true, gravity: 'e'});
+				$('a[data-tipsy=south_west]').tipsy({fade: true, gravity: 'sw'});
+				$('a[data-tipsy=south]').tipsy({fade: true, gravity: 's'});
+				$('a[data-tipsy=south_east]').tipsy({fade: true, gravity: 'se'});
 			});
 		</script>
     </head>
