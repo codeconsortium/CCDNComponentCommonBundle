@@ -1,0 +1,32 @@
+.marked_read {
+	background-color: #fcfcfc;
+}
+
+.marked_unread {
+	background-color: #f7f7f7;
+}
+
+.mark_checked {
+	background-color: #fef9d7;
+}
+
+/*tr:hover {
+	background-color: #fef9d7 !important;
+}*/
+
+.table tbody tr[class*='mark_checked']:hover td {
+	background-color: #fff5b0 !important;
+}
+
+
+table th .left, table td .left {
+	text-align: left;
+}
+
+table th .left, table td .center {
+	text-align: left;
+}
+
+table th .left, table td .right {
+	text-align: left;
+}

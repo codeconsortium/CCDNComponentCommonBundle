@@ -1,0 +1,41 @@
+div.speech_bubble {
+	display: block;
+	width: auto;
+	min-height: 60px !important;
+	margin: 5px;
+	margin-left: 20px !important;
+	padding: 15px;
+	
+	overflow: visible;
+	background-color: white;
+
+	vertical-align: top;	
+	z-index: 1;	
+	
+	border-radius: 8px;
+	border: 1px solid #ccc;
+}
+
+div.speech_bubble div.chevron {
+	display: block;
+	z-index: 1;
+	margin: 0 0 -30px;
+}
+
+div.speech_bubble div.chevron img {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	left: -35px;
+	top: 30px;
+	z-index: 1;
+	visibility: visible;
+	overflow: visible;
+}
+
+div.speech_bubble div.content {
+	display: block;
+	z-index: 2;
+}
+

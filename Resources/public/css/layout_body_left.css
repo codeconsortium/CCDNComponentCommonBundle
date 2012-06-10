@@ -174,8 +174,8 @@ div.left_column_container {
 div.left_column {
 /*	background-color: #fff;*/
 	
-	margin: 8px 160px 5px 5px;
-	padding: 0px;
+	margin: 8px 180px 5px 5px;
+	padding: 5px;
 	overflow: hidden;
 /*	border-right: 1px solid #eee;*/
 /*	border: 1px solid #ccc;
@@ -185,18 +185,18 @@ div.left_column {
 div.right_column_container {
 	vertical-align: top;
 	display: block;
-	margin: 0px 0px 0px -160px;
+	margin: 0px 0px 0px -180px;
 	padding: 0px;
 	overflow: hidden;
 	float: right;
-	width: 160px;
+	width: 180px;
 }
 
 div.right_column {
 /*	background-color: #fff;*/
 	
 	margin: 8px 5px 5px;
-	padding: 0px;
+	padding: 5px;
 	overflow: hidden;
 /*	border: 1px solid #ccc;
 	border-radius: 5px;*/

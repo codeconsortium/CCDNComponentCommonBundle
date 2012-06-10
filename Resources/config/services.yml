@@ -1,12 +1,13 @@
 parameters:
-    ccdn_component_common.bin.si.units.class:             CCDNComponent\CommonBundle\Component\BinSIUnits
+    ccdn_component_common.bin.si.units.class:                   CCDNComponent\CommonBundle\Component\BinSIUnits
+                                                                
+    ccdn_component_common.bin.si.units.extension.class:         CCDNComponent\CommonBundle\Extension\BinSIUnitsExtension
+    ccdn_component_common.cycler.extension.class:               CCDNComponent\CommonBundle\Extension\CyclerExtension
+    ccdn_component_common.div_ceil.extension.class:             CCDNComponent\CommonBundle\Extension\DivCeilExtension
+    ccdn_component_common.param.extension.class:                CCDNComponent\CommonBundle\Extension\ParamExtension
+    ccdn_component_common.trunc_dot.extension.class:            CCDNComponent\CommonBundle\Extension\TruncDotExtension
+    ccdn_component_common.relevant_date_format.extension.class: CCDNComponent\CommonBundle\Extension\RelevantDateFormatExtension
     
-    ccdn_component_common.bin.si.units.extension.class:   CCDNComponent\CommonBundle\Extension\BinSIUnitsExtension
-    ccdn_component_common.cycler.extension.class:         CCDNComponent\CommonBundle\Extension\CyclerExtension
-    ccdn_component_common.div_ceil.extension.class:       CCDNComponent\CommonBundle\Extension\DivCeilExtension
-    ccdn_component_common.param.extension.class:          CCDNComponent\CommonBundle\Extension\ParamExtension
-    ccdn_component_common.trunc_dot.extension.class:      CCDNComponent\CommonBundle\Extension\TruncDotExtension
-
 services:
     
     #
@@ -19,24 +20,28 @@ services:
     # Twig Extensions.
     #
     ccdn_component_common.binSIUnits.extension:
-        class:  %ccdn_component_common.bin.si.units.extension.class%
+        class: %ccdn_component_common.bin.si.units.extension.class%
         arguments: [@service_container]
         tags:
             - { name: twig.extension }        
     ccdn_component_common.cycler.extension:
-        class:  %ccdn_component_common.cycler.extension.class%
+        class: %ccdn_component_common.cycler.extension.class%
         tags:
             - { name: twig.extension }
     ccdn_component_common.param.extension:
-        class:  %ccdn_component_common.param.extension.class%
+        class: %ccdn_component_common.param.extension.class%
         arguments: [@service_container]
         tags:
             - { name: twig.extension }
     ccdn_component_common.div_ceil.extension:
-        class:  %ccdn_component_common.div_ceil.extension.class%
+        class: %ccdn_component_common.div_ceil.extension.class%
         tags:
             - { name: twig.extension }
     ccdn_component_common.trunc_dot.extension:
-        class:  %ccdn_component_common.trunc_dot.extension.class%
+        class: %ccdn_component_common.trunc_dot.extension.class%
+        tags:
+            - { name: twig.extension }
+    ccdn_component_common.relevant_date_format.extension:
+        class: %ccdn_component_common.relevant_date_format.extension.class%
         tags:
             - { name: twig.extension }

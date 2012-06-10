@@ -58,7 +58,9 @@ div.sidebar_panel:hover {
 }
 
 a.sidebar:link, a.sidebar:visited, a.sidebar:active {
-	display: block;	
+	display: block;
+	width: 100%;	
+	height: 100%;
 	padding: 4px;
 	text-decoration: none;
 	color: #4a89c6;
@@ -68,7 +70,57 @@ a.sidebar:hover {
 	text-decoration: none;
 	color: #fff;
 }
+/* **********************************
+ * TABS
+ * *********************************/
+div.horizontal_tab
+{
+	
+}
 
+div.vertical_tab
+{
+	width: 100%;
+	text-align: center;
+	border-right: 1px solid #ccc;
+	overflow: hidden;	
+}
+
+div.vertical_tab div.current_tab
+{
+	display: block;	
+	width: 100%;
+	height: 100%;
+	margin: 10px 1px 1px;
+	border: 1px solid #ccc;
+	border-bottom: 2px solid #fec499; !important;
+	border-radius: 3px;
+	
+	background-color: #eee;
+	
+}
+
+div.vertical_tab div.tab
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 10px 1px 1px;
+}
+
+a.tab_link:link, a.tab_link:visited, a.tab_link:active  {
+	display: block;
+	width: 100%;	
+	height: 100%;
+	padding: 4px;
+
+	color: #4a89c6; text-decoration: none; font: 12pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif; 
+}
+
+a.tab_link:hover {
+	 text-decoration: none;
+	 color: #000;
+}
 /* **********************************
  * COMMON LINKS
  * *********************************/
@@ -128,7 +180,9 @@ span.item_timestamp {
 span.item_timestamp_medium {
 	 font: bold 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #aaa; 
 }
-
+span.table_timestamp {
+	 font: bold 9pt "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; color: #777; 
+}
 /************************
  * COMMON FLASH BOXES
  ***********************/
