@@ -33,3 +33,14 @@ div.sidebar .btn {
 	display:block;
 	margin-bottom:5px;
 }
+
+/*a[name^='anchor_offset_'] {*/
+/*a.anchor {
+	display:block;
+	width: 90px;
+	height: 100px;
+	position: relative;
+	border:10px solid red;
+	top: -90px;
+	z-index: 2;
+}*/
