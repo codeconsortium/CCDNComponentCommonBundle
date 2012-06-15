@@ -81,7 +81,17 @@ CCDNComponentCommonBundle:
 # for CCDNComponent CommonBundle
 #
 ccdn_component_common:
-    header_bar_links:
+    header:
+        registration_route: fos_user_registration_register
+        login_route: fos_user_security_login
+        logout_route: fos_user_security_logout
+        account_route: cc_user_account_show
+        profile_route: cc_profile_show
+        header_bar_links:
+            - { bundle: CCDNComponentDashboardBundle, label: 'layout.header_links.dashboard', route: 'cc_dashboard_index' }
+            - { bundle: CCDNUserMemberBundle, label: 'layout.header_links.members', route: 'cc_members_index'}
+            - { bundle: CCDNForumForumBundle, label: 'layout.header_links.forum', route: cc_forum_index }
+
 ```
 
 ### Step 7: Symlink assets to your public web directory.
@@ -106,4 +116,5 @@ Installation should now be complete!
 
 If you need further help/support, have suggestions or want to contribute please join the community at [Code Consortium](http://www.codeconsortium.com)
 
-[Return back to the docs index](http://github.com/codeconsortium/CommonBundle/blob/master/Resources/doc/index.md).
+- [Return back to the docs index](index.md).
+- [Configuration Reference](configuration_reference.md).

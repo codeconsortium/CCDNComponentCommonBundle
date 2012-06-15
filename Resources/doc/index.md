@@ -20,5 +20,6 @@ For more information about translations, check [Symfony documentation](http://sy
 
 ## Installation Documentation:
 
-- [Installing CCDNComponent CommonBundle for Symfony 2.0.11](http://github.com/codeconsortium/CommonBundle/blob/master/Resources/doc/Install.md).
-- [Adding Header Links to Layouts](http://github.com/codeconsortium/CommonBundle/blob/master/Resources/doc/adding_header_links_to_layouts.md).
+- [Installing CCDNComponent CommonBundle for Symfony 2.0.11](install.md).
+- [Configuration Reference](configuration_reference.md).
+- [Adding Header Links to Layouts](adding_header_links_to_layouts.md).

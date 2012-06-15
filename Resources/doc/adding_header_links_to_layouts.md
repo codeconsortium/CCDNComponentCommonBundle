@@ -18,4 +18,4 @@ ccdn_component_common:
 
 The above are examples of links used in CCDN bundles.
 
-[Return back to the docs index](http://github.com/codeconsortium/CommonBundle/blob/master/Resources/doc/index.md).
+- [Return back to the docs index](index.md).
