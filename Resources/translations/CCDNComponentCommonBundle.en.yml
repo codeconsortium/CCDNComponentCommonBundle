@@ -8,3 +8,9 @@ layout.header_links.downloads: Downloads
 layout.header_links.answers: Answers
 layout.header_links.articles: Articles
 layout.header_links.knowledge_base: Knowledge Base
+
+layout.header.register: Register
+layout.header.login: Login
+layout.header.logout: Logout
+layout.header.account: Account
+layout.header.profile: Profile

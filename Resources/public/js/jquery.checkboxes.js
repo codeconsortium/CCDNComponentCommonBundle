@@ -76,17 +76,28 @@ $(document).ready(function() {
 			//
 			// disable registered actions
 			//
-			var $actions = $("[data-disabled-responds='" + $form_identifier + "']");
+			var $responds_disabled_actions = $("[data-responds-disabled='" + $form_identifier + "']");
+			var $responds_hidden_actions =  $("[data-responds-hidden='" + $form_identifier + "']");
 
-			if ($actions.size() > 0)
+			if ($responds_disabled_actions.size() > 0)
 			{
 				if ($identifiable_checkboxes.filter(':checked').size() > 0)
 				{
-					$actions.removeClass('disabled');
-					$actions.removeAttr('disabled');
+					$responds_disabled_actions.removeClass('disabled');
+					$responds_disabled_actions.removeAttr('disabled');
 				} else {
-					$actions.removeClass('disabled').addClass('disabled');
-					$actions.attr('disabled', '');
+					$responds_disabled_actions.removeClass('disabled').addClass('disabled');
+					$responds_disabled_actions.attr('disabled', '');
+				}
+			}
+			
+			if ($responds_hidden_actions.size() > 0)
+			{
+				if ($identifiable_checkboxes.filter(':checked').size() > 0)
+				{
+					$responds_hidden_actions.removeClass('hidden');
+				} else {
+					$responds_hidden_actions.removeClass('hidden').addClass('hidden');
 				}
 			}
 		}

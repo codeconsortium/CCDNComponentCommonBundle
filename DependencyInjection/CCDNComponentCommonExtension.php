@@ -28,6 +28,9 @@ use Symfony\Component\DependencyInjection\Loader;
  */
 class CCDNComponentCommonExtension extends Extension
 {
+	
+	
+	
     /**
      * {@inheritDoc}
      */
@@ -38,8 +41,27 @@ class CCDNComponentCommonExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
-
-		$container->setParameter('ccdn_component_common.header_bar_links', $config['header_bar_links']);
-
+		
+		$this->getHeaderSection($container, $config);
     }
+	
+	
+	
+	/**
+	 *
+	 * @access private
+	 * @param $container, $config
+	 */
+	private function getHeaderSection($container, $config)
+	{
+		$container->setParameter('ccdn_component_common.header.registration_route', $config['header']['registration_route']);
+		$container->setParameter('ccdn_component_common.header.login_route', $config['header']['login_route']);
+		$container->setParameter('ccdn_component_common.header.logout_route', $config['header']['logout_route']);
+		$container->setParameter('ccdn_component_common.header.account_route', $config['header']['account_route']);
+		$container->setParameter('ccdn_component_common.header.profile_route', $config['header']['profile_route']);
+				
+		$container->setParameter('ccdn_component_common.header.header_bar_links', $config['header']['header_bar_links']);
+	
+	}
+	
 }

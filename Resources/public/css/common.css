@@ -18,15 +18,18 @@
 	background-color: #fff5b0 !important;
 }
 
+.center {text-align:center;}
 
-table th .left, table td .left {
-	text-align: left;
-}
+table tr th.left {text-transform:capitalize;}
+table tr th.left, table tr td.left {text-align:left;}
 
-table th .left, table td .center {
-	text-align: left;
-}
+table tr th.center {text-transform:capitalize;}
+table tr th.center, table tr td.center {text-align:center;}
 
-table th .left, table td .right {
-	text-align: left;
+table tr th.right {text-transform:capitalize;}
+table tr th.right, table tr td.right {text-align:right;}
+
+div.sidebar .btn {
+	display:block;
+	margin-bottom:5px;
 }

@@ -40,24 +40,47 @@ class Configuration implements ConfigurationInterface
         // more information on that topic.
 		$rootNode
 			->children()
-				->arrayNode('header_bar_links')
-					->prototype('array')
-						->children()
-							->scalarNode('bundle')
-							->end()
-							->scalarNode('label')
-							->end()
-							->scalarNode('route')
-								->defaultNull()
-							->end()
-							->scalarNode('path')
-								->defaultNull()
+			->end();
+		
+		$this->addHeaderSection($rootNode);
+		
+        return $treeBuilder;
+    }
+
+
+	
+
+	/**
+	 *
+	 * @access private
+	 * @param ArrayNodeDefinition $node
+	 */
+	private function addHeaderSection(ArrayNodeDefinition $node)
+	{
+		$node
+			->children()
+				->arrayNode('header')
+					->addDefaultsIfNotSet()
+					->canBeUnset()
+					->children()
+						->scalarNode('registration_route')->defaultValue('fos_user_registration_register')->end()
+						->scalarNode('login_route')->defaultValue('fos_user_security_login')->end()
+						->scalarNode('logout_route')->defaultValue('fos_user_security_logout')->end()
+						->scalarNode('account_route')->defaultValue('cc_user_account_show')->end()
+						->scalarNode('profile_route')->defaultValue('cc_profile_show')->end()
+						->arrayNode('header_bar_links')
+							->prototype('array')
+								->children()
+									->scalarNode('bundle')->end()
+									->scalarNode('label')->end()
+									->scalarNode('route')->defaultNull()->end()
+									->scalarNode('path')->defaultNull()->end()
+								->end()
 							->end()
 						->end()
 					->end()
 				->end()
 			->end();
-			
-        return $treeBuilder;
-    }
+	}
+	
 }
