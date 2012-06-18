@@ -7,7 +7,6 @@
 		{% block stylesheets %}
 		<link href="{{ asset('bundles/ccdncomponentcommon/css/layout_body_left.css') }}" rel="stylesheet" type="text/css">
 		<link href="{{ asset('bundles/ccdncomponentcommon/css/common.css') }}" rel="stylesheet" type="text/css">
-		<link href="{{ asset('bundles/ccdncomponentcommon/css/tipsy.css') }}" rel="stylesheet" type="text/css">
 		
 		<link href="{{ asset('bundles/ccdncomponentcommon/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
 		<link href="{{ asset('bundles/ccdncomponentcommon/css/bootstrap-responsive.css') }}" rel="stylesheet" type="text/css">		
@@ -16,16 +15,14 @@
 		{% block javascripts %}
 		<script src="{{ asset('bundles/ccdncomponentcommon/js/jquery-1.7.1.min.js') }}" type="text/javascript"></script>
 
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="{{ asset('bundles/ccdncomponentcommon/js/jquery.tipsy.js') }}" type="text/javascript"></script>
-		
+		<!-- Placed at the end of the document so the pages load faster -->	
 	    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/google-code-prettify/prettify.js') }}"></script>
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-transition.js') }}"></script>
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-alert.js') }}"></script>
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-modal.js') }}"></script>
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-dropdown.js') }}"></script>
-	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-scrollspy.js') }}"></script>
+{#	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-scrollspy.js') }}"></script>#}
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-tab.js') }}"></script>
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-tooltip.js') }}"></script>
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-popover.js') }}"></script>
@@ -36,17 +33,39 @@
 		{% endblock %}
 
 		<script type='text/javascript'>
-			$(function() {
-				$('[data-tipsy=north_west]').tipsy({fade: true, gravity: 'nw'});
-				$('[data-tipsy=north]').tipsy({fade: true, gravity: 'n'});
-				$('[data-tipsy=north_east]').tipsy({fade: true, gravity: 'ne'});
-				$('[data-tipsy=west]').tipsy({fade: true, gravity: 'w'});
-				$('[data-tipsy=east]').tipsy({fade: true, gravity: 'e'});
-				$('[data-tipsy=south_west]').tipsy({fade: true, gravity: 'sw'});
-				$('[data-tipsy=south]').tipsy({fade: true, gravity: 's'});
-				$('[data-tipsy=south_east]').tipsy({fade: true, gravity: 'se'});
+			
+			$(document).ready(function() {
+			//	$('[data-tooltip="top"]').tooltip({placement: 'top'});
+
+			//	$('a[ref="tooltip"]').tooltip();
+			//	    data-tooltip="bottom"
+			//	$('[data-tooltip="left"]').tooltip({placement: 'left'});
+			//	$('[data-tooltip="right"]').tooltip({placement: 'right'});
+				
 			});
 		</script>
+		
+		<script type='text/javascript'>
+		<!--
+		$("body").ready(function() {
+			// make visible js compat toolbars site wide
+			$("[data-compat='interactive-js-compat']").removeClass('hidden');
+			$("[data-compat='interactive-non-js-compat']").addClass('hidden');
+			
+			$(document).tooltip({
+				selector:'[data-toggle="tooltip"]',
+				placement:'bottom'
+			});
+			
+//			$(document).tooltip({
+//				selector:'[data-tooltip="bottom"]',
+//				placement:'bottom'
+//			});
+						
+		});
+		//-->
+		</script>
+		
     </head>
     <body>
 	
@@ -96,9 +115,9 @@
 							
 							{% set message_count = unreadMessageCount() %}
 							{% if message_count > 0 %}
-								<a class="btn btn-danger" style="vertical-align: middle; font-weight: bold;" href="{{ path('cc_message_index') }}" data-tipsy="north" title="{{ 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') }}">{{ message_count }}</a>
+								<a class="btn btn-danger" style="vertical-align: middle; font-weight: bold;" href="{{ path('cc_message_index') }}" data-toggle="tooltip" title="{{ 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') }}">{{ message_count }}</a>								
 							{% else %}
-								<a class="btn" style="vertical-align: middle;" href="{{ path('cc_message_index') }}" data-tipsy="north" title="{{ 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') }}">{{ message_count }}</a>				
+								<a class="btn" style="vertical-align: middle;" href="{{ path('cc_message_index') }}" data-toggle="tooltip" title="{{ 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') }}">{{ message_count }}</a>				
 							{% endif %}
 
 							<div class="btn-group" style="vertical-align: middle; margin-left: 30px; border: 0px;">
@@ -118,10 +137,10 @@
 					</div>
 					{% else %}
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path(param('ccdn_component_common.header.registration_route')) }}" data-tipsy="north" title="Register"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_up.png') }}" alt="register">&nbsp;{{ 'layout.header.register' |trans({}, 'CCDNComponentCommonBundle') }}</a>
+						<a class="primary_bar" href="{{ path(param('ccdn_component_common.header.registration_route')) }}" data-tooltip="bottom" title="Register"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_up.png') }}" alt="register">&nbsp;{{ 'layout.header.register' |trans({}, 'CCDNComponentCommonBundle') }}</a>
 					</div>
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path(param('ccdn_component_common.header.login_route')) }}" data-tipsy="north" title="Sign in"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_in.png') }}" alt="sign in">&nbsp;{{ 'layout.header.login' |trans({}, 'CCDNComponentCommonBundle') }}</a>
+						<a class="primary_bar" href="{{ path(param('ccdn_component_common.header.login_route')) }}" data-tooltip="bottom" title="Sign in"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_in.png') }}" alt="sign in">&nbsp;{{ 'layout.header.login' |trans({}, 'CCDNComponentCommonBundle') }}</a>
 					</div>
 					{% endif %}
 				</div>
@@ -183,15 +202,9 @@
 	        </div>
 		</div>
 		
-		<script type='text/javascript'>
-		<!--
-		$(document).ready(function() {
-			// make visible js compat toolbars site wide
-			$("[data-compat='interactive-js-compat']").removeClass('hidden');
-			$("[data-compat='interactive-non-js-compat']").addClass('hidden');
-		});
-		//-->
-		</script>
+
+
+
 		
 		{% spaceless %}
 		<div id="footer">
