@@ -38,7 +38,7 @@
 			//	$('[data-tooltip="top"]').tooltip({placement: 'top'});
 
 			//	$('a[ref="tooltip"]').tooltip();
-			//	    data-tooltip="bottom"
+			//	    data-tip="bottom"
 			//	$('[data-tooltip="left"]').tooltip({placement: 'left'});
 			//	$('[data-tooltip="right"]').tooltip({placement: 'right'});
 				
@@ -51,17 +51,12 @@
 			// make visible js compat toolbars site wide
 			$("[data-compat='interactive-js-compat']").removeClass('hidden');
 			$("[data-compat='interactive-non-js-compat']").addClass('hidden');
-			
-			$(document).tooltip({
-				selector:'[data-toggle="tooltip"]',
-				placement:'bottom'
-			});
-			
-//			$(document).tooltip({
-//				selector:'[data-tooltip="bottom"]',
-//				placement:'bottom'
-//			});
 						
+			$('[data-tip]').each(function() {
+				$(this).tooltip({
+					placement: $(this).data('tip')
+				});
+			});
 		});
 		//-->
 		</script>
@@ -115,9 +110,9 @@
 							
 							{% set message_count = unreadMessageCount() %}
 							{% if message_count > 0 %}
-								<a class="btn btn-danger" style="vertical-align: middle; font-weight: bold;" href="{{ path('cc_message_index') }}" data-toggle="tooltip" title="{{ 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') }}">{{ message_count }}</a>								
+								<a class="btn btn-danger" style="vertical-align: middle; font-weight: bold;" href="{{ path('cc_message_index') }}" data-tip="bottom" title="{{ 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') }}">{{ message_count }}</a>								
 							{% else %}
-								<a class="btn" style="vertical-align: middle;" href="{{ path('cc_message_index') }}" data-toggle="tooltip" title="{{ 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') }}">{{ message_count }}</a>				
+								<a class="btn" style="vertical-align: middle;" href="{{ path('cc_message_index') }}" data-tip="bottom" title="{{ 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') }}">{{ message_count }}</a>				
 							{% endif %}
 
 							<div class="btn-group" style="vertical-align: middle; margin-left: 30px; border: 0px;">
@@ -137,10 +132,10 @@
 					</div>
 					{% else %}
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path(param('ccdn_component_common.header.registration_route')) }}" data-tooltip="bottom" title="Register"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_up.png') }}" alt="register">&nbsp;{{ 'layout.header.register' |trans({}, 'CCDNComponentCommonBundle') }}</a>
+						<a class="primary_bar" href="{{ path(param('ccdn_component_common.header.registration_route')) }}" data-tip="bottom" title="Register"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_up.png') }}" alt="register">&nbsp;{{ 'layout.header.register' |trans({}, 'CCDNComponentCommonBundle') }}</a>
 					</div>
 					<div class="bar_box">
-						<a class="primary_bar" href="{{ path(param('ccdn_component_common.header.login_route')) }}" data-tooltip="bottom" title="Sign in"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_in.png') }}" alt="sign in">&nbsp;{{ 'layout.header.login' |trans({}, 'CCDNComponentCommonBundle') }}</a>
+						<a class="primary_bar" href="{{ path(param('ccdn_component_common.header.login_route')) }}" data-tip="bottom" title="Sign in"><img class="icon16" width="16" height="16" src="{{ asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_in.png') }}" alt="sign in">&nbsp;{{ 'layout.header.login' |trans({}, 'CCDNComponentCommonBundle') }}</a>
 					</div>
 					{% endif %}
 				</div>
