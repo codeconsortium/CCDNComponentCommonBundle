@@ -22,7 +22,6 @@
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-alert.js') }}"></script>
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-modal.js') }}"></script>
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-dropdown.js') }}"></script>
-{#	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-scrollspy.js') }}"></script>#}
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-tab.js') }}"></script>
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-tooltip.js') }}"></script>
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap-popover.js') }}"></script>
@@ -33,31 +32,19 @@
 		{% endblock %}
 
 		<script type='text/javascript'>
-			
-			$(document).ready(function() {
-			//	$('[data-tooltip="top"]').tooltip({placement: 'top'});
-
-			//	$('a[ref="tooltip"]').tooltip();
-			//	    data-tip="bottom"
-			//	$('[data-tooltip="left"]').tooltip({placement: 'left'});
-			//	$('[data-tooltip="right"]').tooltip({placement: 'right'});
-				
-			});
-		</script>
-		
-		<script type='text/javascript'>
 		<!--
-		$("body").ready(function() {
-			// make visible js compat toolbars site wide
-			$("[data-compat='interactive-js-compat']").removeClass('hidden');
-			$("[data-compat='interactive-non-js-compat']").addClass('hidden');
+			//$("body").ready(function() {
+			$(document).ready(function() {
+				// make visible js compat toolbars site wide
+				$("[data-compat='interactive-js-compat']").removeClass('hidden');
+				$("[data-compat='interactive-non-js-compat']").addClass('hidden');
 						
-			$('[data-tip]').each(function() {
-				$(this).tooltip({
-					placement: $(this).data('tip')
+				$('[data-tip]').each(function() {
+					$(this).tooltip({
+						placement: $(this).data('tip')
+					});
 				});
 			});
-		});
 		//-->
 		</script>
 		
