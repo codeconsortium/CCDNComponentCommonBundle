@@ -7,6 +7,7 @@ parameters:
     ccdn_component_common.param.extension.class:                CCDNComponent\CommonBundle\Extension\ParamExtension
     ccdn_component_common.trunc_dot.extension.class:            CCDNComponent\CommonBundle\Extension\TruncDotExtension
     ccdn_component_common.relevant_date_format.extension.class: CCDNComponent\CommonBundle\Extension\RelevantDateFormatExtension
+    ccdn_component_common.alert_key.extension.class:            CCDNComponent\CommonBundle\Extension\AlertKeyExtension
     
 services:
     
@@ -43,5 +44,10 @@ services:
             - { name: twig.extension }
     ccdn_component_common.relevant_date_format.extension:
         class: %ccdn_component_common.relevant_date_format.extension.class%
+        tags:
+            - { name: twig.extension }
+    ccdn_component_common.alert_key.extension:
+        class: %ccdn_component_common.alert_key.extension.class%
+        arguments: [@service_container]
         tags:
             - { name: twig.extension }

@@ -14,3 +14,9 @@ layout.header.login: Login
 layout.header.logout: Logout
 layout.header.account: Account
 layout.header.profile: Profile
+
+
+flash.notice:   'alert alert-info'
+flash.success:  'alert alert-success'
+flash.warning:  'alert alert'
+flash.error:    'alert alert-error'
