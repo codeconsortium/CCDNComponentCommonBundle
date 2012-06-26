@@ -49,25 +49,57 @@ class RelevantDateFormatExtension extends \Twig_Extension
 		
 		$interval = $date->diff($now);
 		
-		$diff = $interval->format('%a');
+		$diffDays = $interval->format('%a');
+		$diffHours = ($diffDays  < 1) ? $interval->format('%h') : $diffDays * 24;
+		$diffMins = ($diffDays < 1) ? $interval->format('%i') : $diffHours * 60;
+
+		// return $date->format('Y-m-d H:i');
+
+		//
+		// Number of minutes
+		//
+		if ($diffMins < 1)		
+		{
+			return '1 minute ago';
+		}
+		if ($diffMins < 59)
+		{
+			return $diffMins . ' minutes ago';
+		}
 		
-		if ($diff > 365)
+		//
+		// Number of hours
+		//
+		if ($diffHours < 1)
+		{
+			return '1 hour ago';
+		}
+		if ($diffHours < 24)
+		{
+			return $diffHours . ' hours ago';
+		}
+		
+		//
+		// Number of days
+		//
+		//if ($diff > 365)
+		if ($now->format('Y') > $date->format('Y'))
 		{
 			return $date->format('Y-m-d H:i');
 		}
-		if ($diff > 31)
+		if ($diffDays > 31)
 		{
 			return $date->format('M d H:i');
 		}
-		if ($diff > 1)
+		if ($diffDays > 1)
 		{
 			return $date->format('M d H:i'); 
 		}
-		if ($diff == 1)
+		if ($diffDays == 1)
 		{
 			return $date->format('H:i \Y\e\s\t\e\r\d\a\y');
 		}
-		if ($diff == 0)
+		if ($diffDays == 0)
 		{
 			return $date->format('H:i \T\o\d\a\y');
 		}
