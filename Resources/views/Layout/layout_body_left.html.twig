@@ -29,11 +29,13 @@
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap/bootstrap-collapse.js') }}"></script>
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap/bootstrap-carousel.js') }}"></script>
 	    <script src="{{ asset('bundles/ccdncomponentcommon/js/bootstrap/bootstrap-typeahead.js') }}"></script>
+	
+		<script src="{{ asset('bundles/ccdncomponentcommon/js/timrwood/moment.min.js') }}"></script>
+		<script src="{{ asset('bundles/ccdncomponentcommon/js/ccdn/jquery.timestamper.js') }}"></script>
 		{% endblock %}
 
 		<script type='text/javascript'>
 		<!--
-			//$("body").ready(function() {
 			$(document).ready(function() {
 				// make visible js compat toolbars site wide
 				$("[data-compat='interactive-js-compat']").removeClass('hidden');
@@ -43,7 +45,7 @@
 					$(this).tooltip({
 						placement: $(this).data('tip')
 					});
-				});
+				});				
 			});
 		//-->
 		</script>
