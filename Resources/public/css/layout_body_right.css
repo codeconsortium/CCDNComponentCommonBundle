@@ -187,10 +187,10 @@ div.right_column_container {
 }
 
 div.right_column {
-/*	width: 100%;*/
 	margin: 0 0 0 190px;
 	padding: 8px 5px 5px;
 	overflow: hidden;
+	width: auto;
 }
 
 /************************

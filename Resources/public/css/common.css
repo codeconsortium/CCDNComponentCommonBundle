@@ -44,3 +44,30 @@ div.sidebar .btn {
 	top: -90px;
 	z-index: 2;
 }*/
+
+.form-confirmation {
+	display:block;
+	width:auto;
+/*	margin:5px;*/
+	padding:5px;
+	text-align:center;
+	overflow:hidden;
+}
+
+.form-confirmation .form-question {
+	display:block;
+	width:auto;
+	padding:30px;
+	text-align:center;
+	overflow:hidden;
+}
+
+.form-confirmation .form-answer {
+	display:block;
+	width:auto;
+	padding:30px;
+	border-top:1px solid #ddd;
+	background-color:#eee;
+	text-align:center;
+	overflow:hidden;
+}
