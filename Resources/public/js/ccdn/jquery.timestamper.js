@@ -29,7 +29,6 @@ $(document).ready(function() {
 	$('abbr.timestamper').timestamper({ 
 		interval: (1000 * 30),
 	});
-	
 });
 
 !function($) {
