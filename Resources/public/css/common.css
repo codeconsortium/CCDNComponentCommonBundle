@@ -71,3 +71,7 @@ div.sidebar .btn {
 	text-align:center;
 	overflow:hidden;
 }
+
+span.label a:link, span.label a:visited, span.label a:active, span.label a:hover {
+	color: #eee;
+}
