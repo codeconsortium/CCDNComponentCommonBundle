@@ -75,3 +75,8 @@ div.sidebar .btn {
 span.label a:link, span.label a:visited, span.label a:active, span.label a:hover {
 	color: #eee;
 }
+
+.common_body {
+	word-wrap:break-word;
+	
+}
