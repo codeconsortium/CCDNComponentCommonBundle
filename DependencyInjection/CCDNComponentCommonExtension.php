@@ -34,6 +34,16 @@ class CCDNComponentCommonExtension extends Extension
     /**
      * {@inheritDoc}
      */
+	public function getAlias()
+	{
+		return 'ccdn_component_common';
+	}
+	
+	
+	
+    /**
+     * {@inheritDoc}
+     */
     public function load(array $configs, ContainerBuilder $container)
     {
         $configuration = new Configuration();
