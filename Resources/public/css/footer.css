@@ -1,0 +1,24 @@
+/************************
+ * Page Footer
+ ***********************/
+
+div#footer {
+	display: block;
+	width: auto;
+	margin: 0px;
+	padding: 30px;
+	left: -1px;
+	right: -1px;
+	bottom:  -1px;
+	clear: both;
+	overflow: hidden;
+	background-color: #f1f1f1;
+	text-align: center;
+}
+
+span.footnote {
+	text-align: center;
+	text-decoration: none;
+	color: #aaa;
+	font: 11pt "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+}
