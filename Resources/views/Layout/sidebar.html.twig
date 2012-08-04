@@ -6,19 +6,19 @@
 				{%- if app.request.get('category') == 'admin' -%}
 					<li class="active"><a rel="nofollow" href="{{- path('cc_admin_cp') -}}"><i class="icon-white icon-wrench"></i>&nbsp;{{- 'general.view.link_administrate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 				{%- else -%}
-					<li><a rel="nofollow" href="{{- path('cc_admin_cp') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'general.view.link_administrate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>								
+					<li><a rel="nofollow" href="{{- path('cc_admin_cp') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'general.view.link_administrate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 				{%- endif -%}
 			{%- endif -%}
 			{%- if app.request.get('category') == 'moderator' -%}
 				<li class="active"><a rel="nofollow" href="{{- path('cc_moderator_cp') -}}"><i class="icon-white icon-wrench"></i>&nbsp;{{- 'general.view.link_moderate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 			{%- else -%}
-				<li><a rel="nofollow" href="{{- path('cc_moderator_cp') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'general.view.link_moderate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>								
+				<li><a rel="nofollow" href="{{- path('cc_moderator_cp') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'general.view.link_moderate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 			{%- endif -%}
 		{%- else -%}
 			{%- if is_granted('ROLE_ADMIN') -%}
-				<li><a rel="nofollow" href="{{- path('cc_admin_cp') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'general.view.link_administrate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>								
+				<li><a rel="nofollow" href="{{- path('cc_admin_cp') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'general.view.link_administrate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 			{%- endif -%}
-			<li><a rel="nofollow" href="{{- path('cc_moderator_cp') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'general.view.link_moderate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>								
+			<li><a rel="nofollow" href="{{- path('cc_moderator_cp') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'general.view.link_moderate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 		{%- endif -%}
 		<li class="divider"></li>
 	{%- endif -%}

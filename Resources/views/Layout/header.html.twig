@@ -5,7 +5,7 @@
 			{%- for row, link in header_links -%}
 				<a class="nav_link" href="{{- path(link['route']) -}}">{{- link['label'] | trans({}, link['bundle']) -}}</a>
 			{%- endfor -%}
-		</div>			
+		</div>
 
 		<div id="primary_bar">
 			<div id="primary_left">
@@ -21,26 +21,26 @@
 						{%- if message_count > 0 -%}
 							<a rel="nofollow" class="btn btn-danger" style="vertical-align: middle; font-weight: bold;" href="{{- path('cc_message_index') -}}" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>
 						{%- else -%}
-							<a rel="nofollow" class="btn" style="vertical-align: middle;" href="{{- path('cc_message_index') -}}" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>				
+							<a rel="nofollow" class="btn" style="vertical-align: middle;" href="{{- path('cc_message_index') -}}" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>
 						{%- endif -%}
 					</div>
 					<div class="bar_box">
 						<a rel="nofollow" class="primary_bar" href="{{- path(param('ccdn_component_common.header.account_route')) -}}" title="Account"><img class="icon16" width="16" height="16" src="{{- asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_account.png') -}}" alt="account">&nbsp;{{- app.user.username -}}</a>
-					</div>		
+					</div>
 					<div class="bar_box">
 						<a rel="nofollow" class="primary_bar" href="{{- path(param('ccdn_component_common.header.logout_route')) -}}" title="Sign out"><img class="icon16" width="16" height="16" src="{{- asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_out.png') -}}" alt="sign out">&nbsp;{{- 'layout.header.logout' |trans({}, 'CCDNComponentCommonBundle') -}}</a>
 					</div>
 				</div>
-			
-			
+
+
 				<div class="hidden" data-compat="interactive-js-compat">
 					<div class="btn-toolbar form-inline" style="margin-right: 60px;">
-					
+
 						{%- set message_count = unreadMessageCount() -%}
 						{%- if message_count > 0 -%}
-							<a rel="nofollow" class="btn btn-danger" style="vertical-align: middle; font-weight: bold;" href="{{- path('cc_message_index') -}}" data-tip="bottom" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>								
+							<a rel="nofollow" class="btn btn-danger" style="vertical-align: middle; font-weight: bold;" href="{{- path('cc_message_index') -}}" data-tip="bottom" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>
 						{%- else -%}
-							<a rel="nofollow" class="btn" style="vertical-align: middle;" href="{{- path('cc_message_index') -}}" data-tip="bottom" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>				
+							<a rel="nofollow" class="btn" style="vertical-align: middle;" href="{{- path('cc_message_index') -}}" data-tip="bottom" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>
 						{%- endif -%}
 
 						<div class="btn-group" style="vertical-align: middle; margin-left: 30px; border: 0px;">

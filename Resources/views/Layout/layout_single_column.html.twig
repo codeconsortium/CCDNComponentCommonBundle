@@ -8,17 +8,17 @@
 		<link href="{{- asset('bundles/ccdncomponentcommon/css/header.css') -}}" rel="stylesheet" type="text/css">
 		<link href="{{- asset('bundles/ccdncomponentcommon/css/layout_single_column.css') -}}" rel="stylesheet" type="text/css">
 		<link href="{{- asset('bundles/ccdncomponentcommon/css/footer.css') -}}" rel="stylesheet" type="text/css">
-		
+
 		<link href="{{- asset('bundles/ccdncomponentcommon/css/common.css') -}}" rel="stylesheet" type="text/css">
-		
+
 		<link href="{{- asset('bundles/ccdncomponentcommon/css/bootstrap.css') -}}" rel="stylesheet" type="text/css">
-		<link href="{{- asset('bundles/ccdncomponentcommon/css/bootstrap-responsive.css') -}}" rel="stylesheet" type="text/css">		
+		<link href="{{- asset('bundles/ccdncomponentcommon/css/bootstrap-responsive.css') -}}" rel="stylesheet" type="text/css">
 		{% endblock %}
-		
+
 		{% block javascripts %}
 		<script src="{{- asset('bundles/ccdncomponentcommon/js/jquery-1.7.1.min.js') -}}" type="text/javascript"></script>
 
-		<!-- Placed at the end of the document so the pages load faster -->	
+		<!-- Placed at the end of the document so the pages load faster -->
 {#	    <script type="text/javascript" src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
 	    <script src="{{- asset('bundles/ccdncomponentcommon/js/bootstrap/google-code-prettify/prettify.js') -}}" type="text/javascript"></script>#}
 	    <script src="{{- asset('bundles/ccdncomponentcommon/js/bootstrap/bootstrap-transition.js') -}}" type="text/javascript"></script>
@@ -44,31 +44,31 @@
 				// make visible js compat toolbars site wide
 				$("[data-compat='interactive-js-compat']").removeClass('hidden');
 				$("[data-compat='interactive-non-js-compat']").addClass('hidden');
-						
+
 				$('[data-tip]').each(function() {
 					$(this).tooltip({
 						placement: $(this).data('tip')
 					});
-				});				
+				});
 			});
 		//-->
 		</script>
 		{%- endspaceless -%}
-		
+
     </head>
     <body>
-		
+
 		{%- spaceless -%}
-		
+
 		{%- include 'CCDNComponentCommonBundle:Layout:header.html.twig' -%}
-		
+
 		<div id="body">
 
 			<div id="top"></div>
             {%- block body -%}{%- endblock -%}
 
 		</div>
-		
+
 		{%- include 'CCDNComponentCommonBundle:Layout:footer.html.twig' -%}
 
 		{%- endspaceless -%}
