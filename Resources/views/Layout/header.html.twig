@@ -19,9 +19,9 @@
 					<div class="bar_box">
 						{%- set message_count = unreadMessageCount() -%}
 						{%- if message_count > 0 -%}
-							<a rel="nofollow" class="btn btn-danger" style="vertical-align: middle; font-weight: bold;" href="{{- path('cc_message_index') -}}" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>
+							<a rel="nofollow" class="btn btn-danger" style="vertical-align: middle; font-weight: bold;" href="{{- path('ccdn_message_message_index') -}}" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>
 						{%- else -%}
-							<a rel="nofollow" class="btn" style="vertical-align: middle;" href="{{- path('cc_message_index') -}}" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>
+							<a rel="nofollow" class="btn" style="vertical-align: middle;" href="{{- path('ccdn_message_message_index') -}}" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>
 						{%- endif -%}
 					</div>
 					<div class="bar_box">
@@ -38,9 +38,9 @@
 
 						{%- set message_count = unreadMessageCount() -%}
 						{%- if message_count > 0 -%}
-							<a rel="nofollow" class="btn btn-danger" style="vertical-align: middle; font-weight: bold;" href="{{- path('cc_message_index') -}}" data-tip="bottom" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>
+							<a rel="nofollow" class="btn btn-danger" style="vertical-align: middle; font-weight: bold;" href="{{- path('ccdn_message_message_index') -}}" data-tip="bottom" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>
 						{%- else -%}
-							<a rel="nofollow" class="btn" style="vertical-align: middle;" href="{{- path('cc_message_index') -}}" data-tip="bottom" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>
+							<a rel="nofollow" class="btn" style="vertical-align: middle;" href="{{- path('ccdn_message_message_index') -}}" data-tip="bottom" title="{{- 'message.inbox_status' | trans({'%message_count%': message_count }, 'CCDNMessageMessageBundle') -}}">{{- message_count -}}</a>
 						{%- endif -%}
 
 						<div class="btn-group" style="vertical-align: middle; margin-left: 30px; border: 0px;">
