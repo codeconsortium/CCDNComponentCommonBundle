@@ -20,9 +20,42 @@ namespace CCDNComponent\CommonBundle\Manager;
  */
 interface ManagerInterface
 {
+	/**
+	 *
+	 * @access public
+	 * @param $doctrine
+	 */
+    public function __construct($doctrine);
 
-    public function __construct($doctrine, $container);
+	/**
+	 *
+	 * @access public
+	 * @param $entity
+	 * @return $this
+	 */
+    public function persist($entity);
 
-    public function persist($persist);
+	/**
+	 *
+	 * @access public
+	 * @param $entity
+	 * @return $this
+	 */
+    public function remove($entity);
+
+	/**
+	 *
+	 * @access public
+	 * @param $entity
+	 * @return $this
+	 */
+    public function refresh($entity);
+
+	/**
+	 *
+	 * @access public
+	 * @return $this
+	 */
+    public function flush();
 
 }

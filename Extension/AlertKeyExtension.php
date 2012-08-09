@@ -29,6 +29,8 @@ class AlertKeyExtension extends \Twig_Extension
 
     /**
      *
+ 	 * @access public
+ 	 * @param $container
      */
     public function __construct($container)
     {
@@ -49,8 +51,9 @@ class AlertKeyExtension extends \Twig_Extension
 
     /**
      *
-     *
      * @access public
+	 * @param $str
+	 * @return String
      */
     public function alertKey($str)
     {

@@ -29,6 +29,8 @@ class ParamExtension extends \Twig_Extension
 
     /**
      *
+ 	 * @access public
+ 	 * @param $container
      */
     public function __construct($container)
     {

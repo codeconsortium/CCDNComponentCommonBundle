@@ -64,12 +64,12 @@ services:
         public: false
         tags:
             - { name: pagerfanta.view, alias: twitter_bootstrap_compact }
-    ccdn_component_common.pagerfanta.view.pagerfanta_translated:
-        class: %ccdn_component_common.pagerfanta.view.pagerfanta_translated.class%
-        arguments: [@pagerfanta.view.twitter_bootstrap, @translator]
-        public: false
-        tags:
-            - { name: pagerfanta.view, alias: twitter_bootstrap_compact_translated }
+    #ccdn_component_common.pagerfanta.view.pagerfanta_translated:
+    #    class: %ccdn_component_common.pagerfanta.view.pagerfanta_translated.class%
+    #    arguments: [@pagerfanta.view.twitter_bootstrap, @translator]
+    #    public: false
+    #    tags:
+    #        - { name: pagerfanta.view, alias: twitter_bootstrap_compact_translated }
 
         
         

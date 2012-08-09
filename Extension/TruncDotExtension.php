@@ -39,7 +39,7 @@ class TruncDotExtension extends \Twig_Extension
      *
      * @access public
      * @param $numerator, $denominator
-     * @return int
+     * @return Int
      */
     public function truncDot($text, $length)
     {
@@ -49,7 +49,7 @@ class TruncDotExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @return string
+     * @return String
      */
     public function getName()
     {

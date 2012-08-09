@@ -23,44 +23,77 @@ use Symfony\Component\DependencyInjection\ContainerAware;
 class BaseManager extends ContainerAware
 {
 
+	/**
+	 *
+	 * @access protected
+	 */
     protected $doctrine;
 
-    protected $entityManager;
+	/**
+	 *
+	 * @access protected
+	 */
+    protected $em;
 
-    protected $container;
-
-    public function __construct($doctrine, $container)
+	/**
+	 *
+	 * @access public
+	 * @param $doctrine
+	 */
+    public function __construct($doctrine)
     {
         $this->doctrine = $doctrine;
-        $this->entityManager = $doctrine->getEntityManager();
 
-        $this->container = $container;
+        $this->em = $doctrine->getEntityManager();
     }
 
-    public function persist($persist)
+	/**
+	 *
+	 * @access public
+	 * @param $entity
+	 * @return $this
+	 */
+    public function persist($entity)
     {
-        $this->entityManager->persist($persist);
+        $this->em->persist($entity);
 
         return $this;
     }
 
-    public function remove($remove)
+	/**
+	 *
+	 * @access public
+	 * @param $entity
+	 * @return $this
+	 */
+    public function remove($entity)
     {
-        $this->entityManager->remove($remove);
+        $this->em->remove($entity);
 
         return $this;
     }
 
-    public function flushNow()
-    {
-        $this->entityManager->flush();
-
-        return $this;
-    }
-
+	/**
+	 *
+	 * @access public
+	 * @param $entity
+	 * @return $this
+	 */
     public function refresh($entity)
     {
-        $this->entityManager->refresh($entity);
+        $this->em->refresh($entity);
+
+        return $this;
+    }
+
+	/**
+	 *
+	 * @access public
+	 * @return $this
+	 */
+    public function flush()
+    {
+        $this->em->flush();
 
         return $this;
     }
