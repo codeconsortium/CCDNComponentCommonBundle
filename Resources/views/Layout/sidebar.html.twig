@@ -1,24 +1,24 @@
 {%- spaceless -%}
 	{%- if is_granted('ROLE_MODERATOR') -%}
-		<li class="nav-header">{{- 'sidebar.header.special' | trans({}, 'CCDNComponentCommonBundle') -}}</li>
+		<li class="nav-header">{{- 'ccdn_component_common.sidebar.header.special' | trans({}, 'CCDNComponentCommonBundle') -}}</li>
 		{%- if app.request.attributes.get('_route') == 'ccdn_component_dashboard_show' or app.request.attributes.get('_route') == 'ccdn_component_common_moderator_cpanel' or app.request.attributes.get('_route') == 'ccdn_component_common_admin_cpanel' -%}
 			{%- if is_granted('ROLE_ADMIN') -%}
 				{%- if app.request.get('category') == 'admin' -%}
-					<li class="active"><a rel="nofollow" href="{{- path('ccdn_component_common_admin_cpanel') -}}"><i class="icon-white icon-wrench"></i>&nbsp;{{- 'general.view.link_administrate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
+					<li class="active"><a rel="nofollow" href="{{- path('ccdn_component_common_admin_cpanel') -}}"><i class="icon-white icon-wrench"></i>&nbsp;{{- 'ccdn_component_common.general.view.link.administrate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 				{%- else -%}
-					<li><a rel="nofollow" href="{{- path('ccdn_component_common_admin_cpanel') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'general.view.link_administrate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
+					<li><a rel="nofollow" href="{{- path('ccdn_component_common_admin_cpanel') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'ccdn_component_common.general.view.link.administrate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 				{%- endif -%}
 			{%- endif -%}
 			{%- if app.request.get('category') == 'moderator' -%}
-				<li class="active"><a rel="nofollow" href="{{- path('ccdn_component_common_moderator_cpanel') -}}"><i class="icon-white icon-wrench"></i>&nbsp;{{- 'general.view.link_moderate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
+				<li class="active"><a rel="nofollow" href="{{- path('ccdn_component_common_moderator_cpanel') -}}"><i class="icon-white icon-wrench"></i>&nbsp;{{- 'ccdn_component_common.general.view.link.moderate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 			{%- else -%}
-				<li><a rel="nofollow" href="{{- path('ccdn_component_common_moderator_cpanel') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'general.view.link_moderate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
+				<li><a rel="nofollow" href="{{- path('ccdn_component_common_moderator_cpanel') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'ccdn_component_common.general.view.link.moderate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 			{%- endif -%}
 		{%- else -%}
 			{%- if is_granted('ROLE_ADMIN') -%}
-				<li><a rel="nofollow" href="{{- path('ccdn_component_common_admin_cpanel') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'general.view.link_administrate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
+				<li><a rel="nofollow" href="{{- path('ccdn_component_common_admin_cpanel') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'ccdn_component_common.general.view.link.administrate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 			{%- endif -%}
-			<li><a rel="nofollow" href="{{- path('ccdn_component_common_moderator_cpanel') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'general.view.link_moderate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
+			<li><a rel="nofollow" href="{{- path('ccdn_component_common_moderator_cpanel') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'ccdn_component_common.general.view.link.moderate' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 		{%- endif -%}
 		<li class="divider"></li>
 	{%- endif -%}

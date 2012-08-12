@@ -61,19 +61,19 @@ class AlertKeyExtension extends \Twig_Extension
 
         switch ($key[0]) {
             case 'notice':
-                $selector = 'flash.notice';
+                $selector = 'ccdn_component_common.flash.notice';
                 break;
             case 'success':
-                $selector = 'flash.success';
+                $selector = 'ccdn_component_common.flash.success';
                 break;
             case 'warning':
-                $selector = 'flash.warning';
+                $selector = 'ccdn_component_common.flash.warning';
                 break;
             case 'error':
-                $selector = 'flash.error';
+                $selector = 'ccdn_component_common.flash.error';
                 break;
             default:
-                $selector = 'flash.warning';
+                $selector = 'ccdn_component_common.flash.warning';
                 break;
         }
 
