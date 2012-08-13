@@ -10,6 +10,7 @@
 		<link href="{{- asset('bundles/ccdncomponentcommon/css/footer.css') -}}" rel="stylesheet" type="text/css">
 
 		<link href="{{- asset('bundles/ccdncomponentcommon/css/common.css') -}}" rel="stylesheet" type="text/css">
+		<link href="{{- asset('bundles/ccdncomponentcommon/css/scrollbars.css') -}}" rel="stylesheet" type="text/css">		
 
 		<link href="{{- asset('bundles/ccdncomponentcommon/css/bootstrap.css') -}}" rel="stylesheet" type="text/css">
 		<link href="{{- asset('bundles/ccdncomponentcommon/css/bootstrap-responsive.css') -}}" rel="stylesheet" type="text/css">
@@ -68,13 +69,15 @@
 				<div class="right_column">
 					<div id="top"></div>
 		            {%- block body -%}{%- endblock -%}
+		
+					{%- include 'CCDNComponentCommonBundle:Layout:footer.html.twig' -%}
 				</div>
 	        </div>
 
 	        <div class="left_column_container">
 				<div class="left_column">
-					<div class="well" style="padding: 8px 0 8px !important;">
-						<ul class="nav nav-list">
+					<div class="well sidebar">
+						<ul class="nav nav-list" style="padding: 5px 15px 10px 15px !important;">
 
 						{%- include 'CCDNComponentCommonBundle:Layout:sidebar.html.twig' -%}
 
@@ -88,7 +91,6 @@
 
 		</div>
 
-		{%- include 'CCDNComponentCommonBundle:Layout:footer.html.twig' -%}
 
 		{%- endspaceless -%}
 

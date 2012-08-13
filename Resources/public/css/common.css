@@ -1,3 +1,12 @@
+.sidebar {
+	display:block;
+	height: 100% !important;
+	border-radius:0px !important;
+	overflow: auto !important;
+	clear: both !important;
+	padding: 0px !important;
+}
+
 .marked_read {
 	background-color: #fcfcfc;
 }
@@ -28,11 +37,6 @@ table tr th.center, table tr td.center {text-align:center;}
 
 table tr th.right {text-transform:capitalize;}
 table tr th.right, table tr td.right {text-align:right;}
-
-div.sidebar .btn {
-	display:block;
-	margin-bottom:5px;
-}
 
 /*a[name^='anchor_offset_'] {*/
 /*a.anchor {

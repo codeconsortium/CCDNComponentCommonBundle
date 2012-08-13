@@ -5,14 +5,16 @@
 div#footer {
 	display: block;
 	width: auto;
-	margin: 0px;
+	height: 60px;
+	margin: -5px;
 	padding: 30px;
+
 	left: -1px;
 	right: -1px;
-	bottom:  -1px;
+	bottom: -1px;
 	clear: both;
 	overflow: hidden;
-	background-color: #f1f1f1;
+	/*background-color: #f1f1f1;*/
 	text-align: center;
 }
 

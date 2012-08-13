@@ -23,32 +23,30 @@ div.left_column_container {
 }
 
 div.left_column {
-/*	background-color: #fff;*/
-	
-	margin: 8px 190px 5px 5px;
+	margin: 0px 195px 0px 0px;
 	padding: 5px;
 	overflow: hidden;
-/*	border-right: 1px solid #eee;*/
-/*	border: 1px solid #ccc;
-	border-radius: 5px;*/
+	height:100%;
 }
 
 div.right_column_container {
-	vertical-align: top;
 	display: block;
-	margin: 0px 0px 0px -190px;
-	padding: 0px;
-	overflow: visible;
 	float: right;
-	width: 190px;
+	width: 195px;
+	margin: 0px -1px 0px -195px;
+
+	position: fixed;
+	right: 0px;
+	top: 77px;
+	bottom:1px;
+	
+	overflow: hidden;
+	vertical-align: top;
 }
 
 div.right_column {
-/*	background-color: #fff;*/
-	
-	margin: 8px 5px 5px;
-	padding: 5px;
-	overflow: visible;
-/*	border: 1px solid #ccc;
-	border-radius: 5px;*/
+	height:100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
 }

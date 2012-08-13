@@ -15,19 +15,24 @@ div#body {
 div.left_column_container {	
 	display: block;
 	float: left;
-/*	margin: 0px -190px 0px 0px;*/
-	width: 185px;
-	margin: 0px;
+	width: 195px;
+	/*height: 100%;*/
+	margin: -1px;
+
+	position: fixed;
+	left: 0px;
+	top: 77px;
+	bottom:1px;
 	
-	padding: 0px;
 	overflow: hidden;
 	vertical-align: top;
 }
 
 div.left_column {
-	width: 175px;
+	width: 195px;
+	height: 100%;
 	margin: 0px;
-	padding: 5px;
+	padding: 0px;
 	overflow: hidden;
 }
 
@@ -35,18 +40,17 @@ div.right_column_container {
 	display: block;
 	float: right;
 	width: 100%;
-/*	margin: 0;*/
+	height: 100%;
 	margin: 0 0 0 -195px;
-/*	margin: 0px 0px 0px -191px;*/
-
 	padding: 0px;
 	overflow: hidden;
 	vertical-align: top;
 }
 
 div.right_column {
-	margin: 0 0 0 190px;
-	padding: 8px 5px 5px;
+	margin: 0 0 0 195px;
+	padding: 5px;
 	overflow: hidden;
 	width: auto;
+	height: 100%;
 }
