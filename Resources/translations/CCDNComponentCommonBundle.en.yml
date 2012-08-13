@@ -1,22 +1,28 @@
-ccdn_component_common.sidebar.header.special: Special
-ccdn_component_common.general.view.link.moderate: Moderator Panel
-ccdn_component_common.general.view.link.administrate: Administrator Panel
+#
+# Layout Header Link Labels.
+#
+ccdn_component_common.layout.header.register: 'Register'
+ccdn_component_common.layout.header.login: 'Login'
+ccdn_component_common.layout.header.logout: 'Logout'
+ccdn_component_common.layout.header.account: 'Account'
+ccdn_component_common.layout.header.profile: 'Profile'
 
-#layout.header_links.members: Members
-#layout.header_links.forum: Forum
-#layout.header_links.downloads: Downloads
-#layout.header_links.answers: Answers
-#layout.header_links.articles: Articles
-#layout.header_links.knowledge_base: Knowledge Base
-
-ccdn_component_common.layout.header.register: Register
-ccdn_component_common.layout.header.login: Login
-ccdn_component_common.layout.header.logout: Logout
-ccdn_component_common.layout.header.account: Account
-ccdn_component_common.layout.header.profile: Profile
-
-
+#
+# Flash Messages.
+#
 ccdn_component_common.flash.notice:   'alert alert-info'
 ccdn_component_common.flash.success:  'alert alert-success'
 ccdn_component_common.flash.warning:  'alert alert'
 ccdn_component_common.flash.error:    'alert alert-error'
+
+#
+# Sidebar.
+#
+ccdn_component_common.sidebar.header.special: 'Special'
+
+#
+# Link Labels.
+#
+ccdn_component_common.general.view.link.moderate: 'Moderator Panel'
+ccdn_component_common.general.view.link.administrate: 'Administrator Panel'
+
