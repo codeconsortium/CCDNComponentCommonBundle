@@ -34,7 +34,7 @@
 
 
 				<div class="hidden" data-compat="interactive-js-compat">
-					<div class="btn-toolbar form-inline" style="margin-right: 60px;">
+					<div class="btn-toolbar form-inline" style="margin-right: 10px;">
 
 						{%- set message_count = unreadMessageCount() -%}
 						{%- if message_count > 0 -%}
@@ -44,9 +44,9 @@
 						{%- endif -%}
 
 						<div class="btn-group" style="vertical-align: middle; margin-left: 30px; border: 0px;">
-							<a href="#" class="btn dropdown-toggle" style="border:0px; background:none; box-shadow:none;" data-toggle="dropdown">
-								<img class="icon16" width="16" height="16" src="{{- asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_account.png') -}}" alt="account">&nbsp;
-								{{- app.user.username |capitalize -}}&nbsp;
+							<a href="#" class="btn dropdown-toggle" style="{#border:0px;background:none;box-shadow:none;vertical-align:middle;#}" data-toggle="dropdown">
+								{%- include 'CCDNUserProfileBundle:Avatar:item_avatar.html.twig' with {'user': app.user, 'scale_x':20, 'scale_y':20, 'rounded':3 } -%}&nbsp;
+								{{- app.user.username |capitalize -}}&nbsp;&nbsp;
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu pull-right" style="z-index: 20; margin-top:5px;">
