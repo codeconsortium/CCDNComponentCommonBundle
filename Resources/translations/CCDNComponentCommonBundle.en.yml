@@ -25,4 +25,4 @@ ccdn_component_common.sidebar.header.special: 'Special'
 #
 ccdn_component_common.general.view.link.moderate: 'Moderator Panel'
 ccdn_component_common.general.view.link.administrate: 'Administrator Panel'
-
+ccdn_component_common.general.view.link.all_dashboard: 'All Panels'
