@@ -1,5 +1,5 @@
-Installing CCDNComponent CommonBundle 1.0
-==========================================
+Installing CCDNComponent CommonBundle 1.2
+=========================================
 
 ## Dependencies:
 
@@ -26,7 +26,7 @@ Append the following to end of your deps file (found in the root of your Symfony
 [CCDNComponentCommonBundle]
     git=http://github.com/codeconsortium/CommonBundle.git
     target=/bundles/CCDNComponent/CommonBundle
-
+    version=v1.2
 ```
 
 ### Step 2: Register bundles with autoload.php.
