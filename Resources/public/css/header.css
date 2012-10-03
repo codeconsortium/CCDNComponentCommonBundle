@@ -27,9 +27,10 @@ div#primary_bar {
 	top: -1px;
 	list-style-position: inside;
 	list-style-type: none;
-	background-color: #f1f1f1;
-	border-bottom: 1px solid #ddd;
-	box-shadow: 0px 3px 10px #eee;
+	/*background-color: #f1f1f1;*/
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+	box-shadow: 0px 0px 5px #ededed;
 }
 
 
@@ -120,8 +121,8 @@ div#secondary_bar {
 	text-align: left;
 	
 	overflow: hidden;
-	background-image: url(../images/layout/header/lower_bar_bg.png);
-
+	/*background-image: url(../images/layout/header/lower_bar_bg.png);*/
+	background-color:#111;
 	border-bottom: 1px solid #ddd;
 }
 
@@ -130,11 +131,12 @@ a.nav_link:link, a.nav_link:visited, a.nav_link:active {
 	margin-right: 15px;
 	margin-left: 0px;
 
-	color: #4183c4;
+	/*color: #4183c4;*/
+	color:#fff;
 	font: bold small "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-transform: capitalize;
 	text-decoration: none;
-	text-shadow: 0px -1px 1px #eee;
+	/*text-shadow: 0px -1px 1px #eee;*/
 }
 
 a.nav_link:hover {
