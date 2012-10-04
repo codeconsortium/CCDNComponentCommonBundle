@@ -25,10 +25,10 @@
 						{%- endif -%}
 					</div>
 					<div class="bar_box">
-						<a rel="nofollow" class="primary_bar" href="{{- path(param('ccdn_component_common.header.account_route')) -}}" title="Account"><img class="icon16" width="16" height="16" src="{{- asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_account.png') -}}" alt="account">&nbsp;{{- app.user.username -}}</a>
+						<a rel="nofollow" class="primary_bar" href="{{- path(param('ccdn_component_common.header.account_route')) -}}" title="Account"><i class="icon-cog"></i>&nbsp;{{- app.user.username -}}</a>
 					</div>
 					<div class="bar_box">
-						<a rel="nofollow" class="primary_bar" href="{{- path(param('ccdn_component_common.header.logout_route')) -}}" title="Sign out"><img class="icon16" width="16" height="16" src="{{- asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_out.png') -}}" alt="sign out">&nbsp;{{- 'ccdn_component_common.layout.header.logout' |trans({}, 'CCDNComponentCommonBundle') -}}</a>
+						<a rel="nofollow" class="primary_bar" href="{{- path(param('ccdn_component_common.header.logout_route')) -}}" title="Sign out"><i class="icon-off"></i>&nbsp;{{- 'ccdn_component_common.layout.header.logout' |trans({}, 'CCDNComponentCommonBundle') -}}</a>
 					</div>
 				</div>
 
@@ -53,17 +53,17 @@
 								<li><a rel="nofollow" href="{{- path(param('ccdn_component_common.header.account_route')) -}}"><i class="icon-cog"></i>&nbsp;{{- 'ccdn_component_common.layout.header.account' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 								<li><a rel="nofollow" href="{{- path(param('ccdn_component_common.header.profile_route')) -}}"><i class="icon-user"></i>&nbsp;{{- 'ccdn_component_common.layout.header.profile' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 								<li class="divider"></li>
-								<li><a rel="nofollow" href="{{- path(param('ccdn_component_common.header.logout_route')) -}}"><i class="icon-lock"></i>&nbsp;{{- 'ccdn_component_common.layout.header.logout' |trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
+								<li><a rel="nofollow" href="{{- path(param('ccdn_component_common.header.logout_route')) -}}"><i class="icon-off"></i>&nbsp;{{- 'ccdn_component_common.layout.header.logout' |trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				{%- else -%}
+{#				<div class="bar_box">
+					<a rel="nofollow" class="btn" href="{{- path(param('ccdn_component_common.header.registration_route')) -}}" data-tip="bottom" title="Register"><i class="icon-hand-right"></i>&nbsp;{{- 'ccdn_component_common.layout.header.register' |trans({}, 'CCDNComponentCommonBundle') -}}</a>
+				</div>#}
 				<div class="bar_box">
-					<a rel="nofollow" class="primary_bar" href="{{- path(param('ccdn_component_common.header.registration_route')) -}}" data-tip="bottom" title="Register"><img class="icon16" width="16" height="16" src="{{- asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_up.png') -}}" alt="register">&nbsp;{{- 'ccdn_component_common.layout.header.register' |trans({}, 'CCDNComponentCommonBundle') -}}</a>
-				</div>
-				<div class="bar_box">
-					<a rel="nofollow" class="primary_bar" href="{{- path(param('ccdn_component_common.header.login_route')) -}}" data-tip="bottom" title="Sign in"><img class="icon16" width="16" height="16" src="{{- asset('bundles/ccdncomponentcommon/images/icons/Black/16x16/16x16_sign_in.png') -}}" alt="sign in">&nbsp;{{- 'ccdn_component_common.layout.header.login' |trans({}, 'CCDNComponentCommonBundle') -}}</a>
+					<a rel="nofollow" class="btn" href="{{- path(param('ccdn_component_common.header.login_route')) -}}" data-tip="bottom" title="Sign in"><i class="icon-user"></i>&nbsp;{{- 'ccdn_component_common.layout.header.login' |trans({}, 'CCDNComponentCommonBundle') -}}</a>
 				</div>
 				{%- endif -%}
 			</div>
