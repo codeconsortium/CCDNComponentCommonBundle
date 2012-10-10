@@ -38,7 +38,9 @@ CommonBundle Provides the following features:
 	2. Cycler function, improved row cycler, featuring labels for creating cyclers within cyclers.
 	3. Divide/Ceiling function, divides 2 numbers and runs results through php's Ceil() function.
 	4. Param function returns parameters from app/config/config.yml.
-	5. TruncDot function takes a string, if its longer than specified length, will truncate it & append '...' at the end, otherwise returns the original string.
+	5. Relevant date format function formats dates into various 'time ago' fuzzy timestamp string formats.
+	6. TruncDot function takes a string, if its longer than specified length, will truncate it & append '...' at the end, otherwise returns the original string.
+	7. UserRole function gives you a users role as 'User' or 'Admin' extracted from the array in the users role column.
 2. Various templates. (Features a fluid-left/fixed-right layout template).
 3. Various generic CSS files for use across CCDN bundles.
 4. Graphics used in CCDN bundles.
