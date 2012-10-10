@@ -79,7 +79,7 @@ class RoleHelper extends ContainerAware
 				if ($uRole == $aRole && $aRoleKey > $usersHighestRoleKey) {
 					$usersHighestRoleKey = $aRoleKey;
 					
-					break;
+					break; // break because once uRole == aRole we know we cannot match anything else.
 				}
 			}			
 		}
@@ -99,6 +99,11 @@ class RoleHelper extends ContainerAware
 		
 		$roles = $this->getAvailableRoles();
 		
-		return $roles[$usersHighestRoleKey]; 
+		if (array_key_exists($usersHighestRoleKey, $roles)) {
+			return $roles[$usersHighestRoleKey]; 			
+		} else {
+			return 'ROLE_USER';
+		}
+		
 	}
 }
