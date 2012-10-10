@@ -74,7 +74,7 @@ class RoleHelper extends ContainerAware
 		$usersHighestRoleKey = 0;
 
 		// Compare (A)vailable roles against (U)sers roles.		
-		foreach($this->availableRoles as $aRoleKey => $aRole) {
+		foreach($this->getAvailableRoles() as $aRoleKey => $aRole) {
 			foreach($usersRoles as $uRoleKey => $uRole) {
 				if ($uRole == $aRole && $aRoleKey > $usersHighestRoleKey) {
 					$usersHighestRoleKey = $aRoleKey;
@@ -87,4 +87,18 @@ class RoleHelper extends ContainerAware
 		return $usersHighestRoleKey;
 	}
 
+	/**
+	 *
+	 * @access public
+	 * @param Array() $userRoles
+	 * @return String $role
+	 */
+	public function getUsersHighestRoleAsName($usersRoles)
+	{
+		$usersHighestRoleKey = $this->getUsersHighestRole($usersRoles);
+		
+		$roles = $this->getAvailableRoles();
+		
+		return $roles[$usersHighestRoleKey]; 
+	}
 }

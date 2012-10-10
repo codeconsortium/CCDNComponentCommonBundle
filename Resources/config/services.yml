@@ -10,6 +10,7 @@ parameters:
     ccdn_component_common.trunc_dot.extension.class:                    CCDNComponent\CommonBundle\Extension\TruncDotExtension
     ccdn_component_common.relevant_date_format.extension.class:         CCDNComponent\CommonBundle\Extension\RelevantDateFormatExtension
     ccdn_component_common.alert_key.extension.class:                    CCDNComponent\CommonBundle\Extension\AlertKeyExtension
+    ccdn_component_common.user_role.extension.class:                    CCDNComponent\CommonBundle\Extension\UserRoleExtension
 
     ccdn_component_common.pagerfanta.view.pagerfanta.class:              CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapView
     ccdn_component_common.pagerfanta.view.pagerfanta_translated.class:   CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapTranslatedView
@@ -58,6 +59,11 @@ services:
     ccdn_component_common.alert_key.extension:
         class: %ccdn_component_common.alert_key.extension.class%
         arguments: [@service_container]
+        tags:
+            - { name: twig.extension }
+    ccdn_component_common.user_role.extension:
+        class: %ccdn_component_common.user_role.extension.class%
+        arguments: [@ccdn_component_common.role_helper]
         tags:
             - { name: twig.extension }
 
