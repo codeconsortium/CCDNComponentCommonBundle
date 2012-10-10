@@ -1,4 +1,6 @@
 parameters:
+
+    ccdn_component_common.role_helper.class:                            CCDNComponent\CommonBundle\Component\Helper\RoleHelper
     ccdn_component_common.bin.si.units.class:                           CCDNComponent\CommonBundle\Component\BinSIUnits
 
     ccdn_component_common.bin.si.units.extension.class:                 CCDNComponent\CommonBundle\Extension\BinSIUnitsExtension
@@ -19,6 +21,10 @@ services:
     #
     ccdn_component_common.bin.si.units:
         class: %ccdn_component_common.bin.si.units.class%
+
+    ccdn_component_common.role_helper:
+        class: %ccdn_component_common.role_helper.class%
+        arguments: [@service_container]
 
     #
     # Twig Extensions.
