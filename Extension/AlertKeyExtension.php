@@ -25,16 +25,16 @@ class AlertKeyExtension extends \Twig_Extension
      *
      * @access protected
      */
-    protected $container;
+    protected $translator;
 
     /**
      *
  	 * @access public
  	 * @param $container
      */
-    public function __construct($container)
+    public function __construct($translator)
     {
-        $this->container = $container;
+		$this->translator = $translator;
     }
 
     /**
@@ -77,7 +77,7 @@ class AlertKeyExtension extends \Twig_Extension
                 break;
         }
 
-        return $this->container->get('translator')->trans($selector, array(), 'CCDNComponentCommonBundle');
+        return $this->translator->trans($selector, array(), 'CCDNComponentCommonBundle');
     }
 
     /**

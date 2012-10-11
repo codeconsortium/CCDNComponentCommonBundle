@@ -32,7 +32,7 @@ services:
     #
     ccdn_component_common.binSIUnits.extension:
         class: %ccdn_component_common.bin.si.units.extension.class%
-        arguments: [@service_container]
+        arguments: [@ccdn_component_common.bin.si.units]
         tags:
             - { name: twig.extension }
     ccdn_component_common.cycler.extension:
@@ -58,7 +58,7 @@ services:
             - { name: twig.extension }
     ccdn_component_common.alert_key.extension:
         class: %ccdn_component_common.alert_key.extension.class%
-        arguments: [@service_container]
+        arguments: [@translator]
         tags:
             - { name: twig.extension }
     ccdn_component_common.user_role.extension:

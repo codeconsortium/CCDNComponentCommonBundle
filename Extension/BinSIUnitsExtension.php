@@ -32,9 +32,9 @@ class BinSIUnitsExtension extends \Twig_Extension
  	 * @access public
  	 * @param $container
      */
-    public function __construct($container)
+    public function __construct($units)
     {
-        $this->container = $container;
+        $this->units = $units;
     }
 
     /**
@@ -58,7 +58,7 @@ class BinSIUnitsExtension extends \Twig_Extension
      */
     public function binSIUnits($size)
     {
-        return $this->container->get('ccdn_component_common.bin.si.units')->formatToSIUnit($size, null, true);
+        return $this->units->formatToSIUnit($size, null, true);
     }
 
     /**
