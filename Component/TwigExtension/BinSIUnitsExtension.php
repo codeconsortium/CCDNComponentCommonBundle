@@ -11,14 +11,14 @@
  * file that was distributed with this source code.
  */
 
-namespace CCDNComponent\CommonBundle\Extension;
+namespace CCDNComponent\CommonBundle\Component\TwigExtension;
 
 /**
  *
  * @author Reece Fowell <reece@codeconsortium.com>
  * @version 1.0
  */
-class HasRoleExtension extends \Twig_Extension
+class BinSIUnitsExtension extends \Twig_Extension
 {
 
     /**
@@ -27,20 +27,14 @@ class HasRoleExtension extends \Twig_Extension
      */
     protected $container;
 
-	/**
-	 *
-	 * @access protected
-	 */
-	protected $roleHelper;
-	
     /**
      *
  	 * @access public
- 	 * @param $roleHelper
+ 	 * @param $container
      */
-    public function __construct($roleHelper)
+    public function __construct($units)
     {
-        $this->roleHelper = $roleHelper;
+        $this->units = $units;
     }
 
     /**
@@ -51,31 +45,30 @@ class HasRoleExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'hasRole' => new \Twig_Function_Method($this, 'hasRole'),
+            'binSIUnits' => new \Twig_Function_Method($this, 'binSIUnits'),
         );
     }
 
     /**
-     *
-     * Examines the roles of the user and returns true if the user has the role.
+     * returns the requested file size in an appropriate SI Unit format.
      *
      * @access public
-     * @param $user
-     * @return Int
+     * @param $size
+     * @return mixed
      */
-    public function hasRole($user, $role)
+    public function binSIUnits($size)
     {
-		return $this->roleHelper->hasRole($user, $role);		
+        return $this->units->formatToSIUnit($size, null, true);
     }
 
     /**
      *
      * @access public
-     * @return String
+     * @return string
      */
     public function getName()
     {
-        return 'hasRole';
+        return 'binSIUnits';
     }
 
 }

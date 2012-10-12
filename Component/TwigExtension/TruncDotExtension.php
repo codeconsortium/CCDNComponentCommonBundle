@@ -11,31 +11,15 @@
  * file that was distributed with this source code.
  */
 
-namespace CCDNComponent\CommonBundle\Extension;
+namespace CCDNComponent\CommonBundle\Component\TwigExtension;
 
 /**
  *
  * @author Reece Fowell <reece@codeconsortium.com>
  * @version 1.0
  */
-class BinSIUnitsExtension extends \Twig_Extension
+class TruncDotExtension extends \Twig_Extension
 {
-
-    /**
-     *
-     * @access protected
-     */
-    protected $container;
-
-    /**
-     *
- 	 * @access public
- 	 * @param $container
-     */
-    public function __construct($units)
-    {
-        $this->units = $units;
-    }
 
     /**
      *
@@ -45,30 +29,31 @@ class BinSIUnitsExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'binSIUnits' => new \Twig_Function_Method($this, 'binSIUnits'),
+            'truncDot' => new \Twig_Function_Method($this, 'truncDot'),
         );
     }
 
     /**
-     * returns the requested file size in an appropriate SI Unit format.
+     *
+     * Truncates string if longer than needed and appends '...' to signify shorthand, otherwise returns original string.
      *
      * @access public
-     * @param $size
-     * @return mixed
+     * @param $numerator, $denominator
+     * @return Int
      */
-    public function binSIUnits($size)
+    public function truncDot($text, $length)
     {
-        return $this->units->formatToSIUnit($size, null, true);
+        return ((strlen($text) > $length) ? (substr($text, 0, $length) . '...') : $text);
     }
 
     /**
      *
      * @access public
-     * @return string
+     * @return String
      */
     public function getName()
     {
-        return 'binSIUnits';
+        return 'truncDot';
     }
 
 }

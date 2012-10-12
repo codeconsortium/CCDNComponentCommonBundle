@@ -11,31 +11,15 @@
  * file that was distributed with this source code.
  */
 
-namespace CCDNComponent\CommonBundle\Extension;
+namespace CCDNComponent\CommonBundle\Component\TwigExtension;
 
 /**
  *
  * @author Reece Fowell <reece@codeconsortium.com>
  * @version 1.0
  */
-class ParamExtension extends \Twig_Extension
+class DivCeilExtension extends \Twig_Extension
 {
-
-    /**
-     *
-     * @access protected
-     */
-    protected $container;
-
-    /**
-     *
- 	 * @access public
- 	 * @param $container
-     */
-    public function __construct($container)
-    {
-        $this->container = $container;
-    }
 
     /**
      *
@@ -45,20 +29,20 @@ class ParamExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'param' => new \Twig_Function_Method($this, 'param'),
+            'divCeil' => new \Twig_Function_Method($this, 'divCeil'),
         );
     }
 
     /**
-     * returns the requested param.
+     * Divides 2 numbers and returns the rounded up number.
      *
      * @access public
-     * @param $param
-     * @return mixed
+     * @param $numerator, $denominator
+     * @return int
      */
-    public function param($param)
+    public function divCeil($numerator, $denominator)
     {
-        return $this->container->getParameter($param);
+        return ceil($numerator / $denominator);
     }
 
     /**
@@ -68,7 +52,7 @@ class ParamExtension extends \Twig_Extension
      */
     public function getName()
     {
-        return 'param';
+        return 'divCeil';
     }
 
 }

@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
  */
 
-namespace CCDNComponent\CommonBundle\Component;
+namespace CCDNComponent\CommonBundle\Component\Helper;
 
 /**
  *

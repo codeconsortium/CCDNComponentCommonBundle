@@ -11,15 +11,37 @@
  * file that was distributed with this source code.
  */
 
-namespace CCDNComponent\CommonBundle\Extension;
+namespace CCDNComponent\CommonBundle\Component\TwigExtension;
 
 /**
  *
  * @author Reece Fowell <reece@codeconsortium.com>
  * @version 1.0
  */
-class TruncDotExtension extends \Twig_Extension
+class HasRoleExtension extends \Twig_Extension
 {
+
+    /**
+     *
+     * @access protected
+     */
+    protected $container;
+
+	/**
+	 *
+	 * @access protected
+	 */
+	protected $roleHelper;
+	
+    /**
+     *
+ 	 * @access public
+ 	 * @param $roleHelper
+     */
+    public function __construct($roleHelper)
+    {
+        $this->roleHelper = $roleHelper;
+    }
 
     /**
      *
@@ -29,21 +51,21 @@ class TruncDotExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'truncDot' => new \Twig_Function_Method($this, 'truncDot'),
+            'hasRole' => new \Twig_Function_Method($this, 'hasRole'),
         );
     }
 
     /**
      *
-     * Truncates string if longer than needed and appends '...' to signify shorthand, otherwise returns original string.
+     * Examines the roles of the user and returns true if the user has the role.
      *
      * @access public
-     * @param $numerator, $denominator
+     * @param $user
      * @return Int
      */
-    public function truncDot($text, $length)
+    public function hasRole($user, $role)
     {
-        return ((strlen($text) > $length) ? (substr($text, 0, $length) . '...') : $text);
+		return $this->roleHelper->hasRole($user, $role);		
     }
 
     /**
@@ -53,7 +75,7 @@ class TruncDotExtension extends \Twig_Extension
      */
     public function getName()
     {
-        return 'truncDot';
+        return 'hasRole';
     }
 
 }
