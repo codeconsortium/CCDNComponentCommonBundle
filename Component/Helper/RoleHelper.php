@@ -51,20 +51,15 @@ class RoleHelper extends ContainerAware
 		
 		$this->container = $serviceContainer;
 		
-		if (! $this->availableRoles || count($this->availableRoles) < 1) {
-			$this->availableRoles = $this->container->getParameter('security.role_hierarchy.roles');
-			
-			// default role is array is empty.
-			if (count($this->availableRoles) < 1) {
-				$this->availableRoles[] = 'ROLE_USER';
-			}
+		$this->availableRoles = $this->container->getParameter('security.role_hierarchy.roles');
+		
+		// default role is array is empty.
+		if (empty($this->availableRoles)) {
+			$this->availableRoles[] = 'ROLE_USER';
 		}
 		
-		if (! $this->availableRoleKeys || count($this->availableRoleKeys) < 1) {
-			
-			// Remove the associate arrays.
-			$this->availableRoleKeys = array_keys($this->availableRoles);
-		}
+		// Remove the associate arrays.
+		$this->availableRoleKeys = array_keys($this->availableRoles);
 	}
 
 	/**
