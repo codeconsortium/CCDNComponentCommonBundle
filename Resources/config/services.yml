@@ -1,75 +1,75 @@
 parameters:
 
-    ccdn_component_common.role_helper.class:                            CCDNComponent\CommonBundle\Component\Helper\RoleHelper
-    ccdn_component_common.bin.si.units.class:                           CCDNComponent\CommonBundle\Component\Helper\BinSIUnits
+    ccdn_component_common.component.helper.role.class:                          CCDNComponent\CommonBundle\Component\Helper\RoleHelper
+    ccdn_component_common.component.helper.bin_si_units.class:                  CCDNComponent\CommonBundle\Component\Helper\BinSIUnits
 
-    ccdn_component_common.bin.si.units.extension.class:                 CCDNComponent\CommonBundle\Component\TwigExtension\BinSIUnitsExtension
-    ccdn_component_common.cycler.extension.class:                       CCDNComponent\CommonBundle\Component\TwigExtension\CyclerExtension
-    ccdn_component_common.div_ceil.extension.class:                     CCDNComponent\CommonBundle\Component\TwigExtension\DivCeilExtension
-    ccdn_component_common.param.extension.class:                        CCDNComponent\CommonBundle\Component\TwigExtension\ParamExtension
-    ccdn_component_common.trunc_dot.extension.class:                    CCDNComponent\CommonBundle\Component\TwigExtension\TruncDotExtension
-    ccdn_component_common.relevant_date_format.extension.class:         CCDNComponent\CommonBundle\Component\TwigExtension\RelevantDateFormatExtension
-    ccdn_component_common.alert_key.extension.class:                    CCDNComponent\CommonBundle\Component\TwigExtension\AlertKeyExtension
-    ccdn_component_common.user_role.extension.class:                    CCDNComponent\CommonBundle\Component\TwigExtension\UserRoleExtension
-    ccdn_component_common.has_role.extension.class:                     CCDNComponent\CommonBundle\Component\TwigExtension\HasRoleExtension
+    ccdn_component_common.component.twig_extension.bin.si.units.class:          CCDNComponent\CommonBundle\Component\TwigExtension\BinSIUnitsExtension
+    ccdn_component_common.component.twig_extension.cycler.class:                CCDNComponent\CommonBundle\Component\TwigExtension\CyclerExtension
+    ccdn_component_common.component.twig_extension.div_ceil.class:              CCDNComponent\CommonBundle\Component\TwigExtension\DivCeilExtension
+    ccdn_component_common.component.twig_extension.param.class:                 CCDNComponent\CommonBundle\Component\TwigExtension\ParamExtension
+    ccdn_component_common.component.twig_extension.trunc_dot.class:             CCDNComponent\CommonBundle\Component\TwigExtension\TruncDotExtension
+    ccdn_component_common.component.twig_extension.relevant_date_format.class:  CCDNComponent\CommonBundle\Component\TwigExtension\RelevantDateFormatExtension
+    ccdn_component_common.component.twig_extension.alert_key.class:             CCDNComponent\CommonBundle\Component\TwigExtension\AlertKeyExtension
+    ccdn_component_common.component.twig_extension.user_role.class:             CCDNComponent\CommonBundle\Component\TwigExtension\UserRoleExtension
+    ccdn_component_common.component.twig_extension.has_role.class:              CCDNComponent\CommonBundle\Component\TwigExtension\HasRoleExtension
         
-    ccdn_component_common.pagerfanta.view.pagerfanta.class:              CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapView
-    ccdn_component_common.pagerfanta.view.pagerfanta_translated.class:   CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapTranslatedView
+    ccdn_component_common.pagerfanta.view.pagerfanta.class:                     CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapView
+    ccdn_component_common.pagerfanta.view.pagerfanta_translated.class:          CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapTranslatedView
     
 services:
 
     #
     # Components.
     #
-    ccdn_component_common.bin.si.units:
-        class: %ccdn_component_common.bin.si.units.class%
+    ccdn_component_common.component.helper.bin_si_units:
+        class: %ccdn_component_common.component.helper.bin_si_units.class%
 
-    ccdn_component_common.role_helper:
-        class: %ccdn_component_common.role_helper.class%
+    ccdn_component_common.component.helper.role:
+        class: %ccdn_component_common.component.helper.role.class%
         arguments: [@service_container]
 
     #
     # Twig Extensions.
     #
-    ccdn_component_common.binSIUnits.extension:
-        class: %ccdn_component_common.bin.si.units.extension.class%
-        arguments: [@ccdn_component_common.bin.si.units]
+    ccdn_component_common.component.twig_extension.binSIUnits:
+        class: %ccdn_component_common.component.twig_extension.bin.si.units.class%
+        arguments: [@ccdn_component_common.component.helper.bin_si_units]
         tags:
             - { name: twig.extension }
-    ccdn_component_common.cycler.extension:
-        class: %ccdn_component_common.cycler.extension.class%
+    ccdn_component_common.component.twig_extension.cycler:
+        class: %ccdn_component_common.component.twig_extension.cycler.class%
         tags:
             - { name: twig.extension }
-    ccdn_component_common.param.extension:
-        class: %ccdn_component_common.param.extension.class%
+    ccdn_component_common.component.twig_extension.param:
+        class: %ccdn_component_common.component.twig_extension.param.class%
         arguments: [@service_container]
         tags:
             - { name: twig.extension }
-    ccdn_component_common.div_ceil.extension:
-        class: %ccdn_component_common.div_ceil.extension.class%
+    ccdn_component_common.component.twig_extension.div_ceil:
+        class: %ccdn_component_common.component.twig_extension.div_ceil.class%
         tags:
             - { name: twig.extension }
-    ccdn_component_common.trunc_dot.extension:
-        class: %ccdn_component_common.trunc_dot.extension.class%
+    ccdn_component_common.component.twig_extension.trunc_dot:
+        class: %ccdn_component_common.component.twig_extension.trunc_dot.class%
         tags:
             - { name: twig.extension }
-    ccdn_component_common.relevant_date_format.extension:
-        class: %ccdn_component_common.relevant_date_format.extension.class%
+    ccdn_component_common.component.twig_extension.relevant_date_format:
+        class: %ccdn_component_common.component.twig_extension.relevant_date_format.class%
         tags:
             - { name: twig.extension }
-    ccdn_component_common.alert_key.extension:
-        class: %ccdn_component_common.alert_key.extension.class%
+    ccdn_component_common.component.twig_extension.alert_key:
+        class: %ccdn_component_common.component.twig_extension.alert_key.class%
         arguments: [@translator]
         tags:
             - { name: twig.extension }
-    ccdn_component_common.user_role.extension:
-        class: %ccdn_component_common.user_role.extension.class%
-        arguments: [@ccdn_component_common.role_helper]
+    ccdn_component_common.component.twig_extension.user_role:
+        class: %ccdn_component_common.component.twig_extension.user_role.class%
+        arguments: [@ccdn_component_common.component.helper.role]
         tags:
             - { name: twig.extension }
-    ccdn_component_common.has_role.extension:
-        class: %ccdn_component_common.has_role.extension.class%
-        arguments: [@ccdn_component_common.role_helper]
+    ccdn_component_common.component.twig_extension.has_role:
+        class: %ccdn_component_common.component.twig_extension.has_role.class%
+        arguments: [@ccdn_component_common.component.helper.role]
         tags:
             - { name: twig.extension }
             
