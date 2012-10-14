@@ -22,4 +22,25 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class CCDNComponentCommonBundle extends Bundle
 {
+		
+	/**
+	 *
+	 * @access public
+	 */
+	public function boot()
+	{
+		$twig = $this->container->get('twig');	
+		$twig->addGlobal('ccdn_component_common', array(
+			'header' => array(
+				'header_bar_links' => $this->container->getParameter('ccdn_component_common.header.header_bar_links'),
+				'accont_route' => $this->container->getParameter('ccdn_component_common.header.account_route'),
+				'logout_route' => $this->container->getParameter('ccdn_component_common.header.logout_route'),
+				'account_route' => $this->container->getParameter('ccdn_component_common.header.account_route'),
+				'profile_route' => $this->container->getParameter('ccdn_component_common.header.profile_route'),
+				'logout_route' => $this->container->getParameter('ccdn_component_common.header.logout_route'),
+				'registration_route' => $this->container->getParameter('ccdn_component_common.header.registration_route'),
+				'login_route' => $this->container->getParameter('ccdn_component_common.header.login_route'),
+			),
+		));
+	}
 }

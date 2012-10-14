@@ -1,6 +1,6 @@
 {%- spaceless -%}
 	<div id="footer">
-		{#			{%- set header_links = param('ccdn_component_common.header.header_bar_links') -%}
+		{#			{%- set header_links = ccdn_component_common.header.header_bar_links -%}
 			{%- for row, link in header_links -%}
 				<a class="nav_link" href="{{- path(link['route']) -}}">{{- link['label'] | trans({}, link['bundle']) -}}</a>
 			{%- endfor -%}
