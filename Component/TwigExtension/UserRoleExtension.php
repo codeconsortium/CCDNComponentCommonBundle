@@ -46,7 +46,7 @@ class UserRoleExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @return Array()
+     * @return array
      */
     public function getFunctions()
     {
@@ -61,7 +61,7 @@ class UserRoleExtension extends \Twig_Extension
      *
      * @access public
      * @param $user
-     * @return Int
+     * @return int
      */
     public function userRole($user)
     {
@@ -77,7 +77,7 @@ class UserRoleExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @return String
+     * @return string
      */
     public function getName()
     {

@@ -39,7 +39,7 @@ class CyclerExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @return Array()
+     * @return array
      */
     public function getFunctions()
     {
@@ -53,7 +53,7 @@ class CyclerExtension extends \Twig_Extension
      * an iterator stored in the static iterator array, using $name as a key.
      *
      * @access public
-     * @param  Array() $choices, $name
+     * @param  array $choices, $name
      * @return int
      */
     public function cycler($choices = array(), $name)

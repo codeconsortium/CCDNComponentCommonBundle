@@ -24,7 +24,7 @@ class TruncDotExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @return Array()
+     * @return array
      */
     public function getFunctions()
     {
@@ -38,8 +38,8 @@ class TruncDotExtension extends \Twig_Extension
      * Truncates string if longer than needed and appends '...' to signify shorthand, otherwise returns original string.
      *
      * @access public
-     * @param $numerator, $denominator
-     * @return Int
+     * @param int $numerator, int $denominator
+     * @return int
      */
     public function truncDot($text, $length)
     {
@@ -49,7 +49,7 @@ class TruncDotExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @return String
+     * @return string
      */
     public function getName()
     {

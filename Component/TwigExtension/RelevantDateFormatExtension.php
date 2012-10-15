@@ -24,7 +24,7 @@ class RelevantDateFormatExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @return Array()
+     * @return array
      */
     public function getFunctions()
     {
@@ -35,10 +35,10 @@ class RelevantDateFormatExtension extends \Twig_Extension
 
     /**
      *
-     * Truncates string if longer than needed and appends '...' to signify shorthand, otherwise returns original string.
+     * Provides fuzzy timestamps.
      *
      * @access public
-     * @param $numerator, $denominator
+     * @param $date
      * @return int
      */
     public function relevantDateFormat($date)

@@ -40,7 +40,7 @@ class BinSIUnitsExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @return Array()
+     * @return array
      */
     public function getFunctions()
     {
@@ -54,7 +54,7 @@ class BinSIUnitsExtension extends \Twig_Extension
      *
      * @access public
      * @param $size
-     * @return mixed
+     * @return string
      */
     public function binSIUnits($size)
     {

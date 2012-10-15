@@ -31,7 +31,7 @@ interface ManagerInterface
 	 *
 	 * @access public
 	 * @param $entity
-	 * @return $this
+	 * @return self
 	 */
     public function persist($entity);
 
@@ -39,7 +39,7 @@ interface ManagerInterface
 	 *
 	 * @access public
 	 * @param $entity
-	 * @return $this
+	 * @return self
 	 */
     public function remove($entity);
 
@@ -47,14 +47,14 @@ interface ManagerInterface
 	 *
 	 * @access public
 	 * @param $entity
-	 * @return $this
+	 * @return self
 	 */
     public function refresh($entity);
 
 	/**
 	 *
 	 * @access public
-	 * @return $this
+	 * @return self
 	 */
     public function flush();
 

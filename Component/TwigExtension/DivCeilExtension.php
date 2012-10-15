@@ -24,7 +24,7 @@ class DivCeilExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @return Array()
+     * @return array
      */
     public function getFunctions()
     {
@@ -37,7 +37,7 @@ class DivCeilExtension extends \Twig_Extension
      * Divides 2 numbers and returns the rounded up number.
      *
      * @access public
-     * @param $numerator, $denominator
+     * @param int $numerator, int $denominator
      * @return int
      */
     public function divCeil($numerator, $denominator)

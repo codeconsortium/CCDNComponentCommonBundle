@@ -46,7 +46,7 @@ class HasRoleExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @return Array()
+     * @return string
      */
     public function getFunctions()
     {
@@ -60,8 +60,8 @@ class HasRoleExtension extends \Twig_Extension
      * Examines the roles of the user and returns true if the user has the role.
      *
      * @access public
-     * @param $user
-     * @return Int
+     * @param $user, $role
+     * @return int
      */
     public function hasRole($user, $role)
     {
@@ -71,7 +71,7 @@ class HasRoleExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @return String
+     * @return string
      */
     public function getName()
     {

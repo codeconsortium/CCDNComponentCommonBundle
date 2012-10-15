@@ -65,7 +65,7 @@ class RoleHelper extends ContainerAware
 	/**
 	 *
 	 * @access public
-	 * @return Array() $availableRoles
+	 * @return array $availableRoles
 	 */
 	public function getAvailableRoles()
 	{		
@@ -75,7 +75,7 @@ class RoleHelper extends ContainerAware
 	/**
 	 *
 	 * @access public
-	 * @return Array() $availableRoles
+	 * @return array $availableRoles
 	 */
 	public function getAvailableRoleKeys()
 	{		
@@ -85,8 +85,8 @@ class RoleHelper extends ContainerAware
 	/**
 	 *
 	 * @access public
-	 * @param $user
-	 * @return Boolean
+	 * @param $user, string $role
+	 * @return bool
 	 */
 	public function hasRole($user, $role)
 	{
@@ -104,7 +104,7 @@ class RoleHelper extends ContainerAware
 	/**
 	 *
 	 * @access public
-	 * @param Array() $userRoles
+	 * @param array $userRoles
 	 * @return int $highestUsersRoleKey
 	 */
 	public function getUsersHighestRole($usersRoles)
@@ -128,8 +128,8 @@ class RoleHelper extends ContainerAware
 	/**
 	 *
 	 * @access public
-	 * @param Array() $userRoles
-	 * @return String $role
+	 * @param array $userRoles
+	 * @return string $role
 	 */
 	public function getUsersHighestRoleAsName($usersRoles)
 	{

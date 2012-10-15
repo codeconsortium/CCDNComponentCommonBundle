@@ -40,7 +40,7 @@ class ParamExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @return Array()
+     * @return array
      */
     public function getFunctions()
     {
@@ -54,7 +54,7 @@ class ParamExtension extends \Twig_Extension
      *
      * @access public
      * @param $param
-     * @return mixed
+     * @return string
      */
     public function param($param)
     {

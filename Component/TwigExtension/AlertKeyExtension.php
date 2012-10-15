@@ -40,7 +40,7 @@ class AlertKeyExtension extends \Twig_Extension
     /**
      *
      * @access public
-     * @return Array()
+     * @return array
      */
     public function getFunctions()
     {
@@ -52,8 +52,8 @@ class AlertKeyExtension extends \Twig_Extension
     /**
      *
      * @access public
-	 * @param $str
-	 * @return String
+	 * @param string $str
+	 * @return string
      */
     public function alertKey($str)
     {

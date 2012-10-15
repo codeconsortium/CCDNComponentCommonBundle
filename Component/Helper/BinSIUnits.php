@@ -37,8 +37,8 @@ class BinSIUnits
     /**
      *
      * @access public
-     * @param  string $size
-     * @return int    $bpow
+     * @param string $size
+     * @return int $bpow
      */
     public function matchSIUnitFromValue($size)
     {
@@ -68,7 +68,7 @@ class BinSIUnits
      *
      * @access public
      * @param  string $fUnit
-     * @return int    $bpow
+     * @return int $bpow
      */
     public function matchSIUnit($fUnit)
     {
@@ -100,7 +100,7 @@ class BinSIUnits
     /**
      *
      * @access public
-     * @param  int    $bytes
+     * @param  int $bytes
      * @return string $result
      */
     public function bytesToSIUnit($bytes)
@@ -118,7 +118,7 @@ class BinSIUnits
      *
      * @access public
      * @param  string $size, int $bpow
-     * @return int    $result
+     * @return int $result
      */
     public function getBytesFromSIUnit($size, $bpow)
     {
@@ -134,7 +134,7 @@ class BinSIUnits
     /**
      *
      * @access public
-     * @param  string $size, string $format
+     * @param string $size, string $format, string $incUnit
      * @return string $result
      */
     public function formatToSIUnit($size, $format, $incUnit)
