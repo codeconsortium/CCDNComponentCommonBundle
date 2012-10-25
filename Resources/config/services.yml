@@ -6,7 +6,6 @@ parameters:
     ccdn_component_common.component.twig_extension.bin.si.units.class:          CCDNComponent\CommonBundle\Component\TwigExtension\BinSIUnitsExtension
     ccdn_component_common.component.twig_extension.cycler.class:                CCDNComponent\CommonBundle\Component\TwigExtension\CyclerExtension
     ccdn_component_common.component.twig_extension.div_ceil.class:              CCDNComponent\CommonBundle\Component\TwigExtension\DivCeilExtension
-    ccdn_component_common.component.twig_extension.param.class:                 CCDNComponent\CommonBundle\Component\TwigExtension\ParamExtension
     ccdn_component_common.component.twig_extension.trunc_dot.class:             CCDNComponent\CommonBundle\Component\TwigExtension\TruncDotExtension
     ccdn_component_common.component.twig_extension.relevant_date_format.class:  CCDNComponent\CommonBundle\Component\TwigExtension\RelevantDateFormatExtension
     ccdn_component_common.component.twig_extension.alert_key.class:             CCDNComponent\CommonBundle\Component\TwigExtension\AlertKeyExtension
@@ -38,11 +37,6 @@ services:
             - { name: twig.extension }
     ccdn_component_common.component.twig_extension.cycler:
         class: %ccdn_component_common.component.twig_extension.cycler.class%
-        tags:
-            - { name: twig.extension }
-    ccdn_component_common.component.twig_extension.param:
-        class: %ccdn_component_common.component.twig_extension.param.class%
-        arguments: [@service_container]
         tags:
             - { name: twig.extension }
     ccdn_component_common.component.twig_extension.div_ceil:
