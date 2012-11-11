@@ -14,6 +14,9 @@
 namespace CCDNComponent\CommonBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+
+use CCDNComponent\CommonBundle\DependencyInjection\Compiler\MenuBuilderCompilerPass;
 
 /**
  *
@@ -22,7 +25,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class CCDNComponentCommonBundle extends Bundle
 {
-		
+	
 	/**
 	 *
 	 * @access public

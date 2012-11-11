@@ -1,5 +1,5 @@
 parameters:
-
+    
     ccdn_component_common.component.helper.role.class:                          CCDNComponent\CommonBundle\Component\Helper\RoleHelper
     ccdn_component_common.component.helper.bin_si_units.class:                  CCDNComponent\CommonBundle\Component\Helper\BinSIUnits
 
@@ -15,6 +15,8 @@ parameters:
     ccdn_component_common.pagerfanta.view.pagerfanta.class:                     CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapView
     ccdn_component_common.pagerfanta.view.pagerfanta_translated.class:          CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapTranslatedView
     
+    ccdn_component_common.component.menu_builder.menu.class:                    CCDNComponent\CommonBundle\Component\MenuBuilder\Menu
+
 services:
 
     #
@@ -69,8 +71,7 @@ services:
             
     #
     # Pagerfanta Views.
-    #
-            
+    #         
     ccdn_component_common.pagerfanta.view.pagerfanta:
         class: %ccdn_component_common.pagerfanta.view.pagerfanta.class%
         public: false
@@ -83,5 +84,12 @@ services:
     #    tags:
     #        - { name: pagerfanta.view, alias: twitter_bootstrap_compact_translated }
 
-        
+    
+    #
+    # Menu Builder.
+    #
+    ccdn_component_common.component.menu_builder.menu:
+        class: %ccdn_component_common.component.menu_builder.menu.class%
+        tags:
+            - { name: ccdn_component_menu.menu_builder }    
         
