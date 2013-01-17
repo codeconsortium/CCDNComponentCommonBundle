@@ -2,8 +2,7 @@
 
 	<div id="header_bar">
 		<div id="secondary_bar">			
-			{{- menu('layout.header.top') -}}
-			
+
 			{%- set header_links = ccdn_component_common.header.header_bar_links -%}
 			{%- for row, link in header_links -%}
 				<a class="nav_link" href="{{- path(link['route']) -}}">{{- link['label'] | trans({}, link['bundle']) -}}</a>
@@ -18,7 +17,6 @@
 			</div>
 			<div id="primary_right">
 				<div class="btn-toolbar form-inline" style="margin-right:10px;">
-				{{- menu('layout.header.bottom') -}}
 				</div>
 			</div>
 		</div>
