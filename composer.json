@@ -1,7 +1,7 @@
 {
     "name": "codeconsortium/ccdn-component-common-bundle",
     "type": "symfony-bundle",
-    "description": "CCDN Forum common bundle",
+    "description": "CCDN Component Common Bundle",
     "keywords": ["forum", "board"],
     "homepage": "http://github.com/codeconsortium/CCDNComponentCommonBundle",
     "license": "MIT",
