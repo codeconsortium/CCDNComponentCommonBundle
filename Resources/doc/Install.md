@@ -1,4 +1,4 @@
-Installing CCDNComponent CommonBundle 1.2
+Installing CCDNComponent CommonBundle 1.x
 =========================================
 
 ## Dependencies:
