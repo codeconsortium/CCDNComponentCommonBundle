@@ -85,3 +85,7 @@ span.label a:link, span.label a:visited, span.label a:active, span.label a:hover
 	
 }
 
+h1, h2, h3, h4, h5, h6 {
+    float: none;
+}
+
