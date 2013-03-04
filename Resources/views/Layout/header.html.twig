@@ -1,25 +1,27 @@
 {%- spaceless -%}
-
-	<div id="header_bar">
-		<div id="secondary_bar">			
-
-			{%- set header_links = ccdn_component_common.header.header_bar_links -%}
-			{%- for row, link in header_links -%}
-				<a class="nav_link" href="{{- path(link['route']) -}}">{{- link['label'] | trans({}, link['bundle']) -}}</a>
-			{%- endfor -%}
-		</div>
-
-		<div id="primary_bar">
-			<div id="primary_left">
-				<div id="logo"><img class="site_logo" width="212" height="25" src="{{- asset('bundles/ccdncomponentcommon/images/layout/header/logo.png') -}}" alt="site logo"></div>
-				<div id="search">
-				</div>
+	<header class="navbar navbar-fixed-top">
+		<nav class="navbar-inner">
+			<div class="container-fluid">
+				<a class="brand" href="#">Code Consortium</a>
+			
+			    <ul class="nav">
+					{%- set route = app.request.attributes.get('_route') -%}				
+			    </ul>
+			
+			    <ul class="nav pull-right">
+					{%- if is_granted('ROLE_USER') -%}
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-user"></i>
+								<bdi>{{- app.user.username |capitalize -}}</bdi>
+								<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+							</ul>
+						</li>				
+					{%- endif -%}
+			    </ul>
 			</div>
-			<div id="primary_right">
-				<div class="btn-toolbar form-inline" style="margin-right:10px;">
-				</div>
-			</div>
-		</div>
-
-	</div>
+		</nav>
+	</header>
 {%- endspaceless -%}

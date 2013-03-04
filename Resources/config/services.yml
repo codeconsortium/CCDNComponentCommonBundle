@@ -11,6 +11,7 @@ parameters:
     ccdn_component_common.component.twig_extension.alert_key.class:             CCDNComponent\CommonBundle\Component\TwigExtension\AlertKeyExtension
     ccdn_component_common.component.twig_extension.user_role.class:             CCDNComponent\CommonBundle\Component\TwigExtension\UserRoleExtension
     ccdn_component_common.component.twig_extension.has_role.class:              CCDNComponent\CommonBundle\Component\TwigExtension\HasRoleExtension
+    ccdn_component_common.component.twig_extension.abbr_number.class:           CCDNComponent\CommonBundle\Component\TwigExtension\AbbrNumberExtension
         
     ccdn_component_common.pagerfanta.view.pagerfanta.class:                     CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapView
     ccdn_component_common.pagerfanta.view.pagerfanta_translated.class:          CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapTranslatedView
@@ -68,7 +69,11 @@ services:
         arguments: [@ccdn_component_common.component.helper.role]
         tags:
             - { name: twig.extension }
-            
+    ccdn_component_common.component.twig_extension.abbr_number:
+        class: %ccdn_component_common.component.twig_extension.abbr_number.class%
+        tags:
+           - { name: twig.extension }
+        
     #
     # Pagerfanta Views.
     #         

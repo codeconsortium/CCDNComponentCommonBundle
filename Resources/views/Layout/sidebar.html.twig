@@ -1,17 +1,5 @@
 {%- spaceless -%}
 
-	{%- if is_granted('ROLE_MODERATOR') -%}
-		
-		{%- set route = app.request.attributes.get('_route') -%}
-		{%- set request = app.request.get('category') -%}
-	
-		<li class="nav-header">{{- 'ccdn_component_common.sidebar.header.special' | trans({}, 'CCDNComponentCommonBundle') -}}</li>
-		
-		{%- if route == 'ccdn_component_dashboard_index' -%}
-			<li class="active"><a rel="nofollow" href="{{- path('ccdn_component_dashboard_index') -}}"><i class="icon-white icon-wrench"></i>&nbsp;{{- 'ccdn_component_common.general.view.link.all_dashboard' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
-		{%- else -%}
-			<li><a rel="nofollow" href="{{- path('ccdn_component_dashboard_index') -}}"><i class="icon-wrench"></i>&nbsp;{{- 'ccdn_component_common.general.view.link.all_dashboard' | trans({}, 'CCDNComponentCommonBundle') -}}</a></li>
-		{%- endif -%}
-	{%- endif -%}
+
 
 {%- endspaceless -%}
