@@ -425,12 +425,18 @@ aside > ul.nav > li.divider {
 
 /* Form Elements
 -------------------------------------------------- */
+input[type="submit"],
+button[type="submit"],
+button.btn,
+.dropdown,
+.btn-group,
 .btn {
     margin-right:10px;
 }
 
 .btn-group > .btn {
 	margin-right:0px;
+	margin-left:0px;
 }
 
 .form-actions > .btn {
@@ -447,18 +453,31 @@ aside > ul.nav > li.divider {
 }
 
 .btn-right {
-	text-align:right;
+	text-align:right !important;
 }
 
+.content-right > input[type="submit"],
+.content-right > button[type="submit"],
+.content-right > button.btn,
+.content-right > .btn,
+.content-right > .btn-group,
+.content-right > .dropdown,
+.btn-right > input[type="submit"],
+.btn-right > button[type="submit"],
+.btn-right > button.btn,
 .btn-right > .btn,
-.btn-right > .btn-group {
-	margin:5px 0px 15px 5px;
+.btn-right > .btn-group,
+.btn-right > .dropdown {
+	margin:5px 0px 15px 5px !important;
 }
 
 a.dropdown-toggle > .caret {
 	margin-left:5px;
 }
 
+input[type="submit"] > i[class^="icon-"],
+button[type="submit"] > i[class^="icon-"],
+button.btn > i[class^="icon-"],
 .dropdown-menu > li > a > i[class^="icon-"],
 .btn > i[class^="icon-"],
 .nav i[class^="icon-"],
@@ -490,13 +509,6 @@ a.dropdown-toggle > .caret {
 	font-weight:bold;
 	
 	color:#999;
-	/*
-	background-color:#f6f6f6;
-	
-	        border-radius:5px;
-	   -moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	*/
 }
 
 
