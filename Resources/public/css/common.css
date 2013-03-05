@@ -573,10 +573,8 @@ button.btn > i[class^="icon-"],
 	padding-right:10px;
 	vertical-align:middle;
 	text-align:left;
-	font-size:15px;
-	font-weight:bold;
-	
-	color:#999;
+	font-size:16px;
+	color:#666;
 }
 
 /* confirmation pages */
