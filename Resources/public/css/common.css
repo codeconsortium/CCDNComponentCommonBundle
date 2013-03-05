@@ -21,13 +21,8 @@ body > #page-wrap > #page-main > .navbar {
 
 /* Change the docs' brand */
 body > #page-wrap > #page-main > .navbar .brand {
-	/*padding-right: 0;
-	padding-left: 0;
-	margin-left: 20px;
-	float: right;*/
 	font-weight: bold;
 	color: #888;
-	/*text-shadow: 1px 1px 1px rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);*/
 	text-shadow: 0px -1px 0 #666;
 	text-shadow: 0px 1px 0 #fff;
 	
@@ -37,10 +32,84 @@ body > #page-wrap > #page-main > .navbar .brand {
 }
 
 body > #page-wrap > #page-main > .navbar .brand:hover {
-	/*color:#555;*/
 	color:#0088cc;
-	/*text-decoration: none;
-	text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);*/
+}
+
+
+
+body > #page-wrap > #page-main > .navbar > nav.navbar-inner > div.container-fluid > ul.nav > li.message-count-unread > a,
+body > #page-wrap > #page-main > .navbar > nav.navbar-inner > div.container-fluid > ul.nav > li.message-count > a {
+	display: inline-block;
+	*display: inline;
+	line-height: 20px;
+	margin-top:5px;
+	margin-bottom: 0;
+	*margin-left: .3em;
+	padding: 4px 12px;
+
+	vertical-align: middle;
+	color: #333333;
+	font-size: 14px;
+	text-align: center;
+	text-shadow: 0 1px 0 #ffffff;	
+	cursor: pointer;
+
+	background-color: #ddd;
+	*background-color: #e6e6e6;
+
+	background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0, rgb(231,231,231)),color-stop(1, rgb(235,235,235)));
+	background-image: -webkit-linear-gradient(left top,left bottom, rgb(231,231,231) 0%,rgb(235,235,235) 100%);
+	background-image: -moz-linear-gradient(225deg, rgb(231,231,231) 0%, rgb(235,235,235) 100%);
+	background-image: -o-linear-gradient(left top,left bottom, rgb(231,231,231) 0%,rgb(235,235,235) 100%);
+	background-image: -ms-linear-gradient(left top,left bottom, rgb(231,231,231) 0%,rgb(235,235,235) 100%);
+	background-image: linear-gradient(left top,left bottom, rgb(231,231,231) 0%,rgb(235,235,235) 100%);
+
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f1f1f1, endColorstr=#f5f5f5);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#f1f1f1, endColorstr=#f5f5f5)";
+	*zoom: 1;
+
+	        box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
+	   -moz-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
+
+	border: 1px solid #d9d9d9;
+	-webkit-border-radius: 4px;
+	 -moz-border-radius: 4px;
+	      border-radius: 4px;		
+}
+
+
+body > #page-wrap > #page-main > .navbar > nav.navbar-inner > div.container-fluid > ul.nav > li.message-count-unread > a {
+	color: #ffffff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #da4f49;
+	*background-color: #bd362f;
+	background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+	background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+	background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+	background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
+	background-repeat: repeat-x;
+	border-color: #bd362f #bd362f #802420;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+body > #page-wrap > #page-main > .navbar > nav.navbar-inner > div.container-fluid > ul.nav > li.message-count-unread > a:hover,
+body > #page-wrap > #page-main > .navbar > nav.navbar-inner > div.container-fluid > ul.nav > li.message-count-unread > a:focus,
+body > #page-wrap > #page-main > .navbar > nav.navbar-inner > div.container-fluid > ul.nav > li.message-count-unread > a:active,
+body > #page-wrap > #page-main > .navbar > nav.navbar-inner > div.container-fluid > ul.nav > li.message-count-unread > a.active,
+body > #page-wrap > #page-main > .navbar > nav.navbar-inner > div.container-fluid > ul.nav > li.message-count-unread > a.disabled,
+body > #page-wrap > #page-main > .navbar > nav.navbar-inner > div.container-fluid > ul.nav > li.message-count-unread > a[disabled] { 
+	color: #ffffff;
+	background-color: #bd362f;
+	*background-color: #a9302a;
+}
+
+body > #page-wrap > #page-main > .navbar > nav.navbar-inner > div.container-fluid > ul.nav > li.message-count-unread > a:active,
+body > #page-wrap > #page-main > .navbar > nav.navbar-inner > div.container-fluid > ul.nav > li.message-count-unread > a.active {
+	background-color: #942a25 \9;
 }
 
 /* Header Sub-nav
@@ -371,7 +440,6 @@ body > footer.site-footer {
 	
 	text-align: center;
 	padding: 35px 0;
-	/*margin-top: 70px;*/
 	border-top: 1px solid #e5e5e5;
 	background-color: #f5f5f5;
 }
@@ -511,6 +579,32 @@ button.btn > i[class^="icon-"],
 	color:#999;
 }
 
+/* confirmation pages */
+.form-confirmation {
+	display:block;
+	width:auto;
+	padding:5px;
+	text-align:center;
+	overflow:hidden;
+}
+
+.form-confirmation .form-question {
+	display:block;
+	width:auto;
+	padding:30px;
+	text-align:center;
+	overflow:hidden;
+}
+
+.form-confirmation .form-answer {
+	display:block;
+	width:auto;
+	padding:30px;
+	border-top:1px solid #ddd;
+	background-color:#eee;
+	text-align:center;
+	overflow:hidden;
+}
 
 /* checkbox labels go inside controls after checkbox, not before */
 .control-group > .controls > input[type="checkbox"] {
@@ -544,52 +638,64 @@ button.btn > i[class^="icon-"],
 	text-align:left;
 }
 
+
 /* 
 -------------------------------------------------- */
-
-.btn-toolbar {
-	height:30px;
-	line-height:30px;
-	margin:2px 0px 5px 0px;
-	padding:0px 0px 8px 0px;
+header {
+	vertical-align:middle;
+	margin-bottom:10px;
 }
 
-.content-left {
-	text-align:left;
+header h1,
+header h2,
+header h3,
+header h4,
+header h5,
+header h6,
+header > div h1,
+header > div h2,
+header > div h3,
+header > div h4,
+header > div h5,
+header > div h6 {
+	margin:0px;
+	padding:0px;
 }
-.content-right {
-	text-align:right;
+
+header > div {
+	height:inherit;
+}
+
+header .badge,
+header .label {
+	vertical-align:middle;
+}
+
+header .content-right .label,
+header.content-right .label
+header .content-right .badge,
+header.content-right .badge {
+	margin-right:0px;
+	margin-left:5px;
+}
+
+header .content-left .label,
+header.content-left .label
+header .content-left .badge,
+header.content-left .badge {
+	margin-right:0px;
+	margin-left:5px;
+}
+
+section, .section, header {
+	border-bottom:1px solid #eee;
 }
 
 section {
 	margin:2px 0px 5px 0px;
 	padding:0px 0px 8px 0px;
-	border-bottom:1px solid #eee;
 }
 
-section > header {
-	vertical-align:middle;
-}
-
-section > header h1,
-section > header h2,
-section > header h3,
-section > header h4,
-section > header h5,
-section > header h6,
-section > header > div h1,
-section > header > div h2,
-section > header > div h3,
-section > header > div h4,
-section > header > div h5,
-section > header > div h6 {
-	margin:0px;
-	padding:0px;
-}
-
-section > header > div {
-	height:inherit;
-}
 
 section > div {
 	height:inherit;
@@ -599,37 +705,26 @@ section .badge {
 	margin-right:5px;
 }
 
-section > header .badge,
-section > header .label {
-	vertical-align:middle;
+.btn-toolbar {
+	height:30px;
+	line-height:30px;
+	margin:2px 0px 5px 0px;
+	padding:0px 0px 8px 0px;
 }
 
-section > header .content-right .label,
-section > header.content-right .label
-section > header .content-right .badge,
-section > header.content-right .badge {
-	margin-right:0px;
-	margin-left:5px;
-}
-
-section > header .content-left .label,
-section > header.content-left .label
-section > header .content-left .badge,
-section > header.content-left .badge {
-	margin-right:0px;
-	margin-left:5px;
-}
-
-/*
-section h1,
-section h2,
-section h3,
-section h4,
-section h5,
-section h6 {
+.btn-toolbar > nav.paginate div {
 	margin:0px;
-	padding:0px;
-}*/
+}
+
+.content-left {
+	text-align:left;
+}
+.content-right {
+	text-align:right;
+}
+
+
+
 
 .prominent-figure.label,
 .prominent-figure.badge,
@@ -650,20 +745,14 @@ section h6 {
 	font-weight:normal;
 }
 
-.btn-toolbar > nav.paginate div {
-	margin:0px;
+
+
+span.label a:link, span.label a:visited, span.label a:active, span.label a:hover {
+	color: #eee;
 }
 
 
 
-
-table.table-vertical-labels > tbody > tr > td:nth-child(1) {
-	width:20%;
-}
-
-table.table-vertical-labels > tbody > tr > td:nth-child(2) {
-	width:auto;
-}
 
 
 
@@ -690,6 +779,13 @@ table.table-vertical-labels > tbody > tr > td:nth-child(2) {
 	background-color: #fef9d7 !important;
 }*/
 
+table.table-vertical-labels > tbody > tr > td:nth-child(1) {
+	width:20%;
+}
+
+table.table-vertical-labels > tbody > tr > td:nth-child(2) {
+	width:auto;
+}
 
 .table-no-vertical-borders > thead > tr > th:not(:first-child),
 .table-no-vertical-borders > tbody > tr > td:not(:first-child) {
@@ -745,36 +841,8 @@ table tr th.right, table tr td.right {text-align:right;}
 	z-index: 2;
 }*/
 
-.form-confirmation {
-	display:block;
-	width:auto;
-/*	margin:5px;*/
-	padding:5px;
-	text-align:center;
-	overflow:hidden;
-}
 
-.form-confirmation .form-question {
-	display:block;
-	width:auto;
-	padding:30px;
-	text-align:center;
-	overflow:hidden;
-}
 
-.form-confirmation .form-answer {
-	display:block;
-	width:auto;
-	padding:30px;
-	border-top:1px solid #ddd;
-	background-color:#eee;
-	text-align:center;
-	overflow:hidden;
-}
-
-span.label a:link, span.label a:visited, span.label a:active, span.label a:hover {
-	color: #eee;
-}
 
 
 
