@@ -44,7 +44,8 @@ body > #page-wrap > #page-main > .navbar > nav.navbar-inner > div.container-flui
 	line-height: 20px;
 	margin-top:5px;
 	margin-bottom: 0;
-	*margin-left: .3em;
+	margin-left:5px;
+	margin-right:5px;
 	padding: 4px 12px;
 
 	vertical-align: middle;
@@ -640,6 +641,8 @@ button.btn > i[class^="icon-"],
 /* 
 -------------------------------------------------- */
 header {
+	float:none;
+	clear:both;
 	vertical-align:middle;
 	margin-bottom:10px;
 }
@@ -656,6 +659,8 @@ header > div h3,
 header > div h4,
 header > div h5,
 header > div h6 {
+	float:none;
+	clear:both;
 	margin:0px;
 	padding:0px;
 }
@@ -685,7 +690,7 @@ header.content-left .badge {
 	margin-left:5px;
 }
 
-section, .section, header {
+.section, section, header {
 	border-bottom:1px solid #eee;
 }
 
