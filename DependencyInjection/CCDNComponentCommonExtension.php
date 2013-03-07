@@ -45,12 +45,25 @@ class CCDNComponentCommonExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
+        $this->getServicesSection($container, $config);
+
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
 
         $this->getHeaderSection($container, $config);
     }
 
+    /**
+     *
+     * @access private
+     * @param $container, $config
+     */
+	private function getServicesSection($container, $config)
+	{
+        $container->setParameter('ccdn_component_common.component.provider.profile.class', $config['service']['provider']['profile_provider']['class']);
+        $container->setParameter('ccdn_component_common.component.provider.profile.avatar_fallback', $config['service']['provider']['profile_provider']['fallback_avatar']);
+    }
+	
     /**
      *
      * @access private

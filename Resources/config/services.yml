@@ -12,7 +12,8 @@ parameters:
     ccdn_component_common.component.twig_extension.user_role.class:             CCDNComponent\CommonBundle\Component\TwigExtension\UserRoleExtension
     ccdn_component_common.component.twig_extension.has_role.class:              CCDNComponent\CommonBundle\Component\TwigExtension\HasRoleExtension
     ccdn_component_common.component.twig_extension.abbr_number.class:           CCDNComponent\CommonBundle\Component\TwigExtension\AbbrNumberExtension
-        
+    ccdn_component_common.component.twig_extension.create_profile.class:        CCDNComponent\CommonBundle\Component\TwigExtension\CreateProfileExtension
+
     ccdn_component_common.pagerfanta.view.pagerfanta.class:                     CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapView
     ccdn_component_common.pagerfanta.view.pagerfanta_translated.class:          CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapTranslatedView
     
@@ -73,7 +74,19 @@ services:
         class: %ccdn_component_common.component.twig_extension.abbr_number.class%
         tags:
            - { name: twig.extension }
-        
+    ccdn_component_common.component.twig_extension.create_profile:
+        class: %ccdn_component_common.component.twig_extension.create_profile.class%
+        arguments: [@ccdn_component_common.component.provider.profile]
+        tags:
+           - { name: twig.extension }
+
+    #
+    # Providers.
+    #
+    ccdn_component_common.component.provider.profile:
+        class: %ccdn_component_common.component.provider.profile.class%
+        arguments: [@service_container]
+
     #
     # Pagerfanta Views.
     #         
@@ -89,7 +102,7 @@ services:
     #    tags:
     #        - { name: pagerfanta.view, alias: twitter_bootstrap_compact_translated }
 
-    
+
     #
     # Menu Builder.
     #

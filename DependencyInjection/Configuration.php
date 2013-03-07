@@ -42,11 +42,43 @@ class Configuration implements ConfigurationInterface
             ->children()
             ->end();
 
+        $this->addServices($rootNode);
         $this->addHeaderSection($rootNode);
 
         return $treeBuilder;
     }
 
+    /**
+     *
+     * @access protected
+     * @param ArrayNodeDefinition $node
+     */
+    protected function addServices(ArrayNodeDefinition $node)
+    {
+        $node
+            ->addDefaultsIfNotSet()
+            ->children()
+                ->arrayNode('service')
+                    ->addDefaultsIfNotSet()
+                    ->children()
+                        ->arrayNode('provider')
+                            ->addDefaultsIfNotSet()
+                            ->children()
+                                ->arrayNode('profile_provider')
+		                            ->addDefaultsIfNotSet()
+		                            ->children()
+										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Provider\Profile\SimpleProfileProvider')->end()
+										->scalarNode('fallback_avatar')->defaultValue('bundles/ccdncomponentcommon/images/profile/anonymous_avatar.gif')->end()										
+									->end()
+								->end()
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+            ->end()
+        ;
+    }
+	
     /**
      *
      * @access private
