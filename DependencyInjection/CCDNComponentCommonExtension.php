@@ -58,14 +58,7 @@ class CCDNComponentCommonExtension extends Extension
      */
     private function getHeaderSection($container, $config)
     {
-        $container->setParameter('ccdn_component_common.header.registration_route', $config['header']['registration_route']);
-        $container->setParameter('ccdn_component_common.header.login_route', $config['header']['login_route']);
-        $container->setParameter('ccdn_component_common.header.logout_route', $config['header']['logout_route']);
-        $container->setParameter('ccdn_component_common.header.account_route', $config['header']['account_route']);
-        $container->setParameter('ccdn_component_common.header.profile_route', $config['header']['profile_route']);
-
-        $container->setParameter('ccdn_component_common.header.header_bar_links', $config['header']['header_bar_links']);
-
+        $container->setParameter('ccdn_component_common.header.brand.route', $config['header']['brand']['route']);
+	    $container->setParameter('ccdn_component_common.header.brand.label', $config['header']['brand']['label']);
     }
-
 }
