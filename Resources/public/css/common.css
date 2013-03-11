@@ -723,8 +723,16 @@ section .badge {
 	margin-right:5px;
 }
 
+article > pre,
 article pre {
 	background-color:#fcfcfc;
+	word-wrap:break-word;
+	white-space:pre-line;
+}
+
+article > pre > p {
+	white-space:normal;
+	word-wrap:normal;
 }
 
 .btn-toolbar {
@@ -774,13 +782,14 @@ span.label a:link, span.label a:visited, span.label a:active, span.label a:hover
 }
 
 .light-box {
-	border: 1px solid #777;
-	background-color:#eee;
+	border: 1px solid #ddd;
+	background-color:#fcfcfc;
 }
 
-
-
-
+.light-box > blockquote,
+blockquote.slim  {
+	margin:5px;
+}
 
 
 
