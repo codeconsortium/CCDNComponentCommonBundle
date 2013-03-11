@@ -723,6 +723,10 @@ section .badge {
 	margin-right:5px;
 }
 
+article pre {
+	background-color:#fcfcfc;
+}
+
 .btn-toolbar {
 	height:30px;
 	line-height:30px;
@@ -769,6 +773,10 @@ span.label a:link, span.label a:visited, span.label a:active, span.label a:hover
 	color: #eee;
 }
 
+.light-box {
+	border: 1px solid #777;
+	background-color:#eee;
+}
 
 
 
