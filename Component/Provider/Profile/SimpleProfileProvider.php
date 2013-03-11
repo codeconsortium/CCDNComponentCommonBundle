@@ -56,4 +56,35 @@ class SimpleProfileProvider implements ProfileProviderInterface
 
         return $profile;
     }
+
+	/**
+	 *
+	 * @access public
+	 * @param UserInterface $user
+	 * @return Profile $profile
+	 */
+    public function setup(ProfileInterface $profile = null)
+    {	
+        if (null == $profile) {
+			throw new \Exception('You must provide a Profile to transform.');
+        } else {
+			if (null == $profile->getId()) {
+				throw new \Exception('Profile has no valid id.');
+			}
+        }
+
+		// Set the router object and route path.
+		$profile->setRouter($this->container->get('router'));
+
+		// Set avatar.
+        $asset = $this->container->get('templating.helper.assets');
+
+        $fallbackAvatar = $asset->getUrl($this->container->getParameter('ccdn_component_common.component.provider.profile.avatar_fallback'));
+        $profile->setAvatarFallback($fallbackAvatar);
+
+		// Set role badges.
+        $profile->autoSetRoleBadge();
+
+        return $profile;
+    }
 }

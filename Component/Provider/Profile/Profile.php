@@ -313,7 +313,8 @@ class Profile implements ProfileInterface
 	public function hasContactPoint($contactPoint)
 	{
 		if (array_key_exists($contactPoint, $this->contactPoints)) {
-			if ($this->contactPoints[$contactPoint]['contact']()) {
+			$contact = $this->contactPoints[$contactPoint]['contact'];
+			if ($this->$contact()) {
 				return true;
 			} else {
 				return false;
@@ -332,7 +333,8 @@ class Profile implements ProfileInterface
 	public function isContactPointPublic($contactPoint)
 	{
 		if (array_key_exists($contactPoint, $this->contactPoints)) {
-			if ($this->contactPoints[$contactPoint]['is_public']) {
+			$isPublic = $this->contactPoints[$contactPoint]['is_public'];
+			if ($this->$isPublic()) {
 				return true;
 			} else {
 				return false;
@@ -356,8 +358,11 @@ class Profile implements ProfileInterface
 				return '';
 			}
 			
-			if ($this->contactPoints[$contactPoint]['is_public']) {
-				return $this->contactPoints[$contactPoint]['contact']();
+			$contact = $this->contactPoints[$contactPoint]['contact'];
+			$isPublic = $this->contactPoints[$contactPoint]['is_public'];
+			
+			if ($this->$isPublic()) {
+				return $this->$contact();
 			}
 		}
 
