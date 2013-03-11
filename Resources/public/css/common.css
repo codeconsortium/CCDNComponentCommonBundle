@@ -13,6 +13,21 @@ html, body {
 	overflow:auto;
 }
 
+.page-body-right > div {
+	position:relative;
+	width:100%;
+	padding-left:15px;
+	padding-right:-15px;
+	left:-15px;
+	z-index:99;
+	border-left:1px solid #eee;
+}
+
+.page-body-left > div:after {
+	left:20%;
+	border-right:1px solid #eee;	
+}
+
 /* Header
 -------------------------------------------------- */
 body > #page-wrap > #page-main > .navbar {

@@ -96,6 +96,30 @@ class Profile implements ProfileInterface
      */
     public function getUsername()
     {
+		if (null == $this->username) {
+			if (null == $this->user) {
+				$this->username = 'Guest';
+			} else {
+				$this->username = $this->user->getUsername();
+			}
+		}
+		
+        return ucwords($this->username);
+    }
+	
+    /**
+     * @return string
+     */
+    public function getUsernameBDI()
+    {
+		if (null == $this->username) {
+			if (null == $this->user) {
+				$this->username = 'Guest';
+			} else {
+				$this->username = $this->user->getUsername();
+			}
+		}
+		
         return '<bdi>' . ucwords($this->username) . '</bdi>';
     }
 
