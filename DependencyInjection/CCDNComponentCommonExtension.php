@@ -60,6 +60,8 @@ class CCDNComponentCommonExtension extends Extension
      */
 	private function getServicesSection($container, $config)
 	{
+        $container->setParameter('ccdn_component_common.component.provider.user.class', $config['service']['provider']['user_provider']['class']);
+		
         $container->setParameter('ccdn_component_common.component.provider.profile.class', $config['service']['provider']['profile_provider']['class']);
         $container->setParameter('ccdn_component_common.component.provider.profile.avatar_fallback', $config['service']['provider']['profile_provider']['fallback_avatar']);
     }

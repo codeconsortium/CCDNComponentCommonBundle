@@ -86,7 +86,10 @@ services:
     ccdn_component_common.component.provider.profile:
         class: %ccdn_component_common.component.provider.profile.class%
         arguments: [@service_container]
-
+    ccdn_component_common.component.provider.user_provider:
+        class: %ccdn_component_common.component.provider.user.class%
+        arguments:
+            - @doctrine
     #
     # Pagerfanta Views.
     #         

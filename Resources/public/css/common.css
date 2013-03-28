@@ -20,12 +20,12 @@ html, body {
 	padding-right:-15px;
 	left:-15px;
 	z-index:99;
-	border-left:1px solid #eee;
+/*	border-left:1px solid #eee;*/
 }
 
 .page-body-left > div:after {
 	left:20%;
-	border-right:1px solid #eee;	
+/*	border-right:1px solid #eee;*/	
 }
 
 /* Header
@@ -505,7 +505,11 @@ aside > ul.nav > li.divider {
     border-bottom: 1px solid #ffffff;
 }
 
-
+/* this is for nested sidebar menus */
+aside > ul.nav > li > ul.nav {
+	margin-left:5px;
+	padding-left:11px;
+}
 
 /* Form Elements
 -------------------------------------------------- */
@@ -559,6 +563,7 @@ a.dropdown-toggle > .caret {
 	margin-left:5px;
 }
 
+a > i[class^="icon-"],
 input[type="submit"] > i[class^="icon-"],
 button[type="submit"] > i[class^="icon-"],
 button.btn > i[class^="icon-"],
@@ -579,6 +584,23 @@ button.btn > i[class^="icon-"],
 	margin-left:0px;
 }
 
+section > form.form-horizontal {
+	border:1px solid #f3f3f3;
+	background-color:#fefefe;
+	        border-radius:5px;
+	   -moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	
+	padding-bottom:0px;
+	
+	overflow:hidden;
+}
+
+section > form.form-horizontal > fieldset > .form-actions {
+	margin-bottom:0px;
+	overflow:hidden;
+}
+
 .control-group.form-title {
 	border-bottom:1px solid #eee;
 }
@@ -591,6 +613,13 @@ button.btn > i[class^="icon-"],
 	text-align:left;
 	font-size:16px;
 	color:#666;
+}
+
+.control-group > .controls > .label {
+	vertical-align:middle;
+	padding:5px;
+	font-size:16px;
+	line-height:20px;
 }
 
 /* confirmation pages */
@@ -862,6 +891,18 @@ table tr th.left, table tr td.left {text-align:left;}
 table tr th.center, table tr td.center {text-align:center;}
 
 table tr th.right, table tr td.right {text-align:right;}
+
+table > tr > td.row-group-heading,
+table > tbody > tr > td.row-group-heading {
+	line-height:10px;
+	height:10px !important;
+	max-height:10px !important;
+	text-align:center;
+	vertical-align:middle;
+
+	background-color:#aaa !important;
+	color:#fff;
+}
 
 .center {text-align:center;}
 
