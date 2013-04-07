@@ -16,8 +16,6 @@ parameters:
 
     ccdn_component_common.pagerfanta.view.pagerfanta.class:                     CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapView
     ccdn_component_common.pagerfanta.view.pagerfanta_translated.class:          CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapTranslatedView
-    
-    ccdn_component_common.component.menu_builder.menu.class:                    CCDNComponent\CommonBundle\Component\MenuBuilder\Menu
 
 services:
 
@@ -104,13 +102,4 @@ services:
     #    public: false
     #    tags:
     #        - { name: pagerfanta.view, alias: twitter_bootstrap_compact_translated }
-
-
-    #
-    # Menu Builder.
-    #
-    ccdn_component_common.component.menu_builder.menu:
-        class: %ccdn_component_common.component.menu_builder.menu.class%
-        tags:
-            - { name: ccdn_component_menu.menu_builder }    
         
