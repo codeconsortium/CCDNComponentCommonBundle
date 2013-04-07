@@ -175,7 +175,7 @@ $(document).ready(function() {
 		 * Tick all checkboxes that match the data-qualifier
 		 * attribute of the requesting button or link. 
 		 */
-		$("a[data-action^='select_all']").click(function(event) {
+		$("[data-action^='select_all']").click(function(event) {
 		
 			// what was clicked.
 			this.check_all = $(this);
@@ -218,7 +218,7 @@ $(document).ready(function() {
 		 * Untick all checkboxes that match the data-qualifier
 		 * attribute of the requesting button or link.
 		 */
-		$("a[data-action^='select_none']").click(function(event) {
+		$("[data-action^='select_none']").click(function(event) {
 		
 			// what was clicked.
 			this.check_all = $(this);
