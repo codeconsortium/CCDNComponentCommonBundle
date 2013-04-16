@@ -28,30 +28,183 @@ use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 class Configuration implements ConfigurationInterface
 {
     /**
-     * {@inheritDoc}
+     *
+	 * @access public
+	 * @return \Symfony\Component\Config\Definition\Builder\TreeBuilder
      */
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('ccdn_component_common');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
         $rootNode
             ->children()
             ->end();
 
-        $this->addServices($rootNode);
-        $this->addHeaderSection($rootNode);
+		// Class file namespaces.
+		$this
+			->addComponentSection($rootNode)
+		;
+		
+		// Configuration stuff.
+        $this
+			->addServices($rootNode)
+	        ->addHeaderSection($rootNode)
+		;
 
         return $treeBuilder;
     }
+	
+    /**
+     *
+     * @access private
+     * @param \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
+	 * @return \CCDNComponent\CommonBundle\DependencyInjection\Configuration
+     */
+    private function addComponentSection(ArrayNodeDefinition $node)
+    {
+        $node
+            ->addDefaultsIfNotSet()
+            ->children()
+                ->arrayNode('component')
+                    ->addDefaultsIfNotSet()
+                    ->canBeUnset()
+                    ->children()
+		                ->arrayNode('twig_extension')
+		                    ->addDefaultsIfNotSet()
+		                    ->canBeUnset()
+		                    ->children()
+				                ->arrayNode('bin_si_units')
+				                    ->addDefaultsIfNotSet()
+				                    ->canBeUnset()
+				                    ->children()
+										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\BinSIUnitsExtension')->end()							
+									->end()		
+								->end()
+				                ->arrayNode('cycler')
+				                    ->addDefaultsIfNotSet()
+				                    ->canBeUnset()
+				                    ->children()
+										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\CyclerExtension')->end()							
+									->end()		
+								->end()
+				                ->arrayNode('div_ceil')
+				                    ->addDefaultsIfNotSet()
+				                    ->canBeUnset()
+				                    ->children()
+										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\DivCeilExtension')->end()							
+									->end()		
+								->end()
+				                ->arrayNode('trunc_dot')
+				                    ->addDefaultsIfNotSet()
+				                    ->canBeUnset()
+				                    ->children()
+										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\TruncDotExtension')->end()							
+									->end()
+								->end()
+				                ->arrayNode('relevant_date_format')
+				                    ->addDefaultsIfNotSet()
+				                    ->canBeUnset()
+				                    ->children()
+										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\RelevantDateFormatExtension')->end()							
+									->end()		
+								->end()
+				                ->arrayNode('alert_key')
+				                    ->addDefaultsIfNotSet()
+				                    ->canBeUnset()
+				                    ->children()
+										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\AlertKeyExtension')->end()							
+									->end()		
+								->end()
+				                ->arrayNode('user_role')
+				                    ->addDefaultsIfNotSet()
+				                    ->canBeUnset()
+				                    ->children()
+										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\UserRoleExtension')->end()							
+									->end()		
+								->end()
+				                ->arrayNode('has_role')
+				                    ->addDefaultsIfNotSet()
+				                    ->canBeUnset()
+				                    ->children()
+										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\HasRoleExtension')->end()							
+									->end()		
+								->end()
+				                ->arrayNode('abbr_number')
+				                    ->addDefaultsIfNotSet()
+				                    ->canBeUnset()
+				                    ->children()
+										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\AbbrNumberExtension')->end()							
+									->end()		
+								->end()
+				                ->arrayNode('create_profile')
+				                    ->addDefaultsIfNotSet()
+				                    ->canBeUnset()
+				                    ->children()
+										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\CreateProfileExtension')->end()							
+									->end()		
+								->end()
+							->end()
+						->end()
+		                ->arrayNode('helper')
+		                    ->addDefaultsIfNotSet()
+		                    ->canBeUnset()
+		                    ->children()
+				                ->arrayNode('role')
+				                    ->addDefaultsIfNotSet()
+				                    ->canBeUnset()
+				                    ->children()
+										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Helper\RoleHelper')->end()							
+									->end()
+								->end()
+				                ->arrayNode('bin_si_units')
+				                    ->addDefaultsIfNotSet()
+				                    ->canBeUnset()
+				                    ->children()
+										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Helper\BinSIUnits')->end()							
+									->end()
+								->end()
+							->end()
+						->end()
+		                ->arrayNode('pagerfanta')
+		                    ->addDefaultsIfNotSet()
+		                    ->canBeUnset()
+		                    ->children()
+				                ->arrayNode('view')
+				                    ->addDefaultsIfNotSet()
+				                    ->canBeUnset()
+				                    ->children()
+						                ->arrayNode('bootstrap')
+						                    ->addDefaultsIfNotSet()
+						                    ->canBeUnset()
+						                    ->children()
+												->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapView')->end()																											
+											->end()
+										->end()
+						                ->arrayNode('bootstrap_translated')
+						                    ->addDefaultsIfNotSet()
+						                    ->canBeUnset()
+						                    ->children()
+												->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapTranslatedView')->end()
+											->end()
+										->end()
+									->end()
+								->end()
+							->end()
+						->end()
+					->end()
+				->end()
+			->end()
+		;
 
+		return $this;
+	}
+	
     /**
      *
      * @access protected
      * @param ArrayNodeDefinition $node
+	 * @return \CCDNComponent\CommonBundle\DependencyInjection\Configuration
      */
     protected function addServices(ArrayNodeDefinition $node)
     {
@@ -64,13 +217,6 @@ class Configuration implements ConfigurationInterface
                         ->arrayNode('provider')
                             ->addDefaultsIfNotSet()
                             ->children()
-				                ->arrayNode('user_provider')
-									->addDefaultsIfNotSet()
-									->canBeUnset()
-									->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Provider\User\SimpleUserProvider')->end()
-									->end()
-								->end()
 								->arrayNode('profile_provider')
 		                            ->addDefaultsIfNotSet()
 		                            ->children()
@@ -84,12 +230,15 @@ class Configuration implements ConfigurationInterface
                 ->end()
             ->end()
         ;
+									
+		return $this;
     }
 	
     /**
      *
      * @access private
      * @param ArrayNodeDefinition $node
+	 * @return \CCDNComponent\CommonBundle\DependencyInjection\Configuration
      */
     private function addHeaderSection(ArrayNodeDefinition $node)
     {
@@ -109,7 +258,9 @@ class Configuration implements ConfigurationInterface
 						->end()
                     ->end()
                 ->end()
-            ->end();
+            ->end()
+		;
+		
+		return $this;
     }
-
 }
