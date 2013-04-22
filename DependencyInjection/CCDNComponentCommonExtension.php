@@ -23,15 +23,21 @@ use Symfony\Component\Config\FileLocator;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  *
- * @author Reece Fowell <reece@codeconsortium.com>
- * @version 1.0
+ * @category CCDNComponent
+ * @package  CommonBundle
+ *
+ * @author   Reece Fowell <reece@codeconsortium.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @version  Release: 2.0
+ * @link     https://github.com/codeconsortium/CCDNComponentCommonBundle
+ *
  */
 class CCDNComponentCommonExtension extends Extension
 {
     /**
-	 *
+     *
      * @access public
-	 * @return string
+     * @return string
      */
     public function getAlias()
     {
@@ -41,26 +47,26 @@ class CCDNComponentCommonExtension extends Extension
     /**
      *
      * @access public
-	 * @param array $config
+     * @param array                                                   $config
      * @param \Symfony\Component\DependencyInjection\ContainerBuilder $container
      */
     public function load(array $configs, ContainerBuilder $container)
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
-		
-		// Class file namespaces.
+
+        // Class file namespaces.
         $this
-			->getComponentSection($config, $container)
-		;
-			
-		// Configuration stuff.
+            ->getComponentSection($config, $container)
+        ;
+
+        // Configuration stuff.
         $this
-			->getServicesSection($config, $container)
-	        ->getHeaderSection($config, $container)
-		;
-		
-		// Load Service definitions.
+            ->getServicesSection($config, $container)
+            ->getHeaderSection($config, $container)
+        ;
+
+        // Load Service definitions.
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
     }
@@ -68,58 +74,58 @@ class CCDNComponentCommonExtension extends Extension
     /**
      *
      * @access private
-	 * @param array $config
-     * @param \Symfony\Component\DependencyInjection\ContainerBuilder $container
-	 * @return \CCDNComponent\CommonBundle\DependencyInjection\CCDNComponentCommonExtension
+     * @param  array                                                                        $config
+     * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                      $container
+     * @return \CCDNComponent\CommonBundle\DependencyInjection\CCDNComponentCommonExtension
      */
     private function getComponentSection(array $config, ContainerBuilder $container)
     {
-        $container->setParameter('ccdn_component_common.component.helper.role.class', $config['component']['helper']['role']['class']);		
-        $container->setParameter('ccdn_component_common.component.helper.bin_si_units.class', $config['component']['helper']['bin_si_units']['class']);		
-        $container->setParameter('ccdn_component_common.component.pagerfanta.view.bootstrap.class', $config['component']['pagerfanta']['view']['bootstrap']['class']);		
-        $container->setParameter('ccdn_component_common.component.pagerfanta.view.bootstrap_translated.class', $config['component']['pagerfanta']['view']['bootstrap_translated']['class']);		
+        $container->setParameter('ccdn_component_common.component.helper.role.class', $config['component']['helper']['role']['class']);
+        $container->setParameter('ccdn_component_common.component.helper.bin_si_units.class', $config['component']['helper']['bin_si_units']['class']);
+        $container->setParameter('ccdn_component_common.component.pagerfanta.view.bootstrap.class', $config['component']['pagerfanta']['view']['bootstrap']['class']);
+        $container->setParameter('ccdn_component_common.component.pagerfanta.view.bootstrap_translated.class', $config['component']['pagerfanta']['view']['bootstrap_translated']['class']);
 
-        $container->setParameter('ccdn_component_common.component.twig_extension.bin_si_units.class', $config['component']['twig_extension']['bin_si_units']['class']);		
-        $container->setParameter('ccdn_component_common.component.twig_extension.cycler.class', $config['component']['twig_extension']['cycler']['class']);		
-        $container->setParameter('ccdn_component_common.component.twig_extension.div_ceil.class', $config['component']['twig_extension']['div_ceil']['class']);		
-        $container->setParameter('ccdn_component_common.component.twig_extension.trunc_dot.class', $config['component']['twig_extension']['trunc_dot']['class']);		
-        $container->setParameter('ccdn_component_common.component.twig_extension.relevant_date_format.class', $config['component']['twig_extension']['relevant_date_format']['class']);		
-        $container->setParameter('ccdn_component_common.component.twig_extension.alert_key.class', $config['component']['twig_extension']['alert_key']['class']);		
-        $container->setParameter('ccdn_component_common.component.twig_extension.user_role.class', $config['component']['twig_extension']['user_role']['class']);		
-        $container->setParameter('ccdn_component_common.component.twig_extension.has_role.class', $config['component']['twig_extension']['has_role']['class']);		
-        $container->setParameter('ccdn_component_common.component.twig_extension.abbr_number.class', $config['component']['twig_extension']['abbr_number']['class']);		
-        $container->setParameter('ccdn_component_common.component.twig_extension.create_profile.class', $config['component']['twig_extension']['create_profile']['class']);		
+        $container->setParameter('ccdn_component_common.component.twig_extension.bin_si_units.class', $config['component']['twig_extension']['bin_si_units']['class']);
+        $container->setParameter('ccdn_component_common.component.twig_extension.cycler.class', $config['component']['twig_extension']['cycler']['class']);
+        $container->setParameter('ccdn_component_common.component.twig_extension.div_ceil.class', $config['component']['twig_extension']['div_ceil']['class']);
+        $container->setParameter('ccdn_component_common.component.twig_extension.trunc_dot.class', $config['component']['twig_extension']['trunc_dot']['class']);
+        $container->setParameter('ccdn_component_common.component.twig_extension.relevant_date_format.class', $config['component']['twig_extension']['relevant_date_format']['class']);
+        $container->setParameter('ccdn_component_common.component.twig_extension.alert_key.class', $config['component']['twig_extension']['alert_key']['class']);
+        $container->setParameter('ccdn_component_common.component.twig_extension.user_role.class', $config['component']['twig_extension']['user_role']['class']);
+        $container->setParameter('ccdn_component_common.component.twig_extension.has_role.class', $config['component']['twig_extension']['has_role']['class']);
+        $container->setParameter('ccdn_component_common.component.twig_extension.abbr_number.class', $config['component']['twig_extension']['abbr_number']['class']);
+        $container->setParameter('ccdn_component_common.component.twig_extension.create_profile.class', $config['component']['twig_extension']['create_profile']['class']);
 
-		return $this;
-	}
-	
+        return $this;
+    }
+
     /**
      *
      * @access private
-	 * @param array $config
-     * @param \Symfony\Component\DependencyInjection\ContainerBuilder $container
-	 * @return \CCDNComponent\CommonBundle\DependencyInjection\CCDNComponentCommonExtension
+     * @param  array                                                                        $config
+     * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                      $container
+     * @return \CCDNComponent\CommonBundle\DependencyInjection\CCDNComponentCommonExtension
      */
-	private function getServicesSection(array $config, ContainerBuilder $container)
-	{
+    private function getServicesSection(array $config, ContainerBuilder $container)
+    {
         $container->setParameter('ccdn_component_common.component.provider.profile.class', $config['service']['provider']['profile_provider']['class']);
         $container->setParameter('ccdn_component_common.component.provider.profile.avatar_fallback', $config['service']['provider']['profile_provider']['fallback_avatar']);
-		
-		return $this;
+
+        return $this;
     }
-	
+
     /**
      *
      * @access private
-	 * @param array $config
-     * @param \Symfony\Component\DependencyInjection\ContainerBuilder $container
-	 * @return \CCDNComponent\CommonBundle\DependencyInjection\CCDNComponentCommonExtension
+     * @param  array                                                                        $config
+     * @param  \Symfony\Component\DependencyInjection\ContainerBuilder                      $container
+     * @return \CCDNComponent\CommonBundle\DependencyInjection\CCDNComponentCommonExtension
      */
     private function getHeaderSection(array $config, ContainerBuilder $container)
     {
         $container->setParameter('ccdn_component_common.header.brand.route', $config['header']['brand']['route']);
-	    $container->setParameter('ccdn_component_common.header.brand.label', $config['header']['brand']['label']);
-		
-		return $this;
+        $container->setParameter('ccdn_component_common.header.brand.label', $config['header']['brand']['label']);
+
+        return $this;
     }
 }

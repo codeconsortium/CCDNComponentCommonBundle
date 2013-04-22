@@ -19,19 +19,26 @@ use Pagerfanta\View\ViewInterface;
 /**
  * TwitterBootstrapView.
  *
- * View that can be used with the pagination module 
+ * View that can be used with the pagination module
  * from the Twitter Bootstrap CSS Toolkit
  * http://twitter.github.com/bootstrap/
  *
- * @author Pablo Díez <pablodip@gmail.com>
- * @author Jan Sorgalla <jsorgalla@gmail.com>
+ * @category CCDNComponent
+ * @package  CommonBundle
+ *
+ * @author   Pablo Díez <pablodip@gmail.com>
+ * @author   Jan Sorgalla <jsorgalla@gmail.com>
+ * @author   Reece Fowell <reece@codeconsortium.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @version  Release: 2.0
+ * @link     https://github.com/codeconsortium/CCDNComponentCommonBundle
  *
  * @api
  */
 class TwitterBootstrapView implements ViewInterface
 {
-	
     /**
+     *
      * {@inheritdoc}
      */
     public function render(PagerfantaInterface $pagerfanta, $routeGenerator, array $options = array())
@@ -45,7 +52,7 @@ class TwitterBootstrapView implements ViewInterface
             'dots_message'        => '&hellip;',
             'dots_href'           => '',
             'css_container_class' => 'btn-group',
-			'css_page_class'	  => 'btn',
+            'css_page_class'	  => 'btn',
             'css_prev_class'      => 'btn',
             'css_next_class'      => 'btn',
             'css_disabled_class'  => 'disabled',
@@ -80,7 +87,6 @@ class TwitterBootstrapView implements ViewInterface
 
         $pages[] = sprintf('<a class="%s" href="%s">%s</a>', $class, $url, $options['prev_message']);
 
-
         // first
         if ($startPage > 1) {
             $pages[] = sprintf('<a class="%s" href="%s">%s</a>', $options['css_page_class'], $routeGenerator(1), 1);
@@ -97,8 +103,8 @@ class TwitterBootstrapView implements ViewInterface
             if ($page == $currentPage) {
                 $class = sprintf(' class="%s %s"',  $options['css_page_class'], $options['css_active_class']);
             } else {
-				$class = sprintf(' class="%s"', $options['css_page_class']);
-			}
+                $class = sprintf(' class="%s"', $options['css_page_class']);
+            }
 
             $pages[] = sprintf('<a %s href="%s">%s</a>', $class, $routeGenerator($page), $page);
         }
@@ -131,6 +137,7 @@ class TwitterBootstrapView implements ViewInterface
     }
 
     /**
+     *
      * {@inheritdoc}
      */
     public function getName()

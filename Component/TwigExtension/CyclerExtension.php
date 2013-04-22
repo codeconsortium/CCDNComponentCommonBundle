@@ -15,12 +15,17 @@ namespace CCDNComponent\CommonBundle\Component\TwigExtension;
 
 /**
  *
- * @author Reece Fowell <reece@codeconsortium.com>
- * @version 1.0
+ * @category CCDNComponent
+ * @package  CommonBundle
+ *
+ * @author   Reece Fowell <reece@codeconsortium.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @version  Release: 2.0
+ * @link     https://github.com/codeconsortium/CCDNComponentCommonBundle
+ *
  */
 class CyclerExtension extends \Twig_Extension
 {
-
     /**
      *
      * @access private
@@ -56,7 +61,7 @@ class CyclerExtension extends \Twig_Extension
      * @param  array $choices, $name
      * @return int
      */
-    public function cycler($choices = array(), $name)
+    public function cycler(array $choices, $name)
     {
         if (isset($this::$iterator[$name])) {
             $this::$iterator[$name]['iterator']++;
@@ -81,5 +86,4 @@ class CyclerExtension extends \Twig_Extension
     {
         return 'cycler';
     }
-
 }

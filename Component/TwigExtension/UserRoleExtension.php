@@ -15,28 +15,33 @@ namespace CCDNComponent\CommonBundle\Component\TwigExtension;
 
 /**
  *
- * @author Reece Fowell <reece@codeconsortium.com>
- * @version 1.0
+ * @category CCDNComponent
+ * @package  CommonBundle
+ *
+ * @author   Reece Fowell <reece@codeconsortium.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @version  Release: 2.0
+ * @link     https://github.com/codeconsortium/CCDNComponentCommonBundle
+ *
  */
 class UserRoleExtension extends \Twig_Extension
 {
-
     /**
      *
      * @access protected
      */
     protected $container;
 
-	/**
-	 *
-	 * @access protected
-	 */
-	protected $roleHelper;
-	
     /**
      *
- 	 * @access public
- 	 * @param $roleHelper
+     * @access protected
+     */
+    protected $roleHelper;
+
+    /**
+     *
+      * @access public
+      * @param $roleHelper
      */
     public function __construct($roleHelper)
     {
@@ -65,12 +70,12 @@ class UserRoleExtension extends \Twig_Extension
      */
     public function userRole($user)
     {
-	
-		$role = $this->roleHelper->getUsersHighestRoleAsName($user->getRoles());
-		
-		$roleNoPrefix = str_replace('ROLE_', '', $role);
-		$roleUnslugged = str_replace('_', '', $roleNoPrefix);
-		
+
+        $role = $this->roleHelper->getUsersHighestRoleAsName($user->getRoles());
+
+        $roleNoPrefix = str_replace('ROLE_', '', $role);
+        $roleUnslugged = str_replace('_', '', $roleNoPrefix);
+
         return ucfirst(strtolower($roleUnslugged));
     }
 
@@ -83,5 +88,4 @@ class UserRoleExtension extends \Twig_Extension
     {
         return 'userRole';
     }
-
 }

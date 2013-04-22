@@ -22,15 +22,21 @@ use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html#cookbook-bundles-extension-config-class}
  *
- * @author Reece Fowell <reece@codeconsortium.com>
- * @version 1.0
+ * @category CCDNComponent
+ * @package  CommonBundle
+ *
+ * @author   Reece Fowell <reece@codeconsortium.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @version  Release: 2.0
+ * @link     https://github.com/codeconsortium/CCDNComponentCommonBundle
+ *
  */
 class Configuration implements ConfigurationInterface
 {
     /**
      *
-	 * @access public
-	 * @return \Symfony\Component\Config\Definition\Builder\TreeBuilder
+     * @access public
+     * @return \Symfony\Component\Config\Definition\Builder\TreeBuilder
      */
     public function getConfigTreeBuilder()
     {
@@ -41,25 +47,25 @@ class Configuration implements ConfigurationInterface
             ->children()
             ->end();
 
-		// Class file namespaces.
-		$this
-			->addComponentSection($rootNode)
-		;
-		
-		// Configuration stuff.
+        // Class file namespaces.
         $this
-			->addServices($rootNode)
-	        ->addHeaderSection($rootNode)
-		;
+            ->addComponentSection($rootNode)
+        ;
+
+        // Configuration stuff.
+        $this
+            ->addServices($rootNode)
+            ->addHeaderSection($rootNode)
+        ;
 
         return $treeBuilder;
     }
-	
+
     /**
      *
      * @access private
-     * @param \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
-	 * @return \CCDNComponent\CommonBundle\DependencyInjection\Configuration
+     * @param  \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition $node
+     * @return \CCDNComponent\CommonBundle\DependencyInjection\Configuration
      */
     private function addComponentSection(ArrayNodeDefinition $node)
     {
@@ -70,141 +76,141 @@ class Configuration implements ConfigurationInterface
                     ->addDefaultsIfNotSet()
                     ->canBeUnset()
                     ->children()
-		                ->arrayNode('twig_extension')
-		                    ->addDefaultsIfNotSet()
-		                    ->canBeUnset()
-		                    ->children()
-				                ->arrayNode('bin_si_units')
-				                    ->addDefaultsIfNotSet()
-				                    ->canBeUnset()
-				                    ->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\BinSIUnitsExtension')->end()							
-									->end()		
-								->end()
-				                ->arrayNode('cycler')
-				                    ->addDefaultsIfNotSet()
-				                    ->canBeUnset()
-				                    ->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\CyclerExtension')->end()							
-									->end()		
-								->end()
-				                ->arrayNode('div_ceil')
-				                    ->addDefaultsIfNotSet()
-				                    ->canBeUnset()
-				                    ->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\DivCeilExtension')->end()							
-									->end()		
-								->end()
-				                ->arrayNode('trunc_dot')
-				                    ->addDefaultsIfNotSet()
-				                    ->canBeUnset()
-				                    ->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\TruncDotExtension')->end()							
-									->end()
-								->end()
-				                ->arrayNode('relevant_date_format')
-				                    ->addDefaultsIfNotSet()
-				                    ->canBeUnset()
-				                    ->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\RelevantDateFormatExtension')->end()							
-									->end()		
-								->end()
-				                ->arrayNode('alert_key')
-				                    ->addDefaultsIfNotSet()
-				                    ->canBeUnset()
-				                    ->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\AlertKeyExtension')->end()							
-									->end()		
-								->end()
-				                ->arrayNode('user_role')
-				                    ->addDefaultsIfNotSet()
-				                    ->canBeUnset()
-				                    ->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\UserRoleExtension')->end()							
-									->end()		
-								->end()
-				                ->arrayNode('has_role')
-				                    ->addDefaultsIfNotSet()
-				                    ->canBeUnset()
-				                    ->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\HasRoleExtension')->end()							
-									->end()		
-								->end()
-				                ->arrayNode('abbr_number')
-				                    ->addDefaultsIfNotSet()
-				                    ->canBeUnset()
-				                    ->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\AbbrNumberExtension')->end()							
-									->end()		
-								->end()
-				                ->arrayNode('create_profile')
-				                    ->addDefaultsIfNotSet()
-				                    ->canBeUnset()
-				                    ->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\CreateProfileExtension')->end()							
-									->end()		
-								->end()
-							->end()
-						->end()
-		                ->arrayNode('helper')
-		                    ->addDefaultsIfNotSet()
-		                    ->canBeUnset()
-		                    ->children()
-				                ->arrayNode('role')
-				                    ->addDefaultsIfNotSet()
-				                    ->canBeUnset()
-				                    ->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Helper\RoleHelper')->end()							
-									->end()
-								->end()
-				                ->arrayNode('bin_si_units')
-				                    ->addDefaultsIfNotSet()
-				                    ->canBeUnset()
-				                    ->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Helper\BinSIUnits')->end()							
-									->end()
-								->end()
-							->end()
-						->end()
-		                ->arrayNode('pagerfanta')
-		                    ->addDefaultsIfNotSet()
-		                    ->canBeUnset()
-		                    ->children()
-				                ->arrayNode('view')
-				                    ->addDefaultsIfNotSet()
-				                    ->canBeUnset()
-				                    ->children()
-						                ->arrayNode('bootstrap')
-						                    ->addDefaultsIfNotSet()
-						                    ->canBeUnset()
-						                    ->children()
-												->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapView')->end()																											
-											->end()
-										->end()
-						                ->arrayNode('bootstrap_translated')
-						                    ->addDefaultsIfNotSet()
-						                    ->canBeUnset()
-						                    ->children()
-												->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapTranslatedView')->end()
-											->end()
-										->end()
-									->end()
-								->end()
-							->end()
-						->end()
-					->end()
-				->end()
-			->end()
-		;
+                        ->arrayNode('twig_extension')
+                            ->addDefaultsIfNotSet()
+                            ->canBeUnset()
+                            ->children()
+                                ->arrayNode('bin_si_units')
+                                    ->addDefaultsIfNotSet()
+                                    ->canBeUnset()
+                                    ->children()
+                                        ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\BinSIUnitsExtension')->end()
+                                    ->end()
+                                ->end()
+                                ->arrayNode('cycler')
+                                    ->addDefaultsIfNotSet()
+                                    ->canBeUnset()
+                                    ->children()
+                                        ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\CyclerExtension')->end()
+                                    ->end()
+                                ->end()
+                                ->arrayNode('div_ceil')
+                                    ->addDefaultsIfNotSet()
+                                    ->canBeUnset()
+                                    ->children()
+                                        ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\DivCeilExtension')->end()
+                                    ->end()
+                                ->end()
+                                ->arrayNode('trunc_dot')
+                                    ->addDefaultsIfNotSet()
+                                    ->canBeUnset()
+                                    ->children()
+                                        ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\TruncDotExtension')->end()
+                                    ->end()
+                                ->end()
+                                ->arrayNode('relevant_date_format')
+                                    ->addDefaultsIfNotSet()
+                                    ->canBeUnset()
+                                    ->children()
+                                        ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\RelevantDateFormatExtension')->end()
+                                    ->end()
+                                ->end()
+                                ->arrayNode('alert_key')
+                                    ->addDefaultsIfNotSet()
+                                    ->canBeUnset()
+                                    ->children()
+                                        ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\AlertKeyExtension')->end()
+                                    ->end()
+                                ->end()
+                                ->arrayNode('user_role')
+                                    ->addDefaultsIfNotSet()
+                                    ->canBeUnset()
+                                    ->children()
+                                        ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\UserRoleExtension')->end()
+                                    ->end()
+                                ->end()
+                                ->arrayNode('has_role')
+                                    ->addDefaultsIfNotSet()
+                                    ->canBeUnset()
+                                    ->children()
+                                        ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\HasRoleExtension')->end()
+                                    ->end()
+                                ->end()
+                                ->arrayNode('abbr_number')
+                                    ->addDefaultsIfNotSet()
+                                    ->canBeUnset()
+                                    ->children()
+                                        ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\AbbrNumberExtension')->end()
+                                    ->end()
+                                ->end()
+                                ->arrayNode('create_profile')
+                                    ->addDefaultsIfNotSet()
+                                    ->canBeUnset()
+                                    ->children()
+                                        ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\TwigExtension\CreateProfileExtension')->end()
+                                    ->end()
+                                ->end()
+                            ->end()
+                        ->end()
+                        ->arrayNode('helper')
+                            ->addDefaultsIfNotSet()
+                            ->canBeUnset()
+                            ->children()
+                                ->arrayNode('role')
+                                    ->addDefaultsIfNotSet()
+                                    ->canBeUnset()
+                                    ->children()
+                                        ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Helper\RoleHelper')->end()
+                                    ->end()
+                                ->end()
+                                ->arrayNode('bin_si_units')
+                                    ->addDefaultsIfNotSet()
+                                    ->canBeUnset()
+                                    ->children()
+                                        ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Helper\BinSIUnits')->end()
+                                    ->end()
+                                ->end()
+                            ->end()
+                        ->end()
+                        ->arrayNode('pagerfanta')
+                            ->addDefaultsIfNotSet()
+                            ->canBeUnset()
+                            ->children()
+                                ->arrayNode('view')
+                                    ->addDefaultsIfNotSet()
+                                    ->canBeUnset()
+                                    ->children()
+                                        ->arrayNode('bootstrap')
+                                            ->addDefaultsIfNotSet()
+                                            ->canBeUnset()
+                                            ->children()
+                                                ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapView')->end()
+                                            ->end()
+                                        ->end()
+                                        ->arrayNode('bootstrap_translated')
+                                            ->addDefaultsIfNotSet()
+                                            ->canBeUnset()
+                                            ->children()
+                                                ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Pagerfanta\View\TwitterBootstrapTranslatedView')->end()
+                                            ->end()
+                                        ->end()
+                                    ->end()
+                                ->end()
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+            ->end()
+        ;
 
-		return $this;
-	}
-	
+        return $this;
+    }
+
     /**
      *
      * @access protected
-     * @param ArrayNodeDefinition $node
-	 * @return \CCDNComponent\CommonBundle\DependencyInjection\Configuration
+     * @param  ArrayNodeDefinition                                           $node
+     * @return \CCDNComponent\CommonBundle\DependencyInjection\Configuration
      */
     protected function addServices(ArrayNodeDefinition $node)
     {
@@ -217,28 +223,28 @@ class Configuration implements ConfigurationInterface
                         ->arrayNode('provider')
                             ->addDefaultsIfNotSet()
                             ->children()
-								->arrayNode('profile_provider')
-		                            ->addDefaultsIfNotSet()
-		                            ->children()
-										->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Provider\Profile\SimpleProfileProvider')->end()
-										->scalarNode('fallback_avatar')->defaultValue('bundles/ccdncomponentcommon/images/profile/anonymous_avatar.gif')->end()										
-									->end()
-								->end()
+                                ->arrayNode('profile_provider')
+                                    ->addDefaultsIfNotSet()
+                                    ->children()
+                                        ->scalarNode('class')->defaultValue('CCDNComponent\CommonBundle\Component\Provider\Profile\SimpleProfileProvider')->end()
+                                        ->scalarNode('fallback_avatar')->defaultValue('bundles/ccdncomponentcommon/images/profile/anonymous_avatar.gif')->end()
+                                    ->end()
+                                ->end()
                             ->end()
                         ->end()
                     ->end()
                 ->end()
             ->end()
         ;
-									
-		return $this;
+
+        return $this;
     }
-	
+
     /**
      *
      * @access private
-     * @param ArrayNodeDefinition $node
-	 * @return \CCDNComponent\CommonBundle\DependencyInjection\Configuration
+     * @param  ArrayNodeDefinition                                           $node
+     * @return \CCDNComponent\CommonBundle\DependencyInjection\Configuration
      */
     private function addHeaderSection(ArrayNodeDefinition $node)
     {
@@ -248,19 +254,19 @@ class Configuration implements ConfigurationInterface
                     ->addDefaultsIfNotSet()
                     ->canBeUnset()
                     ->children()
-						->arrayNode('brand')
-		                    ->addDefaultsIfNotSet()
-		                    ->canBeUnset()
-		                    ->children()
-								->scalarNode('route')->defaultValue('#')->end()
-								->scalarNode('label')->defaultValue('Code Consortium')->end()
-							->end()
-						->end()
+                        ->arrayNode('brand')
+                            ->addDefaultsIfNotSet()
+                            ->canBeUnset()
+                            ->children()
+                                ->scalarNode('route')->defaultValue('#')->end()
+                                ->scalarNode('label')->defaultValue('Code Consortium')->end()
+                            ->end()
+                        ->end()
                     ->end()
                 ->end()
             ->end()
-		;
-		
-		return $this;
+        ;
+
+        return $this;
     }
 }

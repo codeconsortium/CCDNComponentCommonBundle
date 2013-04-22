@@ -3,11 +3,11 @@
 		<nav class="navbar-inner">
 			<div class="container-fluid">
 				<a class="brand" href="{{- ccdn_component_common.header.brand.route -}}">{{- ccdn_component_common.header.brand.label -}}</a>
-			
+
 			    <ul class="nav">
-					{%- set route = app.request.attributes.get('_route') -%}				
+					{%- set route = app.request.attributes.get('_route') -%}
 			    </ul>
-			
+
 			    <ul class="nav pull-right">
 					{%- if is_granted('ROLE_USER') -%}
 						<li class="dropdown">
@@ -18,7 +18,7 @@
 							</a>
 							<ul class="dropdown-menu">
 							</ul>
-						</li>				
+						</li>
 					{%- endif -%}
 			    </ul>
 			</div>

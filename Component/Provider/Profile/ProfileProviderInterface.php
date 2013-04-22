@@ -15,6 +15,17 @@ namespace CCDNComponent\CommonBundle\Component\Provider\Profile;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
+/**
+ *
+ * @category CCDNComponent
+ * @package  CommonBundle
+ *
+ * @author   Reece Fowell <reece@codeconsortium.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @version  Release: 2.0
+ * @link     https://github.com/codeconsortium/CCDNComponentCommonBundle
+ *
+ */
 interface ProfileProviderInterface
 {
     public function transform(UserInterface $user = null);

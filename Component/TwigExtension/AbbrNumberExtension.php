@@ -15,12 +15,17 @@ namespace CCDNComponent\CommonBundle\Component\TwigExtension;
 
 /**
  *
- * @author Reece Fowell <reece@codeconsortium.com>
- * @version 1.0
+ * @category CCDNComponent
+ * @package  CommonBundle
+ *
+ * @author   Reece Fowell <reece@codeconsortium.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @version  Release: 2.0
+ * @link     https://github.com/codeconsortium/CCDNComponentCommonBundle
+ *
  */
 class AbbrNumberExtension extends \Twig_Extension
 {
-
     /**
      *
      * @access public
@@ -38,22 +43,26 @@ class AbbrNumberExtension extends \Twig_Extension
      * Converts numbers to an abbreviated form, i.e; 1,000 = 1k etc
      *
      * @access public
-     * @param int $number
+     * @param  int    $number
      * @return string
      */
     public function abbrNumber($number)
     {
-		$postfix = array('B'=>1000000000, 'M'=>1000000, ''=>1);
-		
-		foreach ($postfix as $p=>$div) {
-			if ($number >= $div) {
-				$number = abs(floor(($number / $div)*10.0)/10.0) . $p;
-				
-				break;
-			}
-	    }
-	   
-		return trim($number);
+        $postfix = array(
+            'B' => 1000000000,
+            'M' => 1000000,
+            ''  => 1
+        );
+
+        foreach ($postfix as $p => $div) {
+            if ($number >= $div) {
+                $number = abs(floor(($number / $div)*10.0)/10.0) . $p;
+
+                break;
+            }
+        }
+
+        return trim($number);
     }
 
     /**
@@ -65,5 +74,4 @@ class AbbrNumberExtension extends \Twig_Extension
     {
         return 'abbr_number';
     }
-
 }

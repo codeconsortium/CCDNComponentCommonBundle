@@ -15,12 +15,17 @@ namespace CCDNComponent\CommonBundle\Component\TwigExtension;
 
 /**
  *
- * @author Reece Fowell <reece@codeconsortium.com>
- * @version 1.0
+ * @category CCDNComponent
+ * @package  CommonBundle
+ *
+ * @author   Reece Fowell <reece@codeconsortium.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @version  Release: 2.0
+ * @link     https://github.com/codeconsortium/CCDNComponentCommonBundle
+ *
  */
 class TruncDotExtension extends \Twig_Extension
 {
-
     /**
      *
      * @access public
@@ -38,7 +43,7 @@ class TruncDotExtension extends \Twig_Extension
      * Truncates string if longer than needed and appends '...' to signify shorthand, otherwise returns original string.
      *
      * @access public
-     * @param int $numerator, int $denominator
+     * @param  int $numerator, int $denominator
      * @return int
      */
     public function truncDot($text, $length)
@@ -55,5 +60,4 @@ class TruncDotExtension extends \Twig_Extension
     {
         return 'truncDot';
     }
-
 }

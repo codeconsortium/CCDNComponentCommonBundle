@@ -1,6 +1,6 @@
 parameters:
 
-    # Service Parameters defined in app/config    
+    # Service Parameters defined in app/config
 
 services:
 
@@ -86,7 +86,7 @@ services:
 
     #
     # Pagerfanta Views.
-    #         
+    #
     ccdn_component_common.component.pagerfanta.view.bootstrap:
         class: %ccdn_component_common.component.pagerfanta.view.bootstrap.class%
         public: false
@@ -101,4 +101,3 @@ services:
 #        public: false
 #        tags:
 #            - { name: pagerfanta.view, alias: twitter_bootstrap_compact_translated }
-        

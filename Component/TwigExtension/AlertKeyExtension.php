@@ -15,12 +15,17 @@ namespace CCDNComponent\CommonBundle\Component\TwigExtension;
 
 /**
  *
- * @author Reece Fowell <reece@codeconsortium.com>
- * @version 1.0
+ * @category CCDNComponent
+ * @package  CommonBundle
+ *
+ * @author   Reece Fowell <reece@codeconsortium.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @version  Release: 2.0
+ * @link     https://github.com/codeconsortium/CCDNComponentCommonBundle
+ *
  */
 class AlertKeyExtension extends \Twig_Extension
 {
-
     /**
      *
      * @access protected
@@ -29,12 +34,12 @@ class AlertKeyExtension extends \Twig_Extension
 
     /**
      *
- 	 * @access public
- 	 * @param $container
+      * @access public
+      * @param $container
      */
     public function __construct($translator)
     {
-		$this->translator = $translator;
+        $this->translator = $translator;
     }
 
     /**
@@ -52,8 +57,8 @@ class AlertKeyExtension extends \Twig_Extension
     /**
      *
      * @access public
-	 * @param string $str
-	 * @return string
+     * @param  string $str
+     * @return string
      */
     public function alertKey($str)
     {
@@ -89,5 +94,4 @@ class AlertKeyExtension extends \Twig_Extension
     {
         return 'alertKey';
     }
-
 }

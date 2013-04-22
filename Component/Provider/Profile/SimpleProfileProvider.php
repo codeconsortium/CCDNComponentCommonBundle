@@ -15,74 +15,93 @@ namespace CCDNComponent\CommonBundle\Component\Provider\Profile;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
+/**
+ *
+ * @category CCDNComponent
+ * @package  CommonBundle
+ *
+ * @author   Reece Fowell <reece@codeconsortium.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @version  Release: 2.0
+ * @link     https://github.com/codeconsortium/CCDNComponentCommonBundle
+ *
+ */
 class SimpleProfileProvider implements ProfileProviderInterface
 {
-	/** @var $container */
+    /**
+     *
+     *  @var $container
+     */
     protected $container;
 
+    /**
+     *
+     * @access public
+     * @param $container
+     */
     public function __construct($container)
     {
         $this->container = $container;
     }
 
-	/**
-	 *
-	 * @access public
-	 * @param UserInterface $user
-	 * @return Profile $profile
-	 */
+    /**
+     *
+     * @access public
+     * @param  UserInterface $user
+     * @return Profile       $profile
+     */
     public function transform(UserInterface $user = null)
     {
         $profile = new Profile();
 
-		// Set user object.
-		$profile->setUser($user);
-		
-		// Choose username, wether canonical or email or some other field.
+        // Set user object.
+        $profile->setUser($user);
+
+        // Choose username, wether canonical or email or some other field.
         if (null !== $user) {
             $profile->setUsername($user->getUsername());
         } else {
             $profile->setUsername('Guest');
         }
 
-		// Set avatar.
+        // Set avatar.
         $asset = $this->container->get('templating.helper.assets');
 
         $fallbackAvatar = $asset->getUrl($this->container->getParameter('ccdn_component_common.component.provider.profile.avatar_fallback'));
         $profile->setAvatarFallback($fallbackAvatar);
 
-		// Set role badges.
+        // Set role badges.
         $profile->autoSetRoleBadge();
 
         return $profile;
     }
 
-	/**
-	 *
-	 * @access public
-	 * @param UserInterface $user
-	 * @return Profile $profile
-	 */
+    /**
+     *
+     * @access public
+     * @param  UserInterface $user
+     * @return Profile       $profile
+     */
     public function setup(ProfileInterface $profile = null)
-    {	
+    {
         if (null == $profile) {
-			throw new \Exception('You must provide a Profile to transform.');
+            throw new \Exception('You must provide a Profile to transform.');
         } else {
-			if (null == $profile->getId()) {
-				throw new \Exception('Profile has no valid id.');
-			}
+            if (null == $profile->getId()) {
+                throw new \Exception('Profile has no valid id.');
+            }
         }
 
-		// Set the router object and route path.
-		$profile->setRouter($this->container->get('router'));
+        // Set the router object and route path.
+        $profile->setRouter($this->container->get('router'));
 
-		// Set avatar.
+        // Set avatar.
         $asset = $this->container->get('templating.helper.assets');
 
         $fallbackAvatar = $asset->getUrl($this->container->getParameter('ccdn_component_common.component.provider.profile.avatar_fallback'));
         $profile->setAvatarFallback($fallbackAvatar);
 
-		// Set role badges.
+        // Set role badges.
         $profile->autoSetRoleBadge();
 
         return $profile;

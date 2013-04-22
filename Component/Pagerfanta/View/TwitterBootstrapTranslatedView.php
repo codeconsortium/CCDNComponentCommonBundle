@@ -21,22 +21,29 @@ use Symfony\Component\Translation\TranslatorInterface;
 /**
  * This view renders the twitter bootstrap view with texts translated.
  *
+ * @category CCDNComponent
+ * @package  CommonBundle
+ *
  * @author Pablo Díez <pablodip@gmail.com>
  * @author Reece Fowell <reece@codeconsortium.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @version  Release: 2.0
+ * @link     https://github.com/codeconsortium/CCDNComponentCommonBundle
+ *
  */
 class TwitterBootstrapTranslatedView implements ViewInterface
 {
-	
-	/**
-	 *
-	 * @access private
-	 */
+
+    /**
+     *
+     * @access private
+     */
     private $view;
 
-	/**
-	 *
-	 * @access private
-	 */
+    /**
+     *
+     * @access private
+     */
     private $translator;
 
     /**

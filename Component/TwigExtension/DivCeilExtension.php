@@ -15,12 +15,17 @@ namespace CCDNComponent\CommonBundle\Component\TwigExtension;
 
 /**
  *
- * @author Reece Fowell <reece@codeconsortium.com>
- * @version 1.0
+ * @category CCDNComponent
+ * @package  CommonBundle
+ *
+ * @author   Reece Fowell <reece@codeconsortium.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @version  Release: 2.0
+ * @link     https://github.com/codeconsortium/CCDNComponentCommonBundle
+ *
  */
 class DivCeilExtension extends \Twig_Extension
 {
-
     /**
      *
      * @access public
@@ -37,7 +42,7 @@ class DivCeilExtension extends \Twig_Extension
      * Divides 2 numbers and returns the rounded up number.
      *
      * @access public
-     * @param int $numerator, int $denominator
+     * @param  int $numerator, int $denominator
      * @return int
      */
     public function divCeil($numerator, $denominator)
@@ -54,5 +59,4 @@ class DivCeilExtension extends \Twig_Extension
     {
         return 'divCeil';
     }
-
 }

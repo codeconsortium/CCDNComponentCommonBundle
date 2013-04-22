@@ -14,40 +14,42 @@
 namespace CCDNComponent\CommonBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-
-use CCDNComponent\CommonBundle\DependencyInjection\Compiler\MenuBuilderCompilerPass;
 
 /**
  *
- * @author Reece Fowell <reece@codeconsortium.com>
- * @version 1.0
+ * @category CCDNComponent
+ * @package  CommonBundle
+ *
+ * @author   Reece Fowell <reece@codeconsortium.com>
+ * @license  http://opensource.org/licenses/MIT MIT
+ * @version  Release: 2.0
+ * @link     https://github.com/codeconsortium/CCDNComponentCommonBundle
+ *
  */
 class CCDNComponentCommonBundle extends Bundle
 {
-	
-	/**
-	 *
-	 * @access public
-	 */
-	public function boot()
-	{
-		$route = $this->container->getParameter('ccdn_component_common.header.brand.route');
-		
-		if (strlen($route) && $route != '#') {
-			$path = $this->container->get('router')->generate($route);
-		} else {
-			$path = '#';
-		}
-		
-		$twig = $this->container->get('twig');
-		$twig->addGlobal('ccdn_component_common', array(
-			'header' => array(
-				'brand' => array(
-					'route' => $path,
-					'label' => $this->container->getParameter('ccdn_component_common.header.brand.label'),
-				),
-			),
-		));
-	}
+    /**
+     *
+     * @access public
+     */
+    public function boot()
+    {
+        $route = $this->container->getParameter('ccdn_component_common.header.brand.route');
+
+        if (strlen($route) && $route != '#') {
+            $path = $this->container->get('router')->generate($route);
+        } else {
+            $path = '#';
+        }
+
+        $twig = $this->container->get('twig');
+        $twig->addGlobal('ccdn_component_common', array(
+            'header' => array(
+                'brand' => array(
+                    'route' => $path,
+                    'label' => $this->container->getParameter('ccdn_component_common.header.brand.label'),
+                ),
+            ),
+        ));
+    }
 }
