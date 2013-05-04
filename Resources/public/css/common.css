@@ -484,6 +484,13 @@ body > footer.site-footer .container .footer-links li:first-child {
 aside > ul.nav > li {
 	overflow:hidden;
 	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+aside > ul.nav > li > a {
+	padding-right:10px;
+	/*overflow:hidden;*/
+	text-overflow:ellipsis;
 }
 
 aside > ul.nav > li.nav-header {
@@ -507,8 +514,9 @@ aside > ul.nav > li.divider {
 
 /* this is for nested sidebar menus */
 aside > ul.nav > li > ul.nav {
-	margin-left:5px;
+	margin-left:18px;
 	padding-left:11px;
+	border-left:1px solid #eee;
 }
 
 /* Form Elements

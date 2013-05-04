@@ -14,7 +14,9 @@ pre .atv, code .atv { color: #65B042; } /* html/xml attribute value - green */
 pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
 
 pre.prettyprint, code.prettyprint {
-	background-color: #111;
+	padding-top:0px !important;
+	padding-bottom:0px !important;
+	background-color: #eee;
 	border: 1px solid #ddd;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -33,7 +35,7 @@ pre.prettyprint {
 
 
 /* Specify class=linenums on a pre to get line numbering */
-ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE;} /* IE indents via margin-left */
+ol.linenums { margin-top: 0; margin-bottom: 0; padding:10px;color: #AEAEAE; background-color:#111;} /* IE indents via margin-left */
 li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { /*list-style-type: none*/ }
 /* Alternate shading for lines */
 li.L1,li.L3,li.L5,li.L7,li.L9 { }
