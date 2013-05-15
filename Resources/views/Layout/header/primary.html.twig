@@ -1,0 +1,32 @@
+{%- spaceless -%}
+	<div class="navbar navbar-googlebar">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<div class="row-fluid nav">
+					<div class="span2">
+						<a class="brand" href="{{- ccdn_component_common.header.brand.route -}}">{{- ccdn_component_common.header.brand.label -}}</a>
+					</div>
+				
+					<div class="span8">
+					</div>
+				
+					<div class="span2">
+						{%- if is_granted('ROLE_USER') -%}
+
+							<div class="btn-group">
+								<a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
+									<i class="icon-user"></i>
+									<bdi>{{- app.user.username |capitalize -}}</bdi>
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+								</ul>
+							</div>
+						{%- else -%}
+						{%- endif -%}
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+{%- endspaceless -%}

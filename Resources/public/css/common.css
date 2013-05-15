@@ -8,7 +8,7 @@ html, body {
 }
 
 #page-main {
-	padding-top:145px;
+	padding-top:110px;
 	padding-bottom:150px; /* this needs to be bigger than footer height */
 	overflow:auto;
 }
@@ -30,154 +30,29 @@ html, body {
 
 /* Header
 -------------------------------------------------- */
-body > #page-wrap > #page-main > header.nav-bar {
-	border-bottom:1px solid #eee;
-	/*width:100%;*/
+#page-wrap > #page-main > header > .navbar {
+	margin:0px;
+}
+
+#page-wrap > #page-main > header.navbar-fixed-top {
+	margin-bottom:20px;
+}
+
+#page-wrap > #page-main > header.navbar-fixed-top > .navbar {
+	margin-bottom:0px;
+}
+
+#page-wrap > #page-main > header > .crumb-bar-container {
+	height: 55px;
+}
+
+#page-wrap > #page-main > header > .crumb-bar-container [class^="span"] > h3 {
 	margin:0px;
 	padding:0px;
-}
-	body > #page-wrap > #page-main > header.nav-bar > nav.site-header-links {
-		height:25px;
-		line-height:25px;
-		padding:0px;
-	
-		background-color:#000;
-	
-		border-bottom:1px solid #eee;
-	}
-	body > #page-wrap > #page-main > header.nav-bar > nav.site-header-links > ul {
-		
-	}
-	body > #page-wrap > #page-main > header.nav-bar > nav.site-header-links > ul > li {
-		display:inline-block;
-		height:25px;
-		line-height:25px;
-		margin:0px 10px 0px 10px;
-		padding:0px;
-	
-		overflow:hidden;
-	}
-	body > #page-wrap > #page-main > header.nav-bar > nav.site-header-links > ul > li > a {
-		height:inherit;
-		line-height:inherit;
-		margin:0px;
-		padding:0px 15px 0px 15px;
-	
-		text-decoration:none;
-		text-shadow:none;
-		font-size:15px;
-		color:#fff;
-	
-		overflow:hidden;
-	}
-	body > #page-wrap > #page-main > header.nav-bar > nav.site-header-links > ul > li > a:hover {
-		background-color:#0088dd;
-	}
-	body > #page-wrap > #page-main > header.nav-bar > nav.site-header-links > ul > li.active > a {
-		background-color:#0088dd;	
-	}
-
-
-
-
-body > #page-wrap > #page-main > header.nav-bar > nav.site-header-primary {
-	width:inherit;
-	height:50px;
-	margin:0px;
-	padding:0px;
-	vertical-align:middle;
-	background-color:#eee;
-	border-bottom:1px solid #ddd;
-	
-	padding-left:15px;
-	padding-right:15px;
-}
-	body > #page-wrap > #page-main > header.nav-bar > nav.site-header-primary > div {
-		height:50px;
-		line-height:50px;
-		/*margin:0px;*/
-		padding:5px;
-		vertical-align:middle;
-		/*border:1px solid red;*/
-	}
-		body > #page-wrap > #page-main > header.nav-bar > nav.site-header-primary > div > .logo {
-			height:40px;
-			line-height:40px;
-			margin:0px;
-			padding:0px;
-			vertical-align:middle;
-		}
-			body > #page-wrap > #page-main > header.nav-bar > nav.site-header-primary > div > .logo > a.brand,
-			body > #page-wrap > #page-main > header.nav-bar > nav.site-header-primary > div > .logo > a.brand:link,
-			body > #page-wrap > #page-main > header.nav-bar > nav.site-header-primary > div > .logo > a.brand:visited,
-			body > #page-wrap > #page-main > header.nav-bar > nav.site-header-primary > div > .logo > a.brand:active {
-				height:inherit;
-				line-height:inherit;
-				margin:0px;
-				padding:0px;
-				vertical-align:middle;
-				font-size:25px;
-				color:#777;
-			}
-			body > #page-wrap > #page-main > header.nav-bar > nav.site-header-primary > div > .logo > a.brand:hover {
-				color:#0088dd;
-				text-decoration:none;
-			}
-		body > #page-wrap > #page-main > header.nav-bar > nav.site-header-primary > div > .search {
-			height:40px;
-			line-height:40px;
-			margin:0px;
-			padding:0px;
-			vertical-align:middle;
-		}
-		body > #page-wrap > #page-main > header.nav-bar > nav.site-header-primary > div > .account {
-			height:40px;
-			line-height:40px;
-			margin:0px;
-			padding:0px;
-			vertical-align:middle;
-	}
-
-
-
-body > #page-wrap > #page-main > header.nav-bar > nav.site-header-crumbs {
-	background-color:#fff;
-/*	border:1px solid red;*/
-	width:inherit;
-	height:60px;
-	margin:0px;
-	padding:0px;
-	
-	padding-left:20px;
-	padding-right:15px;
-	
+	height:46px;
+	line-height:55px;
 }
 
-body > #page-wrap > #page-main > header.nav-bar > nav.site-header-crumbs > #sub-nav > div.span2 {
-	/*display:inline-block;
-	clear:none;*/
-	height: 60px;
-	line-height:60px;
-
-}
-body > #page-wrap > #page-main > header.nav-bar > nav.site-header-crumbs > #sub-nav > div.span2 > h3 {
-	height:60px;
-	line-height:60px;
-}
-
-body > #page-wrap > #page-main > header.nav-bar > nav.site-header-crumbs > #sub-nav > nav {
-	/*display:inline-block;
-	clear:none;*/
-	height:60px;
-	line-height:60px;
-
-}
-
-body > #page-wrap > #page-main > header.nav-bar > nav.site-header-crumbs > #sub-nav > nav > ol.breadcrumb {
-	/*clear:none;*/
-	height:60px;
-	line-height:60px;
-}
 /* Page-Footer
 -------------------------------------------------- */
 footer.page-footer {
@@ -210,30 +85,15 @@ footer.page-footer .container .footer-links li:first-child {
 
 body > footer.site-footer {
     position: relative;
-    margin-top: -150px; /* negative value of footer height */
-    height: 150px;
     clear:both;
+    height: 50px;
+    margin-top: -50px; /* negative value of footer height */
+	margin-bottom:0px;
     padding-top:20px;	
-
-	
+	padding-bottom:0px;
 	text-align: center;
-	padding: 35px 0;
 	border-top: 1px solid #e5e5e5;
 	background-color: #f5f5f5;
-}
-body > footer.site-footer .container p {
-	margin-bottom: 0;
-	color: #777;
-}
-body > footer.site-footer .container .footer-links {
-	margin: 10px 0;
-}
-body > footer.site-footer .container .footer-links li {
-	display: inline;
-	padding: 0 2px;
-}
-body > footer.site-footer .container .footer-links li:first-child {
-	padding-left: 0;
 }
 
 /* Sidebar
@@ -251,7 +111,6 @@ aside > ul.nav > li {
 
 aside > ul.nav > li > a {
 	padding-right:10px;
-	/*overflow:hidden;*/
 	text-overflow:ellipsis;
 }
 
@@ -354,42 +213,108 @@ button.btn > i[class^="icon-"],
 	margin-left:0px;
 }
 
-section > form.form-horizontal {
-	border:1px solid #f3f3f3;
-	background-color:#fefefe;
-	        border-radius:5px;
-	   -moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	
-	padding-bottom:0px;
-	
+
+form.form-vertical,
+form.form-horizontal {
+	background-color:#f1f1f1;
+	border:1px solid #e3e3e3;
+	border-radius:1px;
+	padding:10px;
+}
+
+form.form-vertical > fieldset,
+form.form-horizontal > fieldset {
+	margin:5px;
+	padding:0px;
 	overflow:hidden;
 }
 
-section > form.form-horizontal > fieldset > .form-actions {
-	margin-bottom:0px;
+form.form-vertical > fieldset > .control-group > .controls > h4,
+form.form-vertical > fieldset h4,
+form.form-horizontal > fieldset > .control-group > .controls > h4,
+form.form-horizontal > fieldset h4 {
+	font-size:17.5px;
+	font-weight:200;
+}
+
+form.form-vertical > fieldset > .control-group > .controls > h5,
+form.form-vertical > fieldset h5,
+form.form-horizontal > fieldset > .control-group > .controls > h5,
+form.form-horizontal > fieldset h5 {
+	font-size:14px;
+	font-weight:100;
+}
+
+form.form-vertical > fieldset > .form-actions,
+form.form-horizontal > fieldset > .form-actions {
+	background-color:#f1f1f1;
+}
+
+form.form-vertical > fieldset > .control-group > .controls {
+	width:inherit;
+	padding:0px;
 	overflow:hidden;
 }
 
-.control-group.form-title {
-	border-bottom:1px solid #eee;
+form.form-vertical > fieldset > .control-group > .controls > * {
+	display:inline-block;
+	width:90%;
+	font-size:15px;
 }
+
+.control-group > .controls > label,
 .control-group > label {
 	display:inline-block;
 	margin:0;
-	padding:5px;
+	padding:5px 5px 5px 0px;
 	padding-right:10px;
 	vertical-align:middle;
 	text-align:left;
-	font-size:16px;
+	font-size:14px;
+	font-weight:600;
+	color:#333;
+}
+
+.control-group > .controls > label {
+	font-size:14px;
+	color:#999;
+}
+
+.control-group > .controls > label.checkbox,
+.control-group > label.checkbox {
+	font-size:14px;
+	font-weight:200;
+	height:20px;
+	line-height:20px;
+	vertical-align:middle;
 	color:#666;
 }
 
-.control-group > .controls > .label {
-	vertical-align:middle;
-	padding:5px;
-	font-size:16px;
+/* checkbox labels go inside controls after checkbox, not before */
+.control-group > .controls > label > input[type="checkbox"],
+.control-group > .controls > input[type="checkbox"],
+.control-group > label > input[type="checkbox"],
+.control-group > input[type="checkbox"] {
 	line-height:20px;
+	float:none;
+	margin:0;
+	margin-left:0px !important;
+	margin-right:10px;
+	padding:0px;
+	vertical-align:middle;
+}
+
+.control-group > .controls > div > table td:nth-child(1) input {
+	width:100%;
+	margin:0px;
+	padding:10px;
+	text-align:center;
+}
+.control-group > .controls > div > table td:nth-child(2) label {
+	width:100%;
+	margin:0px;
+	padding:3px;
+	text-align:left;
 }
 
 /* confirmation pages */
@@ -418,39 +343,6 @@ section > form.form-horizontal > fieldset > .form-actions {
 	text-align:center;
 	overflow:hidden;
 }
-
-/* checkbox labels go inside controls after checkbox, not before */
-.control-group > .controls > input[type="checkbox"] {
-	display:inline-block;
-	float:none;
-	margin:0;
-	padding:5px;
-	vertical-align:middle;
-}
-.control-group > .controls > label {
-	display:inline-block;
-	float:none;
-	margin:0;
-	padding:5px;
-	padding-left:10px;
-	vertical-align:middle;
-	text-align:left;
-	font-size:14px;
-}
-
-.control-group > .controls > div > table td:nth-child(1) input {
-	width:100%;
-	margin:0px;
-	padding:10px;
-	text-align:center;
-}
-.control-group > .controls > div > table td:nth-child(2) label {
-	width:100%;
-	margin:0px;
-	padding:3px;
-	text-align:left;
-}
-
 
 /* 
 -------------------------------------------------- */
@@ -513,7 +405,7 @@ header.content-left .badge {
 
 section {
 	margin:2px 0px 5px 0px;
-	padding:0px 0px 8px 0px;
+	padding:8px 0px 8px 0px;
 }
 
 
@@ -525,14 +417,23 @@ section .badge {
 	margin-right:5px;
 }
 
+pre {
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	word-wrap:break-word;
+	white-space:pre-line;
+	border:none;
+}
+
 article > pre,
 article pre {
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 	background-color:#fcfcfc;
 	word-wrap:break-word;
 	white-space:pre-line;
 }
 
 article > pre > p {
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 	white-space:normal;
 	word-wrap:normal;
 }
@@ -547,16 +448,6 @@ article > pre > p {
 .btn-toolbar > nav.paginate div {
 	margin:0px;
 }
-
-.content-left {
-	text-align:left;
-}
-.content-right {
-	text-align:right;
-}
-
-
-
 
 .prominent-figure.label,
 .prominent-figure.badge,
@@ -593,29 +484,26 @@ blockquote.slim  {
 	margin:5px;
 }
 
-
-
-
-
-
-/*
-.marked_read {
-	background-color: #fcfcfc;
+.alert {
+	margin-bottom:10px;
 }
 
-.marked_unread {
-	background-color: #f7f7f7;
+.alert-inverse {
+	background-color: #333333;
+	border-color:#000;
+	color: #ffffff;
+	text-shadow: 0 -1px 0 #333;
+	font-weight: 500;
 }
 
-.mark_checked {
-	background-color: #fef9d7;
-}
-*/
+.alert-inverse > a:link, 
+.alert-inverse > a:visited, 
+.alert-inverse > a:hover {
+	color:#f5f5f5;
+} 
 
-/*tr:hover {
-	background-color: #fef9d7 !important;
-}*/
-
+/* 
+-------------------------------------------------- */
 table.table-vertical-labels > tbody > tr > td:nth-child(1) {
 	width:20%;
 }
@@ -627,7 +515,6 @@ table.table-vertical-labels > tbody > tr > td:nth-child(2) {
 .table-no-vertical-borders > thead > tr > th:not(:first-child),
 .table-no-vertical-borders > tbody > tr > td:not(:first-child) {
 	border-left:none;
-	/*border-left:1px solid #f1f1f1;*/
 }
 
 
@@ -647,12 +534,10 @@ table.table-vertical-labels > tbody > tr > td:nth-child(2) {
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
        -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-	
 }
 
 .table-bordered > thead > tr > th {
 	border-top: 1px solid #fff;
-/*	border-bottom: 1px solid #f4f4f4;*/
 }
 
 .table tbody tr[class*='mark_checked']:hover td {
@@ -676,17 +561,22 @@ table tr th.center, table tr td.center {text-align:center;}
 
 table tr th.right, table tr td.right {text-align:right;}
 
+table > tr > td.row-group-heading:hover,
+table > tbody > tr > td.row-group-heading:hover {
+	background-color:#333 !important;
+	color:#f6f6f6;
+}
+
 table > tr > td.row-group-heading,
 table > tbody > tr > td.row-group-heading {
-	line-height:10px;
-	height:10px !important;
-	max-height:10px !important;
+	line-height:25px;
+	height:25px !important;
+	max-height:25px !important;
 	text-align:center;
 	vertical-align:middle;
 	padding:0px;
-	/*background-color:#0088cc !important;*/
-	/*color:#fff;*/
-/*	background-color:#fff !important;*/
+	background-color:#333 !important;
+	color:#f6f6f6;
 }
 
 table > tr > td.row-group-heading > span.label,
@@ -698,23 +588,16 @@ table > tbody > tr > td.row-group-heading > span.label {
 	padding:5px;
 }
 
+/* Misc.
+-------------------------------------------------- */
 .center {text-align:center;}
 
-/*a[name^='anchor_offset_'] {*/
-/*a.anchor {
-	display:block;
-	width: 90px;
-	height: 100px;
-	position: relative;
-	border:10px solid red;
-	top: -90px;
-	z-index: 2;
-}*/
-
-
-
-
-
+.content-left {
+	text-align:left;
+}
+.content-right {
+	text-align:right;
+}
 
 /* Responsive
 -------------------------------------------------- */

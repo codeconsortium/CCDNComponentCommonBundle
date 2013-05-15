@@ -4,30 +4,47 @@
         <meta http-equiv="content-type" content="text/html;charset=utf-8">
         <title>{%- block title -%}{%- endblock -%}</title>
 
+		{%- block stylesheets -%}
+			{%- stylesheets '@bootstrap_less' '@bootstrap_todc_less' '/todc/todc-bootstrap/img/*' combine=true -%}
+				<link href="{{- asset_url -}}" type="text/css" rel="stylesheet">
+			{%- endstylesheets -%}			
+		{%- endblock -%}
+		
 		{%- include 'CCDNComponentCommonBundle:Layout:common_css.html.twig' -%}
 
-		{%- block stylesheets -%}
-		{%- endblock -%}
     </head>
     <body>
 
 		{%- spaceless -%}
-
+	
 		<div id="page-wrap">
 			<div id="page-main">
-				{%- include 'CCDNComponentCommonBundle:Layout:header.html.twig' -%}
+				
+				{%- block navbar -%}
+					<header class="navbar-fixed-top">
+						{%- block navbar_site_links -%}
+							{%- include 'CCDNComponentCommonBundle:Layout:header/site_links.html.twig' -%}
+						{%- endblock navbar_site_links -%}
+						
+						{%- block navbar_site_primary -%}
+							{%- include 'CCDNComponentCommonBundle:Layout:header/primary.html.twig' -%}
+						{%- endblock navbar_site_primary -%}
+					</header>
 
-				<div class="container-fluid clear-top">
 					{%- block tool_bar -%}
 					{%- endblock tool_bar -%}
-
+				{%- endblock navbar -%}			
+				
+				<div class="container-fluid clear-top">					
 					<div class="row-fluid">
 				        <div class="span10 page-body-left">
-							<div id="top"></div>
-				            {%- block body -%}
-							{%- endblock body -%}
+							<div>
+								<div id="top"></div>
+					            {%- block body -%}
+								{%- endblock body -%}
+							</div>
 				        </div>
-
+						
 				        <aside class="span2 page-sidebar-right">
 							<ul class="nav nav-pills nav-stacked">
 								{%- include 'CCDNComponentCommonBundle:Layout:sidebar.html.twig' -%}
@@ -40,14 +57,14 @@
 				</div>
 			</div>
 		</div>
-
+		
 		{%- include 'CCDNComponentCommonBundle:Layout:footer.html.twig' -%}
 
 		{%- include 'CCDNComponentCommonBundle:Layout:common_js.html.twig' -%}
-
-		{%- block javascripts -%}
+		
+		{%- block javascripts -%}	
 		{%- endblock -%}
-
+		
 		{%- endspaceless -%}
     </body>
 </html>
