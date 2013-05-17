@@ -5,7 +5,7 @@
         <title>{%- block title -%}{%- endblock -%}</title>
 
 		{%- block stylesheets -%}
-			{%- stylesheets '@bootstrap_less' '@bootstrap_todc_less' '/todc/todc-bootstrap/img/*' combine=true -%}
+			{%- stylesheets '@bootstrap_less' '@bootstrap_todc_less' '/todc/todc-bootstrap/img/*' '@common_less' '@crumbs_less' '@highlight_less' combine=true -%}
 				<link href="{{- asset_url -}}" type="text/css" rel="stylesheet">
 			{%- endstylesheets -%}			
 		{%- endblock -%}
