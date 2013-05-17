@@ -49,10 +49,13 @@
 		
 		{%- include 'CCDNComponentCommonBundle:Layout:footer.html.twig' -%}
 
-		{%- include 'CCDNComponentCommonBundle:Layout:common_js.html.twig' -%}
-		
-		{%- block javascripts -%}	
+		{%- block javascripts -%}
+			{% javascripts '@jquery_js' '@bootstrap_js' '@moment_js' '@timestamper_js' '@checkboxes_js' filter='?yui_js' combine=false %}
+				<script src="{{- asset_url -}}"></script>
+			{%- endjavascripts -%}
 		{%- endblock -%}
+
+		{%- include 'CCDNComponentCommonBundle:Layout:common_js.html.twig' -%}
 		
 		{%- endspaceless -%}
     </body>
