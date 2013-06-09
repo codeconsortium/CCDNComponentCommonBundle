@@ -43,13 +43,17 @@ class CCDNComponentCommonBundle extends Bundle
         }
 
         $twig = $this->container->get('twig');
-        $twig->addGlobal('ccdn_component_common', array(
-            'header' => array(
-                'brand' => array(
-                    'route' => $path,
-                    'label' => $this->container->getParameter('ccdn_component_common.header.brand.label'),
-                ),
-            ),
-        ));
+		
+        $twig->addGlobal(
+			'ccdn_component_common',
+			array(
+	            'header' => array(
+	                'brand' => array(
+	                    'route' => $path,
+	                    'label' => $this->container->getParameter('ccdn_component_common.header.brand.label'),
+	                ),
+	            ),
+	        )
+		); // End Twig Globals.
     }
 }
