@@ -2,15 +2,22 @@
 <!--
 	$(document).ready(function() {
 		// make visible js compat toolbars site wide
-		$("[data-compat='interactive-js-compat']").removeClass('hidden');
-		$("[data-compat='interactive-non-js-compat']").addClass('hidden');
-
+		$("[data-js-non-compat]").each(function(i, el) {
+			$(el).addClass('collapse').addClass('hidden');
+		});
+		
+		$("[data-js-compat]").each(function(i, el) {
+			$(el).removeClass('collapse').removeClass('hidden');
+		});
+		
 		$('[data-tip]').each(function() {
 			$(this).tooltip({
 				html: true,
 				placement: $(this).data('tip')
 			});
-		});		
+		});	
+		
+		$('[data-toggle="dropdown"]').dropdown();
 	});
 //-->
 </script>

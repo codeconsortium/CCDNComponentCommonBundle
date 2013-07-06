@@ -142,6 +142,17 @@ aside > ul.nav > li > ul.nav {
 
 /* Form Elements
 -------------------------------------------------- */
+.collapse, .hidden, input.collapse, input.hidden, button.collapse, button.hidden, a.collapse, a.hidden, div.collapse, div.hidden {
+	display:none !important;
+/*	visibility:hidden !important;
+	width:0px !important;
+	height:0px !important;
+	margin:0px !important;
+	padding:0px !important;
+	border-collapse:collapse !important;
+*/
+}
+
 input[type="submit"],
 button[type="submit"],
 button.btn,
