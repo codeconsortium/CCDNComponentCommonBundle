@@ -82,19 +82,10 @@ class CCDNComponentCommonExtension extends Extension
     {
         $container->setParameter('ccdn_component_common.component.helper.role.class', $config['component']['helper']['role']['class']);
         $container->setParameter('ccdn_component_common.component.helper.bin_si_units.class', $config['component']['helper']['bin_si_units']['class']);
-        $container->setParameter('ccdn_component_common.component.pagerfanta.view.bootstrap.class', $config['component']['pagerfanta']['view']['bootstrap']['class']);
-        $container->setParameter('ccdn_component_common.component.pagerfanta.view.bootstrap_translated.class', $config['component']['pagerfanta']['view']['bootstrap_translated']['class']);
 
         $container->setParameter('ccdn_component_common.component.twig_extension.bin_si_units.class', $config['component']['twig_extension']['bin_si_units']['class']);
-        $container->setParameter('ccdn_component_common.component.twig_extension.cycler.class', $config['component']['twig_extension']['cycler']['class']);
         $container->setParameter('ccdn_component_common.component.twig_extension.div_ceil.class', $config['component']['twig_extension']['div_ceil']['class']);
-        $container->setParameter('ccdn_component_common.component.twig_extension.trunc_dot.class', $config['component']['twig_extension']['trunc_dot']['class']);
-        $container->setParameter('ccdn_component_common.component.twig_extension.relevant_date_format.class', $config['component']['twig_extension']['relevant_date_format']['class']);
-        $container->setParameter('ccdn_component_common.component.twig_extension.alert_key.class', $config['component']['twig_extension']['alert_key']['class']);
-        $container->setParameter('ccdn_component_common.component.twig_extension.user_role.class', $config['component']['twig_extension']['user_role']['class']);
-        $container->setParameter('ccdn_component_common.component.twig_extension.has_role.class', $config['component']['twig_extension']['has_role']['class']);
         $container->setParameter('ccdn_component_common.component.twig_extension.abbr_number.class', $config['component']['twig_extension']['abbr_number']['class']);
-        $container->setParameter('ccdn_component_common.component.twig_extension.create_profile.class', $config['component']['twig_extension']['create_profile']['class']);
 
         return $this;
     }
@@ -108,8 +99,6 @@ class CCDNComponentCommonExtension extends Extension
      */
     private function getServicesSection(array $config, ContainerBuilder $container)
     {
-        $container->setParameter('ccdn_component_common.component.provider.profile.class', $config['service']['provider']['profile_provider']['class']);
-        $container->setParameter('ccdn_component_common.component.provider.profile.avatar_fallback', $config['service']['provider']['profile_provider']['fallback_avatar']);
 
         return $this;
     }

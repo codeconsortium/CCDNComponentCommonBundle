@@ -610,6 +610,13 @@ table > tbody > tr > td.row-group-heading > span.label {
 	text-align:right;
 }
 
+.ellipsis {
+	overflow: hidden;
+	word-wrap: normal;
+	white-space: nowrap;
+	text-overflow: ellipsis; 
+}
+
 /* Responsive
 -------------------------------------------------- */
 

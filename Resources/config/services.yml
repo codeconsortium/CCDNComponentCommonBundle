@@ -24,44 +24,8 @@ services:
         tags:
             - { name: twig.extension }
 
-    ccdn_component_common.component.twig_extension.cycler:
-        class: %ccdn_component_common.component.twig_extension.cycler.class%
-        tags:
-            - { name: twig.extension }
-
     ccdn_component_common.component.twig_extension.div_ceil:
         class: %ccdn_component_common.component.twig_extension.div_ceil.class%
-        tags:
-            - { name: twig.extension }
-
-    ccdn_component_common.component.twig_extension.trunc_dot:
-        class: %ccdn_component_common.component.twig_extension.trunc_dot.class%
-        tags:
-            - { name: twig.extension }
-
-    ccdn_component_common.component.twig_extension.relevant_date_format:
-        class: %ccdn_component_common.component.twig_extension.relevant_date_format.class%
-        tags:
-            - { name: twig.extension }
-
-    ccdn_component_common.component.twig_extension.alert_key:
-        class: %ccdn_component_common.component.twig_extension.alert_key.class%
-        arguments:
-            - @translator
-        tags:
-            - { name: twig.extension }
-
-    ccdn_component_common.component.twig_extension.user_role:
-        class: %ccdn_component_common.component.twig_extension.user_role.class%
-        arguments:
-            - @ccdn_component_common.component.helper.role
-        tags:
-            - { name: twig.extension }
-
-    ccdn_component_common.component.twig_extension.has_role:
-        class: %ccdn_component_common.component.twig_extension.has_role.class%
-        arguments:
-            - @ccdn_component_common.component.helper.role
         tags:
             - { name: twig.extension }
 
@@ -70,34 +34,3 @@ services:
         tags:
             - { name: twig.extension }
 
-    ccdn_component_common.component.twig_extension.create_profile:
-        class: %ccdn_component_common.component.twig_extension.create_profile.class%
-        arguments:
-            - @ccdn_component_common.component.provider.profile
-        tags:
-            - { name: twig.extension }
-
-    #
-    # Providers.
-    #
-    ccdn_component_common.component.provider.profile:
-        class: %ccdn_component_common.component.provider.profile.class%
-        arguments: [@service_container]
-
-    #
-    # Pagerfanta Views.
-    #
-    ccdn_component_common.component.pagerfanta.view.bootstrap:
-        class: %ccdn_component_common.component.pagerfanta.view.bootstrap.class%
-        public: false
-        tags:
-            - { name: pagerfanta.view, alias: twitter_bootstrap_compact }
-
-#    ccdn_component_common.component.pagerfanta.view.bootstrap_translated:
-#        class: %ccdn_component_common.component.pagerfanta.view.bootstrap_translated.class%
-#        arguments:
-#            - @pagerfanta.view.twitter_bootstrap
-#            - @translator
-#        public: false
-#        tags:
-#            - { name: pagerfanta.view, alias: twitter_bootstrap_compact_translated }

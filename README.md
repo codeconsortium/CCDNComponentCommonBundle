@@ -30,27 +30,10 @@ This is a complimentary CommonBundle for containing various assets for CCDN bund
 
 ## Features.
 
-CommonBundle Provides the following features:
+Common bundle provides integration for all other ccdn bundles for the CCDNSandbox
 
-1. Various Twig Extensions:
-	1. BinSIUnits function, binary units converter.
-	2. Cycler function, improved row cycler, featuring labels for creating cyclers within cyclers.
-	3. Divide/Ceiling function, divides 2 numbers and runs results through php's Ceil() function.
-	4. Param function returns parameters from app/config/config.yml.
-	5. Relevant date format function formats dates into various 'time ago' fuzzy timestamp string formats.
-	6. TruncDot function takes a string, if its longer than specified length, will truncate it & append '...' at the end, otherwise returns the original string.
-	7. UserRole function gives you a users role as 'User' or 'Admin' extracted from the array in the users role column.
-2. Various templates. (Features a fluid-left/fixed-right layout template).
-3. Various generic CSS files for use across CCDN bundles.
-4. Graphics used in CCDN bundles.
-5. Smilies for use in BBCodeBundle.
-6. Javascripts:
- 	1. jQuery (1.7.1)
-	2. jquery.checkboxes.js is for creating a check-all box.
-	3. jquery.tipsy.js is for creating hover tool-tips in the style of github/youtube etc.
-7. Utilises Twitter-Bootstrap interface by default.
-
-Before installation of this bundle, you can download the [Sandbox](https://github.com/codeconsortium/CCDNSandBox) for testing/development and feature review, or alternatively see the product in use at [CodeConsortium](http://www.codeconsortium.com).
+Before installation of this bundle, you can download the [Sandbox](https://github.com/codeconsortium/CCDNSandBox) for testing/development and feature review,
+ or alternatively see the product in use at [CodeConsortium](http://www.codeconsortium.com).
 
 ## Documentation.
 
