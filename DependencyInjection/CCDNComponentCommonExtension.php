@@ -99,7 +99,6 @@ class CCDNComponentCommonExtension extends Extension
      */
     private function getServicesSection(array $config, ContainerBuilder $container)
     {
-
         return $this;
     }
 

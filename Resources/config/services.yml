@@ -33,4 +33,3 @@ services:
         class: %ccdn_component_common.component.twig_extension.abbr_number.class%
         tags:
             - { name: twig.extension }
-
