@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="{{- app.request.locale -}}">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>{%- block title -%}{%- endblock -%}</title>
+
+		
+		{%- block stylesheets -%}
+			<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+			{%- include 'CCDNComponentCommonBundle:Layout:Assets/css_default.html.twig' -%}
+		{%- endblock stylesheets -%}
+    </head>
+    <body>
+
+		{%- spaceless -%}
+
+		<div id="page-wrap">
+			<div id="page-main">
+
+				{%- block navbar -%}
+					{%- block navbar_links -%}
+						{%- include 'CCDNComponentCommonBundle:Layout:Header/default.html.twig' -%}
+					{%- endblock navbar_links -%}
+				
+					{%- block tool_bar -%}
+					{%- endblock tool_bar -%}
+				{%- endblock navbar -%}
+
+				<div class="container clearfix">
+					<br>
+					<div class="row">
+						<div id="top clearfix"></div>
+			            {%- block body -%}
+						{%- endblock body -%}
+			        </div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+
+		<footer class="footer site-footer">
+
+			<div class="navbar navbar-default clearfix">
+				<p class="navbar-text pull-right content-right">
+					Copyright <a target="_blank" class="navbar-link" href="http://www.codeconsortium.com/">Code Consortium</a> 2011 - {{ 'now'|date("Y") }}.
+				</p>
+			</div>
+
+			<nav class="navbar navbar-inverse clearfix" style="bottom:0px;margin-bottom:0px;">
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+				    <ul class="nav navbar-nav">
+						<li>
+							<a rel="friend" href="http://www.codeconsortium.com">
+								Code Consortium
+							</a>
+						</li>
+
+						<li>
+							<a rel="friend" target="_blank" href="http://github.com/codeconsortium">
+								Contribute
+							</a>
+						</li>
+
+						<li>
+							<a href="{{- path('ccdn_user_user_legal_copyright_notice') -}}">
+								Copyright Notice
+							</a>
+						</li>
+
+						<li>
+							<a href="{{- path('ccdn_user_user_legal_disclaimer') -}}">
+								Disclaimer
+							</a>
+						</li>
+
+						<li>
+							<a href="{{- path('ccdn_user_user_legal_privacy_policy') -}}">
+								Privacy
+							</a>
+						</li>
+
+						<li>
+							<a href="{{- path('ccdn_user_user_legal_terms_conditions') -}}">
+								Terms & Conditions
+							</a>
+						</li>
+				    </ul>
+				</div>
+			</nav>
+
+		</footer>
+
+		{%- block javascripts -%}
+			<script src="//code.jquery.com/jquery.js"></script>
+			<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+			{%- include 'CCDNComponentCommonBundle:Layout:Assets/js_default.html.twig' -%}
+		{%- endblock javascripts -%}
+
+		<script type='text/javascript'>
+		<!--
+			$(document).ready(function() {
+				// make visible js compat toolbars site wide
+				$("[data-js-non-compat]").each(function(i, el) {
+					$(el).addClass('collapse').addClass('hidden');
+				});
+
+				$("[data-js-compat]").each(function(i, el) {
+					$(el).removeClass('collapse').removeClass('hidden');
+				});
+
+				$('[data-tip]').each(function() {
+					$(this).tooltip({
+						html: true,
+						placement: $(this).data('tip')
+					});
+				});
+
+				$('[data-toggle="dropdown"]').dropdown();
+			});
+		//-->
+		</script>
+
+		{%- endspaceless -%}
+    </body>
+</html>

@@ -1,0 +1,21 @@
+{%- spaceless -%}
+	{%- set route = app.request.attributes.get('_route') -%}
+	<header class="navbar navbar-default navbar-fixed-top clearfix" role="navigation">
+		<a target="_blank" class="navbar-brand" href="http://www.codeconsortium.com/">Code Consortium</a>
+
+
+		<ul class="nav navbar-nav navbar-right">
+			{%- if is_granted('ROLE_USER') -%}
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-user"></i>
+						{%- if app.user -%}
+							{{- app.user.email -}}
+						{%- endif -%}
+						<b class="caret"></b>
+					</a>
+				</li>
+			{%- endif -%}
+		</ul>
+	</header>
+{%- endspaceless -%}
