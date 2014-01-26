@@ -1,0 +1,14 @@
+<a{%- for attr, value in options %} {{ attr -}}="{{- value -}}"{% endfor -%}>
+	<i class="
+	{%- if options.class == 'sortable' -%}
+		glyphicon glyphicon-sort
+	{%- else -%}
+		{%- if options.class == 'asc' -%}
+			glyphicon glyphicon-sort-by-attributes
+		{%- else -%}
+			glyphicon glyphicon-sort-by-attributes-alt
+		{%- endif -%}
+	{%- endif -%}
+	"></i>
+	{{- title -}}
+</a>
