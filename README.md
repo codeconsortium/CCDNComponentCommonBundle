@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/codeconsortium/CCDNComponentCommonBundle.png?label=ready)](https://waffle.io/codeconsortium/CCDNComponentCommonBundle)
 CCDNComponent CommonBundle README.
 ==================================
 
