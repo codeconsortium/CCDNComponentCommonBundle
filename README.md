@@ -1,8 +1,8 @@
-[![Stories in Ready](https://badge.waffle.io/codeconsortium/CCDNComponentCommonBundle.png?label=ready)](https://waffle.io/codeconsortium/CCDNComponentCommonBundle)
 CCDNComponent CommonBundle README.
 ==================================
 
-  
+[![Stories in Ready](https://badge.waffle.io/codeconsortium/CCDNComponentCommonBundle.png?label=ready)](https://waffle.io/codeconsortium/CCDNComponentCommonBundle)
+
 ## Notes:  
   
 This bundle is for the symfony framework and requires Symfony 2.1.x and PHP 5.4
