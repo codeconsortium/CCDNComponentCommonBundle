@@ -1,5 +1,5 @@
-Installing CCDNComponent CommonBundle 1.x
-=========================================
+Installing CCDNComponent CommonBundle
+=====================================
 
 ## Dependencies:
 
@@ -47,9 +47,9 @@ register the new bundle:
 public function registerBundles()
 {
     $bundles = array(
-		new CCDNComponent\CommonBundle\CCDNComponentCommonBundle(),
-		...
-	);
+        new CCDNComponent\CommonBundle\CCDNComponentCommonBundle(),
+        // ...
+    );
 }
 ```
 

@@ -5,10 +5,7 @@ CCDNComponent CommonBundle README.
 
 ## Notes:  
   
-This bundle is for the symfony framework and requires Symfony 2.1.x and PHP 5.4
-  
-This project uses Doctrine 2.1.x and so does not require any specific database.
-
+This bundle is for the symfony framework and requires Symfony ~2.4 and PHP 5.4
 
 This file is part of the CCDNComponent CommonBundle
 
@@ -26,7 +23,7 @@ For the full copyright and license information, please view the [LICENSE](http:/
 
 ## Description.
 
-This is a complimentary CommonBundle for containing various assets for CCDN bundles for Symfony (2.1.x).
+This is a complimentary CommonBundle for containing various assets for CCDN bundles for Symfony.
 
 ## Features.
 
